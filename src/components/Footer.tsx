@@ -1,15 +1,17 @@
 import { useState, useEffect } from "react";
-import { Leaf, ArrowUp } from "lucide-react";
+import { ArrowUp } from "lucide-react";
 
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about" },
-  { label: "Courses", href: "#courses" },
   { label: "Admissions", href: "#admissions" },
-  { label: "Facilities", href: "#facilities" },
-  { label: "Gallery", href: "#gallery" },
+  { label: "Academics", href: "#academics" },
+  { label: "Research", href: "#research" },
   { label: "Placements", href: "#placements" },
-  { label: "Contact", href: "#contact" },
+  { label: "Campus Life", href: "#campus-life" },
+  { label: "Exposure Visit", href: "#exposure-visit" },
+  { label: "Internship/RPT", href: "#internship-rpt" },
+  { label: "Contact Us", href: "#contact" },
 ];
 
 const Footer = () => {
@@ -27,13 +29,15 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-12">
           {/* Logo & Info */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center">
-                <Leaf className="w-5 h-5 text-deep-green" />
-              </div>
+            <div className="flex items-center gap-3 mb-4">
+              <img
+                src="/alvas-org-logo-white.png"
+                alt="Alva's Logo"
+                className="h-16 w-auto object-contain"
+              />
               <div>
-                <p className="font-serif font-bold text-sm">Alva's Agricultural College</p>
-                <p className="text-cream/60 text-xs">Moodbidri, Karnataka</p>
+                <p className="font-sans font-black text-white text-xl leading-none tracking-wider uppercase">ALVA'S</p>
+                <p className="text-white/80 text-[9px] font-medium tracking-[0.18em] uppercase leading-tight mt-0.5">Institute of Agricultural Science &amp; Technology</p>
               </div>
             </div>
             <p className="text-cream/60 text-sm leading-relaxed">
@@ -78,9 +82,8 @@ const Footer = () => {
       {/* Scroll to Top */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className={`fixed bottom-6 right-6 w-12 h-12 rounded-full bg-accent text-accent-foreground shadow-lg flex items-center justify-center transition-all duration-300 hover:shadow-accent/40 hover:shadow-xl z-50 ${
-          showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
-        }`}
+        className={`fixed bottom-6 right-6 w-12 h-12 rounded-full bg-accent text-accent-foreground shadow-lg flex items-center justify-center transition-all duration-300 hover:shadow-accent/40 hover:shadow-xl z-50 ${showTop ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+          }`}
       >
         <ArrowUp className="w-5 h-5" />
       </button>
