@@ -10,6 +10,7 @@ const heroImages = [
   "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&q=80",
 ];
 
+
 const floatingIcons = [
   { Icon: Leaf, className: "top-[20%] left-[10%] text-accent/40", delay: 0 },
   { Icon: Droplets, className: "top-[60%] right-[8%] text-accent/30", delay: 1 },
@@ -108,7 +109,7 @@ const HeroSection = () => {
           <Button
             size="lg"
             variant="outline"
-            className="border-cream/40 text-cream hover:bg-cream/10 font-semibold px-8 py-6 text-base rounded-full backdrop-blur-sm"
+            className="bg-white border-white text-black hover:bg-white/90 font-semibold px-8 py-6 text-base rounded-full shadow-lg"
           >
             Explore Campus
           </Button>
@@ -117,7 +118,7 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <motion.a
-        href="#about"
+        href="#"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 text-cream/60 hover:text-accent transition-colors"
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}

@@ -1,0 +1,437 @@
+/* FacilitiesSection.css */
+.facilities-section {
+  --cream: #faf6ee;
+  --parchment: #f2ead8;
+  --sand: #e8d9b8;
+  --brown: #6b4226;
+  --bark: #8b5e3c;
+  --gold: #c8860a;
+  --amber: #e8a020;
+  --wheat: #d4a84b;
+  --sage: #5a7a3a;
+  --grass: #3d6b2e;
+  --leaf: #7aaa4a;
+  --mint: #c8e0a8;
+  --soil: #3b2314;
+  --text: #2a1a0e;
+  --subtext: #7a5a3a;
+
+  background: var(--cream);
+  font-family: "Cormorant Garamond", serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 60px; /* Adjusting for footer overlap if any */
+}
+
+.facilities-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 10%, #e8f0d8 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 80% 0%, #f0e8d0 0%, transparent 50%),
+    radial-gradient(ellipse 80% 60% at 50% 100%, #e0d0b0 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.facilities-section .spore {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--wheat);
+  animation: spore-float linear infinite;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes spore-float {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(1);
+  }
+  15% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.2;
+    transform: translateY(-40px) translateX(10px) scale(1.4);
+  }
+  85% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-80px) translateX(-5px) scale(0.5);
+  }
+}
+
+.facilities-section .section-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+.facilities-section .header-wrap {
+  margin-bottom: 60px;
+}
+
+.facilities-section .eyebrow {
+  font-family: "Space Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 6px;
+  color: var(--gold);
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.facilities-section .main-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(40px, 6vw, 76px);
+  font-weight: 300;
+  color: var(--text);
+  line-height: 1;
+  font-style: italic;
+  display: inline-block;
+}
+
+.facilities-section .main-title strong {
+  font-weight: 700;
+  color: var(--grass);
+  font-style: normal;
+  display: block;
+  font-size: 0.62em;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 6px;
+}
+
+.facilities-section .ground-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--sand),
+    var(--amber),
+    var(--sand),
+    transparent
+  );
+  margin: 36px 0 0;
+  position: relative;
+}
+
+.facilities-section .ground-line::after {
+  content: "✦";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--cream);
+  color: var(--amber);
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.facilities-section .hex-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 0;
+  margin-top: 24px;
+  position: relative;
+}
+
+.facilities-section .hex-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 -8px;
+  animation: grow-in 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+}
+
+.facilities-section .hex-item:nth-child(1) {
+  animation-delay: 0s;
+}
+.facilities-section .hex-item:nth-child(2) {
+  animation-delay: 0.12s;
+}
+.facilities-section .hex-item:nth-child(3) {
+  animation-delay: 0.24s;
+}
+.facilities-section .hex-item:nth-child(4) {
+  animation-delay: 0.36s;
+}
+.facilities-section .hex-item:nth-child(5) {
+  animation-delay: 0.48s;
+}
+
+@keyframes grow-in {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+.facilities-section .stem {
+  width: 3px;
+  background: linear-gradient(to top, var(--bark), var(--sage));
+  border-radius: 2px;
+  position: relative;
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  transform-origin: bottom center;
+}
+
+.facilities-section .hex-item:hover .stem {
+  animation: sway 2s ease-in-out infinite;
+}
+
+.facilities-section .hex-item:nth-child(1) .stem {
+  height: 60px;
+}
+.facilities-section .hex-item:nth-child(2) .stem {
+  height: 90px;
+}
+.facilities-section .hex-item:nth-child(3) .stem {
+  height: 130px;
+  width: 4px;
+}
+.facilities-section .hex-item:nth-child(4) .stem {
+  height: 78px;
+}
+.facilities-section .hex-item:nth-child(5) .stem {
+  height: 50px;
+}
+
+.facilities-section .stem::before {
+  content: "";
+  position: absolute;
+  right: -10px;
+  top: 28%;
+  width: 14px;
+  height: 9px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--sage);
+  opacity: 0.5;
+  transform: rotate(-30deg);
+}
+
+.facilities-section .stem::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 55%;
+  width: 14px;
+  height: 9px;
+  border-radius: 50% 50% 0 50%;
+  background: var(--leaf);
+  opacity: 0.5;
+  transform: rotate(30deg);
+}
+
+.facilities-section .hex-head {
+  position: relative;
+  width: 148px;
+  height: 148px;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
+  overflow: hidden;
+  flex-shrink: 0;
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 0 0 rgba(200, 134, 10, 0);
+}
+
+.facilities-section .hex-item:hover .hex-head {
+  filter: brightness(1.15);
+  transform: scale(1.1) translateY(-5px);
+  box-shadow: 0 10px 30px rgba(61, 107, 46, 0.3);
+  z-index: 10;
+}
+
+.facilities-section .hex-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.facilities-section .hex-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    160deg,
+    rgba(0, 0, 0, 0.05) 0%,
+    rgba(0, 0, 0, 0.28) 60%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+.facilities-section .hex-icon {
+  position: absolute;
+  bottom: 18px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 32px;
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.55));
+  z-index: 2;
+}
+
+.facilities-section .hex-label {
+  margin-top: 18px;
+  text-align: center;
+  padding: 0 6px;
+}
+
+.facilities-section .hex-name {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.2;
+  display: block;
+  transition: color 0.3s;
+}
+
+.facilities-section .hex-item:hover .hex-name {
+  color: var(--grass);
+}
+
+.facilities-section .hex-sub {
+  font-family: "Space Mono", monospace;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: var(--subtext);
+  text-transform: uppercase;
+  margin-top: 5px;
+  display: block;
+  opacity: 0.6;
+}
+
+.facilities-section .hex-item.featured .hex-head {
+  width: 176px;
+  height: 176px;
+}
+
+.facilities-section .hex-item.featured .hex-name {
+  font-size: 20px;
+  color: var(--grass);
+}
+
+.facilities-section .hex-item.featured .hex-sub {
+  color: var(--gold);
+  opacity: 1;
+}
+
+.facilities-section .soil-strip {
+  width: 100%;
+  height: 32px;
+  margin-top: 2px;
+  position: relative;
+}
+
+.facilities-section .soil-strip::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    var(--sand) 50%,
+    var(--parchment) 100%
+  );
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.facilities-section .grass-row {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: -8px;
+  position: relative;
+  z-index: 2;
+}
+
+.facilities-section .grass-tuft {
+  display: flex;
+  gap: 3px;
+  align-items: flex-end;
+}
+
+.facilities-section .grass-blade {
+  width: 2px;
+  border-radius: 2px 2px 0 0;
+  background: linear-gradient(to top, var(--bark), var(--leaf));
+  opacity: 0.4;
+}
+
+.facilities-section .bottom-row {
+  margin-top: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.facilities-section .dot-nav {
+  display: flex;
+  gap: 10px;
+}
+
+.facilities-section .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--sand);
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid var(--wheat);
+}
+
+.facilities-section .dot.active,
+.facilities-section .dot:hover {
+  background: var(--gold);
+  transform: scale(1.4);
+  border-color: var(--gold);
+}
+
+.facilities-section .view-all {
+  font-family: "Space Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--grass);
+  border: 1.5px solid var(--sage);
+  padding: 10px 24px;
+  border-radius: 40px;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.3s;
+}
+
+.facilities-section .view-all:hover {
+  background: var(--grass);
+  color: #fff;
+  border-color: var(--grass);
+}
