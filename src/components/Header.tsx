@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   Sheet,
   SheetContent,
@@ -12,11 +13,11 @@ const navLinks = [
   { label: "Admissions", href: "#" },
   { label: "Academics", href: "#" },
   { label: "Research", href: "#" },
-  { label: "Placements", href: "#" },
+  { label: "Placements", href: "#", to: "/placements" },
   { label: "Campus Life", href: "#" },
-  { label: "Exposure Visit", href: "#" },
-  { label: "Internship/IPT", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Exposure Visit", href: "#", to: "/exposure-visit" },
+  { label: "Internship/IPT", href: "#", to: "/internship" },
+  { label: "Contact Us", href: "#", to: "/contact-us" },
 ];
 
 const Header = () => {
@@ -34,11 +35,10 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-deep-green/95 backdrop-blur-md shadow-lg py-3"
-          : "bg-transparent py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
+        ? "bg-deep-green/95 backdrop-blur-md shadow-lg py-3"
+        : "bg-transparent py-6"
+        }`}
     >
       {/* Centered Content Width */}
       <div className="mx-auto max-w-[95%] flex items-center pl-4 pr-6">
@@ -72,16 +72,27 @@ const Header = () => {
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap"
-              >
-                {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
-              </a>
-            ))}
+            {navLinks.map((link) =>
+              link.to ? (
+                <Link
+                  key={link.label}
+                  to={link.to}
+                  className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap"
+                >
+                  {link.label}
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
+                </a>
+              )
+            )}
           </nav>
 
           {/* Mobile Menu */}
@@ -99,16 +110,27 @@ const Header = () => {
               </SheetTitle>
 
               <nav className="flex flex-col gap-2 mt-8">
-                {navLinks.map((link) => (
-                  <a
-                    key={link.label}
-                    href={link.href}
-                    onClick={() => setOpen(false)}
-                    className="px-4 py-3 text-lg text-cream/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
-                  >
-                    {link.label}
-                  </a>
-                ))}
+                {navLinks.map((link) =>
+                  link.to ? (
+                    <Link
+                      key={link.label}
+                      to={link.to}
+                      onClick={() => setOpen(false)}
+                      className="px-4 py-3 text-lg text-cream/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setOpen(false)}
+                      className="px-4 py-3 text-lg text-cream/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
+                    >
+                      {link.label}
+                    </a>
+                  )
+                )}
               </nav>
             </SheetContent>
           </Sheet>

@@ -1,0 +1,692 @@
+/* ═══════════════════════════════════════════════
+   Internship / IPT Page – Light Theme
+   Matches site palette: cream, deep-green, gold
+   ═══════════════════════════════════════════════ */
+
+:root {
+    --ip-cream: hsl(40, 30%, 96%);
+    --ip-cream-dark: hsl(40, 25%, 91%);
+    --ip-green: hsl(145, 45%, 22%);
+    --ip-deep: hsl(150, 50%, 12%);
+    --ip-green-lt: hsl(145, 45%, 95%);
+    --ip-green-mid: hsl(145, 40%, 86%);
+    --ip-gold: hsl(43, 80%, 50%);
+    --ip-gold-lt: hsl(43, 80%, 95%);
+    --ip-gold-dk: hsl(43, 80%, 38%);
+    --ip-text: hsl(150, 30%, 10%);
+    --ip-muted: hsl(145, 10%, 44%);
+    --ip-border: hsl(40, 15%, 87%);
+    --ip-shadow: 0 4px 22px rgba(22, 70, 38, 0.09);
+    --ip-shadow-lg: 0 16px 48px rgba(22, 70, 38, 0.13);
+    --ip-radius: 15px;
+}
+
+/* ─── Root ─── */
+.ip-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--ip-cream);
+    font-family: 'Source Sans 3', system-ui, sans-serif;
+    color: var(--ip-text);
+}
+
+.ip-main {
+    flex: 1;
+}
+
+/* ══ HERO ═══════════════════════════════════════ */
+.ip-hero {
+    position: relative;
+    overflow: hidden;
+    background: hsla(150, 50%, 12%, 0.94);
+    /* Semi-transparent to show animation */
+    padding: 116px 24px 80px;
+    text-align: center;
+}
+
+/* Multi-layer radial glow */
+.ip-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 75% 90% at 15% 50%, hsla(145, 60%, 26%, 0.6) 0%, transparent 65%),
+        radial-gradient(ellipse 50% 70% at 85% 35%, hsla(43, 80%, 50%, 0.14) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 50% 100%, hsla(145, 55%, 18%, 0.4) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* Floating blob decorations */
+.ip-blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(65px);
+    opacity: 0.22;
+    pointer-events: none;
+    animation: ipBlobFloat 13s ease-in-out infinite alternate;
+}
+
+.ip-blob-1 {
+    width: 420px;
+    height: 420px;
+    background: hsl(145, 55%, 28%);
+    top: -100px;
+    left: -80px;
+    animation-duration: 15s;
+}
+
+.ip-blob-2 {
+    width: 320px;
+    height: 320px;
+    background: hsl(43, 80%, 50%);
+    bottom: -60px;
+    right: -60px;
+    animation-duration: 11s;
+    animation-delay: -5s;
+}
+
+.ip-blob-3 {
+    width: 260px;
+    height: 260px;
+    background: hsl(145, 45%, 22%);
+    top: 30%;
+    left: 55%;
+    animation-duration: 17s;
+    animation-delay: -9s;
+}
+
+@keyframes ipBlobFloat {
+    from {
+        transform: translate(0, 0) scale(1);
+    }
+
+    to {
+        transform: translate(22px, -22px) scale(1.07);
+    }
+}
+
+/* Particle canvas positioned inside hero */
+.ip-hero-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.ip-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.ip-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(212, 169, 71, 0.18);
+    border: 1px solid rgba(212, 169, 71, 0.45);
+    color: hsl(43, 80%, 74%);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+}
+
+.ip-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+}
+
+.ip-title span {
+    background: linear-gradient(125deg, hsl(43, 80%, 65%) 0%, hsl(43, 80%, 82%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ip-subtitle {
+    font-size: 1.08rem;
+    color: rgba(255, 255, 255, 0.68);
+    max-width: 600px;
+    margin: 0 auto 28px;
+    line-height: 1.75;
+}
+
+/* Hero stats pill row */
+.ip-stat-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+}
+
+.ip-stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 100px;
+    padding: 8px 20px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.87rem;
+    font-weight: 600;
+    backdrop-filter: blur(6px);
+}
+
+.ip-stat-pill strong {
+    color: hsl(43, 80%, 72%);
+    font-size: 1.1rem;
+}
+
+/* Wave divider */
+.ip-wave {
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    line-height: 0;
+    z-index: 1;
+}
+
+.ip-wave svg {
+    display: block;
+    width: 100%;
+}
+
+/* ══ BREADCRUMB ══════════════════════════════ */
+.ip-breadcrumb {
+    background: var(--ip-cream-dark);
+    border-bottom: 1px solid var(--ip-border);
+    padding: 10px 0;
+}
+
+.ip-breadcrumb-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 0.8rem;
+    color: var(--ip-muted);
+}
+
+.ip-breadcrumb a {
+    color: var(--ip-green);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.ip-breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.ip-breadcrumb .ip-cur {
+    color: var(--ip-text);
+    font-weight: 600;
+}
+
+/* ══ BODY WRAPPER ════════════════════════════ */
+.ip-body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+}
+
+/* ── Section label / heading ── */
+.ip-label {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ip-gold-dk);
+    margin-bottom: 4px;
+}
+
+.ip-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+    color: var(--ip-deep);
+    line-height: 1.2;
+    margin: 0 0 16px;
+}
+
+.ip-para {
+    font-size: 0.97rem;
+    color: var(--ip-muted);
+    line-height: 1.75;
+    max-width: 680px;
+}
+
+/* ══ OVERVIEW TWO-COL ════════════════════════ */
+.ip-overview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 72px;
+    animation: ipFadeUp 0.7s ease both;
+}
+
+@media (max-width: 860px) {
+    .ip-overview {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ip-overview-img {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--ip-shadow-lg);
+    position: relative;
+}
+
+.ip-overview-img img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.ip-overview-img:hover img {
+    transform: scale(1.04);
+}
+
+/* Gold accent strip */
+.ip-overview-img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--ip-green) 0%, var(--ip-gold) 100%);
+}
+
+.ip-overview-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.ip-highlight-list {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.ip-highlight-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.94rem;
+    color: var(--ip-text);
+    line-height: 1.55;
+}
+
+.ip-bullet {
+    flex-shrink: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 8px;
+    background: var(--ip-green-lt);
+    border: 1px solid var(--ip-green-mid);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ip-green);
+    font-size: 0.82rem;
+}
+
+/* ══ PROGRAMS GRID ═══════════════════════════ */
+.ip-section {
+    margin-bottom: 72px;
+}
+
+.ip-programs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.ip-program-card {
+    background: rgba(255, 255, 255, 0.88);
+    /* Semi-transparent */
+    border: 1px solid var(--ip-border);
+    border-radius: var(--ip-radius);
+    overflow: hidden;
+    box-shadow: var(--ip-shadow);
+    transition: transform 0.28s, box-shadow 0.28s, border-color 0.28s;
+    animation: ipFadeUp 0.6s ease both;
+}
+
+.ip-program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--ip-shadow-lg);
+    border-color: hsl(145, 40%, 72%);
+}
+
+.ip-card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s;
+}
+
+.ip-program-card:hover .ip-card-img {
+    transform: scale(1.06);
+}
+
+.ip-card-img-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.ip-card-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: var(--ip-green);
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 100px;
+}
+
+.ip-card-body {
+    padding: 20px;
+}
+
+.ip-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--ip-deep);
+    margin: 0 0 7px;
+}
+
+.ip-card-desc {
+    font-size: 0.88rem;
+    color: var(--ip-muted);
+    line-height: 1.6;
+    margin: 0 0 14px;
+}
+
+.ip-card-duration {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: var(--ip-gold-lt);
+    border: 1px solid hsl(43, 80%, 82%);
+    border-radius: 100px;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ip-gold-dk);
+}
+
+/* ══ PROCESS STEPS ═══════════════════════════ */
+.ip-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 28px;
+    counter-reset: step;
+}
+
+.ip-step {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid var(--ip-border);
+    border-radius: var(--ip-radius);
+    padding: 28px 22px;
+    text-align: center;
+    box-shadow: var(--ip-shadow);
+    position: relative;
+    transition: transform 0.25s, box-shadow 0.25s;
+    animation: ipFadeUp 0.6s ease both;
+}
+
+.ip-step:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ip-shadow-lg);
+}
+
+.ip-step-num {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ip-green), hsl(145, 50%, 32%));
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    box-shadow: 0 4px 14px rgba(22, 82, 44, 0.28);
+}
+
+.ip-step-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--ip-deep);
+    margin: 0 0 7px;
+}
+
+.ip-step-desc {
+    font-size: 0.85rem;
+    color: var(--ip-muted);
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Connector line between steps */
+.ip-step::after {
+    content: '→';
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ip-green-mid);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.ip-step:last-child::after {
+    display: none;
+}
+
+/* ══ PARTNER LOGOS ROW ═══════════════════════ */
+.ip-partners {
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid var(--ip-border);
+    border-radius: 20px;
+    padding: 36px 32px;
+    margin-bottom: 72px;
+    box-shadow: var(--ip-shadow);
+    text-align: center;
+    animation: ipFadeUp 0.7s ease both;
+}
+
+.ip-partners-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.ip-partner-chip {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    background: var(--ip-green-lt);
+    border: 1px solid var(--ip-green-mid);
+    border-radius: 100px;
+    padding: 9px 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ip-green);
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.ip-partner-chip:hover {
+    background: var(--ip-green);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(22, 82, 44, 0.22);
+}
+
+.ip-partner-chip span {
+    font-size: 1.1rem;
+}
+
+/* ══ CTA BANNER ══════════════════════════════ */
+.ip-cta {
+    background: linear-gradient(135deg, var(--ip-green) 0%, hsl(145, 55%, 30%) 100%);
+    border-radius: 20px;
+    padding: 52px 40px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 16px;
+    box-shadow: var(--ip-shadow-lg);
+    position: relative;
+    overflow: hidden;
+    animation: ipFadeUp 0.7s ease both;
+}
+
+.ip-cta::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 50%;
+}
+
+.ip-cta::after {
+    content: '';
+    position: absolute;
+    bottom: -80px;
+    left: -40px;
+    width: 250px;
+    height: 250px;
+    background: rgba(212, 169, 71, 0.12);
+    border-radius: 50%;
+}
+
+.ip-cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 12px;
+    position: relative;
+    z-index: 1;
+}
+
+.ip-cta-sub {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 28px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.7;
+    position: relative;
+    z-index: 1;
+}
+
+.ip-cta-btns {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.ip-btn-primary {
+    padding: 13px 30px;
+    border-radius: 12px;
+    border: none;
+    background: var(--ip-gold);
+    color: hsl(150, 30%, 10%);
+    font-size: 0.93rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    font-family: inherit;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 6px 20px rgba(212, 169, 71, 0.4);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.ip-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(212, 169, 71, 0.5);
+}
+
+.ip-btn-outline {
+    padding: 13px 30px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.5);
+    background: transparent;
+    color: #fff;
+    font-size: 0.93rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, border-color 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.ip-btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.7);
+}
+
+/* ══ ANIMATION ═══════════════════════════════ */
+@keyframes ipFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(26px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
