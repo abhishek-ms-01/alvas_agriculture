@@ -1,11 +1,13 @@
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import {
   Sheet,
   SheetContent,
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
+import AboutMegaMenu from "./AboutMegaMenu";
+import { AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "About", href: "#" },
@@ -22,6 +24,7 @@ const navLinks = [
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showAboutMenu, setShowAboutMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +48,7 @@ const Header = () => {
 
         {/* ================= LOGO SECTION ================= */}
         <a
-          href="#"
+          href="/"
           className="flex items-center gap-4 max-w-[420px]"
         >
           <img
@@ -68,19 +71,26 @@ const Header = () => {
         <div className="flex-1" />
 
         {/* ================= NAVIGATION ================= */}
-        <div className="flex items-center gap-4">
-
+        <div className="flex items-center gap-4 relative">
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <div
                 key={link.label}
-                href={link.href}
-                className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap"
+                className="relative"
+                onMouseEnter={() => link.label === "About" && setShowAboutMenu(true)}
               >
-                {link.label}
-                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
-              </a>
+                <a
+                  href={link.href}
+                  className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap flex items-center gap-1"
+                >
+                  {link.label}
+                  {link.label === "About" && (
+                    <ChevronDown className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                  )}
+                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
+                </a>
+              </div>
             ))}
           </nav>
 
@@ -112,9 +122,20 @@ const Header = () => {
               </nav>
             </SheetContent>
           </Sheet>
-
         </div>
+
       </div>
+
+      {/* ================= MEGA MENU (SCREEN CENTERED) ================= */}
+      <AnimatePresence>
+        {showAboutMenu && (
+          <div className="fixed top-24 left-1/2 -translate-x-1/2 z-50 pointer-events-none">
+            <div className="pointer-events-auto">
+              <AboutMegaMenu onClose={() => setShowAboutMenu(false)} />
+            </div>
+          </div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
