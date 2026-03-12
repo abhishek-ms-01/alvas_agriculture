@@ -36,11 +36,12 @@
     position: relative;
     overflow: hidden;
     background: hsla(150, 50%, 12%, 0.94);
-    padding: 100px 24px 70px;
+    padding: 116px 24px 80px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-height: 420px;
 }
 
 /* Multi-layer radial glow for depth */
@@ -119,17 +120,17 @@
     text-transform: uppercase;
     padding: 6px 18px;
     border-radius: 100px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .pl-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
     font-weight: 900;
     color: #fff;
     line-height: 1.1;
-    letter-spacing: -0.01em;
-    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
     animation: plFadeUp 0.8s ease both;
 }
 
@@ -141,11 +142,11 @@
 }
 
 .pl-subtitle {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.75);
-    max-width: 650px;
-    margin: 0 auto 40px;
-    line-height: 1.8;
+    font-size: 1.08rem;
+    color: rgba(255, 255, 255, 0.68);
+    max-width: 600px;
+    margin: 0 auto 28px;
+    line-height: 1.75;
     animation: plFadeUp 0.8s ease 0.1s both;
 }
 
@@ -160,29 +161,30 @@
 .pl-stat-pill {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.16);
     border-radius: 100px;
-    padding: 8px 22px;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 0.9rem;
+    padding: 8px 20px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.87rem;
     font-weight: 600;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(6px);
 }
 
 .pl-stat-pill strong {
-    color: var(--pl-gold);
+    color: hsl(43, 80%, 72%);
     font-size: 1.1rem;
 }
 
 .pl-wave {
     position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
     line-height: 0;
     z-index: 1;
+    width: calc(100% + 2px);
 }
 
 /* ══ BREADCRUMB ══════════════════════════ */

@@ -87,21 +87,14 @@ const ExposureVisit = () => {
                             </p>
 
                             {/* Stats */}
-                            <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', flexWrap: 'wrap' }}>
+                            <div className="ev-stat-row">
                                 {[
                                     { label: "Visits Annually", val: "12+" },
                                     { label: "Sites Covered", val: "40+" },
                                     { label: "States Visited", val: "8" },
                                     { label: "Partners", val: "25+" },
                                 ].map(s => (
-                                    <div key={s.label} style={{
-                                        background: 'rgba(255,255,255,0.08)',
-                                        border: '1px solid rgba(255,255,255,0.15)',
-                                        padding: '8px 20px',
-                                        borderRadius: '100px',
-                                        color: '#fff',
-                                        fontSize: '0.85rem'
-                                    }}>
+                                    <div key={s.label} className="ev-stat-pill">
                                         <strong style={{ color: 'var(--ev-gold)' }}>{s.val}</strong> {s.label}
                                     </div>
                                 ))}

@@ -119,7 +119,7 @@ const Placement = () => {
                                 <Target size={14} /> Placement Cell
                             </span>
                             <h1 className="pl-title">
-                                Cultivating <span>Careers</span> <br />in Agriculture
+                                Cultivating <span>Careers</span> in Agriculture
                             </h1>
                             <p className="pl-subtitle">
                                 Empowering agricultural graduates through industry-focused training,
@@ -136,7 +136,7 @@ const Placement = () => {
                         {/* Wavy edge divider */}
                         <div className="pl-wave">
                             <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style={{ height: 56 }}>
-                                <path d="M0,32 C360,56 1080,0 1440,32 L1440,56 L0,56 Z" fill="hsl(40, 30%, 96%)" />
+                                <path d="M0,32 C360,56 1080,0 1440,32 L1440,56 L0,56 Z" fill="hsl(40, 25%, 91%)" />
                             </svg>
                         </div>
                     </section>

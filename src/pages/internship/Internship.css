@@ -43,6 +43,10 @@
     /* Semi-transparent to show animation */
     padding: 116px 24px 80px;
     text-align: center;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Multi-layer radial glow */
@@ -193,11 +197,12 @@
 /* Wave divider */
 .ip-wave {
     position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
     line-height: 0;
     z-index: 1;
+    width: calc(100% + 2px);
 }
 
 .ip-wave svg {

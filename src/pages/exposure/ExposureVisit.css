@@ -40,8 +40,12 @@
     overflow: hidden;
     background: hsla(150, 50%, 12%, 0.94);
     /* Semi-transparent to show animation */
-    padding: 120px 24px 80px;
+    padding: 116px 24px 80px;
     text-align: center;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Subtle radial glow */
@@ -111,17 +115,17 @@
     text-transform: uppercase;
     padding: 7px 20px;
     border-radius: 100px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 .ev-title {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2.6rem, 6vw, 4.2rem);
+    font-size: clamp(2.5rem, 5.5vw, 4rem);
     font-weight: 900;
     color: #fff;
     line-height: 1.1;
     letter-spacing: -0.02em;
-    margin: 0 0 18px;
+    margin: 0 0 16px;
 }
 
 .ev-title span {
@@ -132,21 +136,52 @@
 }
 
 .ev-subtitle {
+    font-size: 1.08rem;
+    color: rgba(255, 255, 255, 0.68);
+    max-width: 600px;
+    margin: 0 auto 28px;
+    line-height: 1.75;
+}
+
+/* Hero stats pill row */
+.ev-stat-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.ev-stat-pill {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    border-radius: 100px;
+    padding: 8px 20px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.87rem;
+    font-weight: 600;
+    backdrop-filter: blur(6px);
+}
+
+.ev-stat-pill strong {
+    color: hsl(43, 80%, 72%);
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
-    max-width: 620px;
-    margin: 0 auto 36px;
-    line-height: 1.7;
 }
 
 /* Wave divider */
 .ev-hero-wave {
     position: absolute;
-    bottom: -2px;
-    left: 0;
-    right: 0;
+    bottom: -1px;
+    left: -1px;
+    right: -1px;
     line-height: 0;
     z-index: 1;
+    width: calc(100% + 2px);
 }
 
 /* ══ BREADCRUMB ══════════════════════════════ */
