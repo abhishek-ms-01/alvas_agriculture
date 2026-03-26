@@ -30,7 +30,7 @@ const AboutMegaMenu = ({ onClose }: AboutMegaMenuProps) => {
   };
 
   const navItems = [
-    { title: "Institution", items: [
+    { title: "Institution at Glance", items: [
         { label: "About College", path: "/about-college" },
         { label: "Vision Mission", path: "/vision-mission" },
         { label: "Milestones", path: "/milestones" },
@@ -63,9 +63,9 @@ const AboutMegaMenu = ({ onClose }: AboutMegaMenuProps) => {
     },
     {
       title: "DEAN'S MESSAGE",
-      name: "DR. VASUDEV",
+      name: "DR S N VASUDEVAN",
       quote: "\"We foster an environment of academic excellence and holistic development for all.\"",
-      img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop",
+      img: "dean.jpeg",
       path: "/dean-message"
     }
   ];

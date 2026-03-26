@@ -8,6 +8,8 @@ const heroImages = [
   "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=1920&q=80",
   "https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?w=1920&q=80",
   "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=1920&q=80",
+  "farming.png",
+  "fishing.png",
 ];
 
 
@@ -82,7 +84,7 @@ const HeroSection = () => {
         >
           Cultivating Knowledge.
           <br />
-          <span className="text-accent">Harvesting the Future.</span>
+          <span className="text-accent">for a bumper harvesting.</span>
         </motion.h1>
 
         <motion.p

@@ -2,20 +2,93 @@ import { useEffect, useRef, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./CampusLife.css";
+import { motion, AnimatePresence } from "framer-motion";
 
-/* ── Harvest Wall Data ── */
-const galleryItems = [
-    { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80", title: "Campus Morning", tag: "Nature", class: "cl-item-1" },
-    { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80", title: "Cultural Fest", tag: "Virasat", class: "cl-item-2" },
-    { src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=800&q=80", title: "Student Hub", tag: "Community", class: "cl-item-3" },
-    { src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&q=80", title: "Tech Lab", tag: "Innovation", class: "cl-item-4" },
-    { src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=800&q=80", title: "Athletics", tag: "Sports", class: "cl-item-5" },
-    { src: "https://images.unsplash.com/photo-1581093458791-9f302e6d8659?w=800&q=80", title: "Skill Dev", tag: "Workshop", class: "cl-item-6" },
-    { src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=800&q=80", title: "Arts Center", tag: "Culture", class: "cl-item-7" },
-    { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=800&q=80", title: "Library", tag: "Research", class: "cl-item-8" },
-    { src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&q=80", title: "Team Spirit", tag: "Together", class: "cl-item-9" },
-    { src: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80", title: "Green Walk", tag: "Campus", class: "cl-item-10" },
+/* ── Gallery Marquee Data ── */
+const topRowImgs = [
+    { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&q=80", title: "Campus Morning", tag: "Nature" },
+    { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&q=80", title: "Cultural Fest", tag: "Virasat" },
+    { src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=700&q=80", title: "Student Hub", tag: "Community" },
+    { src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700&q=80", title: "Tech Lab", tag: "Innovation" },
+    { src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=700&q=80", title: "Athletics", tag: "Sports" },
+    { src: "https://images.unsplash.com/photo-1581093458791-9f302e6d8659?w=700&q=80", title: "Skill Dev", tag: "Workshop" },
 ];
+
+const bottomRowImgs = [
+    { src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=700&q=80", title: "Arts Center", tag: "Culture" },
+    { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700&q=80", title: "Library", tag: "Research" },
+    { src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80", title: "Team Spirit", tag: "Together" },
+    { src: "https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80", title: "Green Walk", tag: "Campus" },
+    { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&q=80", title: "Sunrise Field", tag: "Nature" },
+    { src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=700&q=80", title: "Sports Day", tag: "Sports" },
+];
+
+const spotlightItems = [
+    { src: "https://images.unsplash.com/photo-1562774053-701939374585?w=1400&q=90", title: "Green Campus & ATC", sub: "100 acres of living, breathing campus in the Western Ghats", tag: "Infrastructure" },
+    { src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1400&q=90", title: "Cultural Vibrance", sub: "Celebrating art, music & heritage through the year", tag: "Culture" },
+    { src: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1400&q=90", title: "Research & Innovation", sub: "Pushing boundaries in agri-science and technology", tag: "Research" },
+];
+
+/* ─── Spotlight Gallery Component ─── */
+function SpotlightGallery({ items }: { items: typeof spotlightItems }) {
+    const [active, setActive] = useState(0);
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            setActive(prev => (prev + 1) % items.length);
+        }, 4000);
+        return () => clearInterval(timer);
+    }, [items.length]);
+
+    return (
+        <div className="cl-spotlight-wrap">
+            {/* Background images */}
+            <AnimatePresence>
+                <motion.div
+                    key={active}
+                    className="cl-spotlight-bg"
+                    initial={{ opacity: 0, scale: 1.04 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.9, ease: "easeInOut" }}
+                    style={{ backgroundImage: `url(${items[active].src})` }}
+                />
+            </AnimatePresence>
+
+            {/* Dark overlay */}
+            <div className="cl-spotlight-overlay" />
+
+            {/* Center text */}
+            <div className="cl-spotlight-content">
+                <AnimatePresence mode="wait">
+                    <motion.div
+                        key={active}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.6 }}
+                        className="cl-spotlight-text"
+                    >
+                        <span className="cl-spotlight-tag">{items[active].tag}</span>
+                        <h3 className="cl-spotlight-title">{items[active].title}</h3>
+                        <p className="cl-spotlight-sub">{items[active].sub}</p>
+                    </motion.div>
+                </AnimatePresence>
+
+                {/* Dots */}
+                <div className="cl-spotlight-dots">
+                    {items.map((_, i) => (
+                        <button
+                            key={i}
+                            className={`cl-dot${i === active ? " cl-dot-active" : ""}`}
+                            onClick={() => setActive(i)}
+                        />
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
 
 /* ─── 6 tile cards ─── */
 const tileCards = [
@@ -202,18 +275,37 @@ export default function CampusLife() {
             {/* ══ GALLERY SECTION ══ */}
             <section className="cl-gallery-section">
                 <div className="cl-sec-hdr cl-reveal" ref={addReveal}>
-                    <div className="cl-sec-eyebrow"><span /> The Harvest Wall <span /></div>
-                    <h2 className="cl-sec-title">Campus <em>Gallery</em></h2>
+                    <div className="cl-sec-eyebrow"><span /> Campus Gallery <span /></div>
+                    <h2 className="cl-sec-title">Life at <em>Alva's</em></h2>
                 </div>
 
-                <div className="cl-harvest-wall-wrap cl-reveal" ref={addReveal}>
-                    <div className="cl-harvest-wall">
-                        {galleryItems.map((item, i) => (
-                            <div key={i} className={`cl-harvest-item ${item.class}`}>
-                                <img src={item.src} alt={item.title} className="cl-harvest-img" />
-                                <div className="cl-harvest-caption">
-                                    <h4>{item.title}</h4>
-                                    <span className="cl-harvest-tag">{item.tag}</span>
+                {/* ── TOP ROW: scrolls left ── */}
+                <div className="cl-marquee-row cl-marquee-left">
+                    <div className="cl-marquee-track">
+                        {[...topRowImgs, ...topRowImgs].map((img, i) => (
+                            <div key={i} className="cl-marquee-card">
+                                <img src={img.src} alt={img.title} />
+                                <div className="cl-marquee-label">
+                                    <span className="cl-mq-tag">{img.tag}</span>
+                                    <span className="cl-mq-title">{img.title}</span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* ── CENTER SPOTLIGHT ── */}
+                <SpotlightGallery items={spotlightItems} />
+
+                {/* ── BOTTOM ROW: scrolls right ── */}
+                <div className="cl-marquee-row cl-marquee-right">
+                    <div className="cl-marquee-track">
+                        {[...bottomRowImgs, ...bottomRowImgs].map((img, i) => (
+                            <div key={i} className="cl-marquee-card">
+                                <img src={img.src} alt={img.title} />
+                                <div className="cl-marquee-label">
+                                    <span className="cl-mq-tag">{img.tag}</span>
+                                    <span className="cl-mq-title">{img.title}</span>
                                 </div>
                             </div>
                         ))}

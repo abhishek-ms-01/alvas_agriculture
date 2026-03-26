@@ -17,15 +17,15 @@ const DeanMessage = () => {
                 <div className="absolute -inset-4 bg-accent/5 rounded-[2rem] blur-2xl group-hover:bg-accent/10 transition-colors duration-500" />
                 <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden border border-accent/20 shadow-2xl">
                   <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=800&fit=crop" 
-                    alt="Dr. Vasudev" 
+                    src="/dean.jpeg" 
+                    alt="Dr. S N Vasudevan" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-deep-green/60 to-transparent opacity-60" />
                 </div>
                 
                 <div className="mt-8 text-center md:text-right">
-                  <h2 className="text-2xl font-black text-deep-green uppercase tracking-tight">Dr. Vasudev</h2>
+                  <h2 className="text-2xl font-black text-deep-green uppercase tracking-tight">Dr. S N Vasudevan</h2>
                   <p className="text-accent font-bold uppercase tracking-[0.2em] text-sm mt-1">Dean, College of Agriculture</p>
                 </div>
               </div>
