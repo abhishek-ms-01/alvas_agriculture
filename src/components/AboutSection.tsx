@@ -49,13 +49,13 @@ const courses = [
     title: "B.Sc. (Hons) Agriculture",
     duration: "4 Years",
     eligibility: "10+2 with Science",
-    image: "https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?w=800&q=80",
+    image: "https://mbcollegeofagriculture.in/img/course-about.jpg",
   },
   {
     title: "B.Tech (Food Technology)",
     duration: "4 Years",
     eligibility: "10+2 with PCM",
-    image: "https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?w=800&q=80",
+    image: "https://www.iccscem.ac.in/images/food.jpg",
   },
 ];
 
@@ -65,7 +65,7 @@ const AboutSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="about" className="py-20 md:py-28 bg-background">
+    <section id="about" className="pt-20 md:pt-28 pb-10 bg-background">
       <div className="container mx-auto px-4" ref={ref}>
         
         {/* ABOUT CONTENT */}

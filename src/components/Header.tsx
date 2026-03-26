@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
 import {
   Sheet,
@@ -7,11 +7,45 @@ import {
   SheetTrigger,
   SheetTitle,
 } from "@/components/ui/sheet";
+import AboutMegaMenu from "./AboutMegaMenu";
+import AcademicsMegaMenu from "./AcademicsMegaMenu";
+import { AnimatePresence } from "framer-motion";
 
 const navLinks = [
   { label: "About", href: "#" },
-  { label: "Admissions", href: "#" },
-  { label: "Academics", href: "#" },
+  {
+    label: "Admissions",
+    href: "#",
+    megaMenu: [
+      {
+        category: "ADMISSION PROCEDURE",
+        links: [
+          { label: "Admission Through KCET", to: "/admissions/kcet" },
+          { label: "Admission Through COMED-K", to: "/admissions/comed-k" },
+          { label: "Admission Through Management", to: "/admissions/management" },
+          { label: "Documents Required", to: "/admissions/documents" },
+          { label: "Disclaimer – Eligibility Criteria", to: "/admissions/disclaimer" },
+        ],
+      },
+      {
+        category: "FEES STRUCTURES",
+        links: [
+          { label: "KCET Students", to: "/admissions/fees/kcet" },
+          { label: "COMED-K Students", to: "/admissions/fees/comed-k" },
+          { label: "Management", to: "/admissions/fees/management" },
+          { label: "Tuition Fees 2025–26", to: "/admissions/fees/tuition-2025" },
+        ],
+      },
+      {
+        category: "SCHOLARSHIPS",
+        links: [
+          { label: "List of Scholarship Schemes", to: "/admissions/scholarships/list" },
+          { label: "Scholarship Schemes", to: "/admissions/scholarships/schemes" },
+        ],
+      },
+    ],
+  },
+  { label: "Academics", href: "#", isAcademics: true },
   {
     label: "Research",
     href: "#",
@@ -24,7 +58,7 @@ const navLinks = [
           { label: "Publication", to: "/research/publications" },
           { label: "Patent Application", to: "/research/patent-application" },
           { label: "Multidisciplinary Research Ideas", to: "/research/multidisciplinary" },
-        ]
+        ],
       },
       {
         category: "RESOURCES",
@@ -34,7 +68,7 @@ const navLinks = [
           { label: "Research Supervisors", to: "/research/supervisors" },
           { label: "Journals", to: "/research/journals" },
           { label: "Conference", to: "/research/conference" },
-        ]
+        ],
       },
       {
         category: "FACILITIES",
@@ -42,12 +76,12 @@ const navLinks = [
           { label: "Facilities", to: "/research/facilities" },
           { label: "About", to: "/research/about" },
           { label: "Yearwise Details", to: "/research/yearwise-details" },
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
   { label: "Placements", href: "#", to: "/placements" },
-  { label: "Campus Life", href: "#" },
+  { label: "Campus Life", href: "#", to: "/campus-life" },
   { label: "Exposure Visit", href: "#", to: "/exposure-visit" },
   { label: "Internship/IPT", href: "#", to: "/internship" },
   { label: "Contact Us", href: "#", to: "/contact-us" },
@@ -56,37 +90,65 @@ const navLinks = [
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showAboutMenu, setShowAboutMenu] = useState(false);
+  const [showAcademicsMenu, setShowAcademicsMenu] = useState(false);
+
+  // Timer refs — bridge the gap between nav trigger and floating menu
+  const aboutTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const academicsTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openAbout = () => {
+    if (aboutTimer.current) clearTimeout(aboutTimer.current);
+    if (academicsTimer.current) clearTimeout(academicsTimer.current);
+    setShowAcademicsMenu(false);
+    setShowAboutMenu(true);
+  };
+  const closeAbout = () => {
+    aboutTimer.current = setTimeout(() => setShowAboutMenu(false), 180);
+  };
+  const keepAboutOpen = () => {
+    if (aboutTimer.current) clearTimeout(aboutTimer.current);
+  };
+
+  const openAcademics = () => {
+    if (academicsTimer.current) clearTimeout(academicsTimer.current);
+    if (aboutTimer.current) clearTimeout(aboutTimer.current);
+    setShowAboutMenu(false);
+    setShowAcademicsMenu(true);
+  };
+  const closeAcademics = () => {
+    academicsTimer.current = setTimeout(() => setShowAcademicsMenu(false), 180);
+  };
+  const keepAcademicsOpen = () => {
+    if (academicsTimer.current) clearTimeout(academicsTimer.current);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-        ? "bg-deep-green/95 backdrop-blur-md shadow-lg py-3"
-        : "bg-transparent py-6"
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? "bg-deep-green/95 backdrop-blur-md shadow-lg py-3"
+          : "bg-transparent py-6"
+      }`}
     >
       {/* Centered Content Width */}
       <div className="mx-auto max-w-[95%] flex items-center pl-4 pr-6">
 
         {/* ================= LOGO SECTION ================= */}
-        <a
-          href="#"
-          className="flex items-center gap-4 max-w-[420px]"
-        >
+        <a href="/" className="flex items-center gap-4 max-w-[420px]">
           <img
             src="/alvas-org-logo-white.png"
             alt="Alva's Logo"
             className="h-16 w-auto object-contain drop-shadow-md"
           />
-
           <div className="hidden sm:block">
             <p className="font-sans font-black text-white text-2xl leading-none tracking-wider uppercase">
               ALVA'S
@@ -97,41 +159,83 @@ const Header = () => {
           </div>
         </a>
 
-        {/* 🔴 FLEX SPACER – THIS CREATES THE GAP */}
+        {/* FLEX SPACER */}
         <div className="flex-1" />
 
         {/* ================= NAVIGATION ================= */}
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 relative">
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-6">
             {navLinks.map((link) =>
-              link.megaMenu ? (
+              link.label === "About" ? (
+                /* About — uses the hover mega-menu */
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={openAbout}
+                  onMouseLeave={closeAbout}
+                >
+                  <a
+                    href={link.href}
+                    className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap flex items-center gap-1"
+                  >
+                    {link.label}
+                    <ChevronDown className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
+                  </a>
+                </div>
+              ) : (link as any).isAcademics ? (
+                /* Academics — uses the hover mega-menu */
+                <div
+                  key={link.label}
+                  className="relative"
+                  onMouseEnter={openAcademics}
+                  onMouseLeave={closeAcademics}
+                >
+                  <a
+                    href={link.href}
+                    className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap flex items-center gap-1"
+                  >
+                    {link.label}
+                    <ChevronDown className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
+                  </a>
+                </div>
+              ) : link.megaMenu ? (
+                /* Admissions / Research — inline dropdown mega-menu (white/yellow theme) */
                 <div key={link.label} className="relative group py-2">
                   <button className="flex items-center gap-1.5 px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 whitespace-nowrap">
                     {link.label}
-                    <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" viewBox="0 0 20 20" fill="currentColor">
-                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                    <svg
+                      className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clipRule="evenodd"
+                      />
                     </svg>
                     <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
                   </button>
 
-                  {/* Mega-Menu Dropdown */}
-                  <div className="absolute top-full left-1/2 -translate-x-[45%] pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-400 transform translate-y-2 group-hover:translate-y-0">
-                    <div className="bg-deep-green/95 backdrop-blur-2xl border border-white/10 rounded-[28px] shadow-[0_30px_100px_rgba(0,0,0,0.5)] overflow-hidden min-w-[780px] p-8 flex gap-12">
+                  {/* Mega-Menu Dropdown — white/yellow theme */}
+                  <div className="absolute top-full left-1/2 -translate-x-[45%] pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="bg-white border border-slate-200 rounded-2xl shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] overflow-hidden min-w-[780px] p-8 flex gap-10">
                       {link.megaMenu.map((cat) => (
                         <div key={cat.category} className="flex-1">
-                          <h4 className="text-[11px] font-black tracking-[0.2em] text-accent/90 border-b border-accent/20 pb-2 mb-6 uppercase">
+                          <h4 className="text-[11px] font-black tracking-[0.2em] text-accent border-b border-amber-200 pb-2 mb-5 uppercase">
                             {cat.category}
                           </h4>
-                          <div className="flex flex-col gap-1.5">
+                          <div className="flex flex-col gap-0.5">
                             {cat.links.map((sub) => (
                               <Link
                                 key={sub.label}
                                 to={sub.to}
-                                className="group/item flex items-center gap-3 px-3 py-2 text-[14px] font-semibold text-cream/70 hover:text-white hover:bg-white/5 rounded-xl transition-all duration-200"
+                                className="group/item flex items-center px-2 py-2 text-[13.5px] font-semibold text-slate-600 hover:text-accent hover:bg-amber-50 rounded-lg transition-all duration-200"
                               >
-                                <span className="w-1 h-1 rounded-full bg-accent/20 group-hover/item:bg-accent group-hover/item:scale-150 transition-all duration-300" />
                                 {sub.label}
                               </Link>
                             ))}
@@ -142,6 +246,7 @@ const Header = () => {
                   </div>
                 </div>
               ) : link.to ? (
+                /* Links with a route */
                 <Link
                   key={link.label}
                   to={link.to}
@@ -151,6 +256,7 @@ const Header = () => {
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
                 </Link>
               ) : (
+                /* Plain href links */
                 <a
                   key={link.label}
                   href={link.href}
@@ -169,13 +275,8 @@ const Header = () => {
               <Menu className="w-6 h-6" />
             </SheetTrigger>
 
-            <SheetContent
-              side="right"
-              className="bg-deep-green border-primary/20 w-72"
-            >
-              <SheetTitle className="text-cream font-serif">
-                Menu
-              </SheetTitle>
+            <SheetContent side="right" className="bg-deep-green border-primary/20 w-72">
+              <SheetTitle className="text-cream font-serif">Menu</SheetTitle>
 
               <nav className="flex flex-col gap-2 mt-8">
                 {navLinks.map((link) => (
@@ -227,9 +328,38 @@ const Header = () => {
               </nav>
             </SheetContent>
           </Sheet>
-
         </div>
       </div>
+
+      {/* ================= ABOUT MEGA MENU (SCREEN CENTERED) ================= */}
+      <AnimatePresence>
+        {showAboutMenu && (
+          <div
+            className="fixed top-24 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
+            onMouseEnter={keepAboutOpen}
+            onMouseLeave={closeAbout}
+          >
+            <div className="pointer-events-auto">
+              <AboutMegaMenu onClose={() => setShowAboutMenu(false)} />
+            </div>
+          </div>
+        )}
+      </AnimatePresence>
+
+      {/* ================= ACADEMICS MEGA MENU (SCREEN CENTERED) ================= */}
+      <AnimatePresence>
+        {showAcademicsMenu && (
+          <div
+            className="fixed top-24 left-1/2 -translate-x-1/2 z-50 pointer-events-none"
+            onMouseEnter={keepAcademicsOpen}
+            onMouseLeave={closeAcademics}
+          >
+            <div className="pointer-events-auto">
+              <AcademicsMegaMenu onClose={() => setShowAcademicsMenu(false)} />
+            </div>
+          </div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };

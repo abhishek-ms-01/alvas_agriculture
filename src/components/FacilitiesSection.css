@@ -16,7 +16,7 @@
   --text: #2a1a0e;
   --subtext: #7a5a3a;
 
-  background: var(--cream);
+  background: linear-gradient(to bottom, #ffffff, var(--cream) 15%);
   font-family: "Cormorant Garamond", serif;
   min-height: 100vh;
   display: flex;
@@ -24,6 +24,7 @@
   justify-content: center;
   overflow: hidden;
   position: relative;
+  padding-top: 40px;
   padding-bottom: 60px; /* Adjusting for footer overlap if any */
 }
 
@@ -84,34 +85,73 @@
 }
 
 .facilities-section .eyebrow {
-  font-family: "Space Mono", monospace;
+  font-family: 'DM Mono', monospace;
   font-size: 10px;
   letter-spacing: 6px;
-  color: var(--gold);
   text-transform: uppercase;
-  display: block;
-  margin-bottom: 14px;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.facilities-section .eyebrow::before,
+.facilities-section .eyebrow::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+}
+
+.facilities-section .eyebrow::after {
+  background: linear-gradient(90deg, var(--gold), transparent);
 }
 
 .facilities-section .main-title {
-  font-family: "Cormorant Garamond", serif;
-  font-size: clamp(40px, 6vw, 76px);
-  font-weight: 300;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5vw, 58px);
+  font-weight: 700;
   color: var(--text);
-  line-height: 1;
-  font-style: italic;
-  display: inline-block;
+  line-height: 1.05;
+  margin-bottom: 10px;
 }
 
-.facilities-section .main-title strong {
-  font-weight: 700;
+.facilities-section .main-title span {
   color: var(--grass);
-  font-style: normal;
-  display: block;
-  font-size: 0.62em;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-top: 6px;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.facilities-section .title-underline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 14px auto 52px;
+}
+
+.facilities-section .title-underline .line {
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--grass), var(--amber));
+}
+
+.facilities-section .title-underline .line-long {
+  width: 60px;
+}
+
+.facilities-section .title-underline .line-short {
+  width: 14px;
+}
+
+.facilities-section .title-underline .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 0 3px rgba(232, 160, 32, 0.2);
 }
 
 .facilities-section .ground-line {

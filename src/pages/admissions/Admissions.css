@@ -1,0 +1,524 @@
+/* ===================================================
+   ADMISSIONS PAGES — shared stylesheet
+   Scoped under .adm-page
+   =================================================== */
+
+.adm-page {
+  --adm-primary: #15803d;
+  --adm-primary-dark: #14532d;
+  --adm-accent: #f59e0b;
+  --adm-cream: #fdfaf3;
+  --adm-text: #1e293b;
+  --adm-muted: #64748b;
+  --adm-glass: rgba(255, 255, 255, 0.8);
+  background-color: var(--adm-cream);
+  color: var(--adm-text);
+  min-height: 100vh;
+}
+
+/* ── Hero ─────────────────────────────────────────── */
+.adm-hero {
+  position: relative;
+  overflow: hidden;
+  background: hsla(150, 50%, 12%, 0.96);
+  padding: 140px 24px 100px;
+  text-align: center;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.adm-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 75% 90% at 15% 50%, hsla(145, 60%, 26%, 0.6) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 70% at 85% 35%, hsla(43, 80%, 50%, 0.14) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 50% 100%, hsla(145, 55%, 18%, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.adm-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  pointer-events: none;
+  animation: admBlobFloat 15s ease-in-out infinite alternate;
+}
+
+.adm-blob-1 {
+  width: 440px;
+  height: 440px;
+  background: hsl(145, 55%, 28%);
+  top: -100px;
+  left: -80px;
+  animation-duration: 20s;
+}
+
+.adm-blob-2 {
+  width: 340px;
+  height: 340px;
+  background: hsl(43, 80%, 50%);
+  bottom: -60px;
+  right: -60px;
+  animation-duration: 14s;
+  animation-delay: -5s;
+}
+
+@keyframes admBlobFloat {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(30px, -30px) scale(1.1); }
+}
+
+.adm-hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.adm-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(245, 158, 11, 0.15);
+  border: 1px solid rgba(245, 158, 11, 0.4);
+  color: #ffd880;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 7px 20px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+
+.adm-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.2rem, 5.5vw, 4rem);
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
+}
+
+.adm-title span {
+  background: linear-gradient(125deg, hsl(43, 80%, 65%) 0%, hsl(43, 80%, 82%) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.adm-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.72);
+  max-width: 680px;
+  margin: 0 auto 32px;
+  line-height: 1.8;
+}
+
+.adm-stat-row {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.adm-stat-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  padding: 9px 22px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  font-weight: 600;
+  backdrop-filter: blur(10px);
+}
+
+.adm-stat-pill strong {
+  color: #f59e0b;
+  font-size: 1.05rem;
+}
+
+/* Wave divider */
+.adm-wave {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  z-index: 1;
+}
+
+.adm-wave svg {
+  display: block;
+  width: 100%;
+  fill: var(--adm-cream);
+}
+
+/* ── Breadcrumb ───────────────────────────────────── */
+.adm-breadcrumb {
+  background: white;
+  padding: 14px 5%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.adm-breadcrumb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  color: var(--adm-muted);
+}
+
+.adm-breadcrumb a {
+  color: var(--adm-primary);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.adm-breadcrumb a:hover { color: var(--adm-accent); }
+
+.adm-cur {
+  color: var(--adm-text);
+  font-weight: 600;
+}
+
+/* ── Body / Content ──────────────────────────────── */
+.adm-body {
+  padding: 60px 5%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.adm-section {
+  margin-bottom: 72px;
+}
+
+.adm-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 28px;
+  color: var(--adm-primary-dark);
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.adm-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  background: var(--adm-accent);
+  border-radius: 2px;
+}
+
+/* ── Cards ───────────────────────────────────────── */
+.adm-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
+}
+
+.adm-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adm-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+.adm-card-accent-bar {
+  height: 5px;
+  background: linear-gradient(90deg, var(--adm-primary), var(--adm-accent));
+}
+
+.adm-card-content {
+  padding: 26px;
+}
+
+.adm-card-icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(21, 128, 61, 0.1);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--adm-primary);
+  margin-bottom: 16px;
+}
+
+.adm-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--adm-text);
+}
+
+.adm-card-desc {
+  color: var(--adm-muted);
+  font-size: 0.93rem;
+  line-height: 1.65;
+}
+
+/* ── Steps list ─────────────────────────────────── */
+.adm-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.adm-step {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  background: white;
+  border-radius: 16px;
+  padding: 22px 26px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease;
+}
+
+.adm-step:hover { transform: translateX(6px); }
+
+.adm-step-num {
+  min-width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--adm-primary), hsl(145, 55%, 25%));
+  color: white;
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.adm-step-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--adm-text);
+  margin-bottom: 4px;
+}
+
+.adm-step-body p {
+  color: var(--adm-muted);
+  font-size: 0.91rem;
+  line-height: 1.6;
+}
+
+/* ── Fee Table ───────────────────────────────────── */
+.adm-table-wrap {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.adm-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.adm-table thead {
+  background: linear-gradient(135deg, var(--adm-primary-dark), var(--adm-primary));
+  color: white;
+}
+
+.adm-table thead th {
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.adm-table tbody tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: background 0.2s;
+}
+
+.adm-table tbody tr:last-child { border-bottom: none; }
+
+.adm-table tbody tr:hover { background: rgba(21, 128, 61, 0.04); }
+
+.adm-table tbody td {
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  color: var(--adm-text);
+}
+
+.adm-table tbody td:first-child { font-weight: 600; }
+
+.adm-table tfoot td {
+  padding: 15px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  background: rgba(245, 158, 11, 0.08);
+  color: var(--adm-primary-dark);
+}
+
+/* ── Info Highlight Box ──────────────────────────── */
+.adm-info-box {
+  background: linear-gradient(135deg, rgba(21, 128, 61, 0.07), rgba(245, 158, 11, 0.07));
+  border: 1px solid rgba(21, 128, 61, 0.2);
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-bottom: 32px;
+}
+
+.adm-info-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--adm-primary-dark);
+  margin-bottom: 10px;
+}
+
+.adm-info-box p {
+  color: var(--adm-muted);
+  font-size: 0.93rem;
+  line-height: 1.7;
+}
+
+/* ── Tag / Pill ──────────────────────────────────── */
+.adm-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(21, 128, 61, 0.1);
+  color: var(--adm-primary);
+  border-radius: 100px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* ── Document Checklist ──────────────────────────── */
+.adm-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.adm-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--adm-text);
+  transition: transform 0.2s ease;
+}
+
+.adm-checklist li:hover { transform: translateX(4px); }
+
+.adm-check-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(21, 128, 61, 0.12);
+  color: var(--adm-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ── Scholarship Card ────────────────────────────── */
+.adm-scholarship-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.adm-scholarship-card {
+  background: white;
+  border-radius: 20px;
+  padding: 28px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.adm-scholarship-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--adm-primary), var(--adm-accent));
+}
+
+.adm-scholarship-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.1);
+}
+
+.adm-scholarship-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--adm-text);
+  margin-bottom: 8px;
+}
+
+.adm-scholarship-amount {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--adm-primary);
+  margin: 12px 0;
+}
+
+.adm-scholarship-card p {
+  font-size: 0.91rem;
+  color: var(--adm-muted);
+  line-height: 1.65;
+}
+
+.adm-scholarship-eligibility {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.85rem;
+  color: var(--adm-primary);
+  font-weight: 600;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+@media (max-width: 768px) {
+  .adm-grid { grid-template-columns: 1fr; }
+  .adm-scholarship-grid { grid-template-columns: 1fr; }
+  .adm-table thead th,
+  .adm-table tbody td { padding: 12px 14px; font-size: 0.85rem; }
+}

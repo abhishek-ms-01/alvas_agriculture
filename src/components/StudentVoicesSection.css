@@ -204,7 +204,6 @@
 }
 
 .student-voices-section .stars { display: flex; gap: 3px; flex-shrink: 0; }
-.student-voices-section .stars svg { width: 16px; height: 1star; } /* Star fix: SVG star logic normally has width/height. Text had height: 16px originally, but I'll fix typo if needed */
 .student-voices-section .stars svg { width: 16px; height: 16px; }
 
 /* bottom bar reveal on hover */
