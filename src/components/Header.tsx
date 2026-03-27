@@ -154,7 +154,7 @@ const Header = () => {
               ALVA'S
             </p>
             <p className="text-white/80 text-[11px] font-medium tracking-[0.14em] uppercase leading-tight mt-0.5">
-              Institute of Agricultural Science &amp; Technology
+              Institute of Agricultural Sciences &amp; Technology
             </p>
           </div>
         </a>

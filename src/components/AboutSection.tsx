@@ -1,46 +1,8 @@
 import { motion } from "framer-motion";
-import { useScrollAnimation, useCountUp } from "@/hooks/useScrollAnimation";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import {
-  GraduationCap,
-  Users,
-  BookOpen,
-  FlaskConical,
 } from "lucide-react";
 
-/* ---------------- STATS ---------------- */
-
-const stats = [
-  { icon: GraduationCap, label: "Years of Excellence", value: 25 },
-  { icon: Users, label: "Students Enrolled", value: 2500 },
-  { icon: BookOpen, label: "Experienced Faculty", value: 120 },
-  { icon: FlaskConical, label: "Research Projects", value: 85 },
-];
-
-const StatCard = ({
-  icon: Icon,
-  label,
-  value,
-  visible,
-}: {
-  icon: any;
-  label: string;
-  value: number;
-  visible: boolean;
-}) => {
-  const count = useCountUp(value, 2000, visible);
-
-  return (
-    <div className="text-center p-6">
-      <div className="w-14 h-14 mx-auto mb-3 rounded-2xl bg-accent/10 flex items-center justify-center">
-        <Icon className="w-7 h-7 text-accent" />
-      </div>
-      <p className="text-3xl md:text-4xl font-serif font-bold text-primary">
-        {count}+
-      </p>
-      <p className="text-sm text-muted-foreground mt-1">{label}</p>
-    </div>
-  );
-};
 
 /* ---------------- COURSES ---------------- */
 
@@ -55,7 +17,7 @@ const courses = [
     title: "B.Tech (Food Technology)",
     duration: "4 Years",
     eligibility: "10+2 with PCM",
-    image: "https://www.iccscem.ac.in/images/food.jpg",
+    image: "ai.png",
   },
 ];
 
@@ -108,17 +70,6 @@ const AboutSection = () => {
           </motion.div>
         </div>
 
-        {/* STATS */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-4 bg-card rounded-2xl shadow-lg p-6 border mb-28"
-        >
-          {stats.map((stat) => (
-            <StatCard key={stat.label} {...stat} visible={isVisible} />
-          ))}
-        </motion.div>
 
         {/* ================= COURSES SECTION (ADDED) ================= */}
 
