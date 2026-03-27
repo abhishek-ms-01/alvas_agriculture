@@ -6,7 +6,7 @@ import "./VisionMission.css";
 const VisionMission = () => {
     return (
         <div className="vm-page-root">
-            <Header />
+            <Header forceDark={true} />
 
             {/* Background Animation */}
             <div className="background-animation">
@@ -74,7 +74,7 @@ const VisionMission = () => {
                                     agricultural professionals with modern skills, scientific knowledge, and entrepreneurial spirit.
                                 </p>
                                 <p>
-                                    We commit to <span class="emphasis-text">advancing agricultural science</span> through 
+                                    We commit to <span className="emphasis-text">advancing agricultural science</span> through 
                                     groundbreaking research, community engagement, and extension programs that transform 
                                     farming into a sustainable, profitable, and dignified profession.
                                 </p>

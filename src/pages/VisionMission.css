@@ -5,10 +5,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lora', serif;
-    background: linear-gradient(135deg, #1a3a0a 0%, #0d1f05 50%, #162608 100%);
+    background: linear-gradient(135deg, #fdf8f0 0%, #f4f9eb 50%, #edf7ed 100%);
     min-height: 100vh;
     overflow-x: hidden;
-    color: #333;
+    color: #1a3a0a;
     position: relative;
     --primary-green: #1a3a0a;
     --accent-green: #5a8c3a;
@@ -32,7 +32,7 @@
 
 .floating-shape {
     position: absolute;
-    opacity: 0.08;
+    opacity: 0.15;
     filter: blur(40px);
     animation: float 20s infinite ease-in-out;
 }
@@ -90,10 +90,10 @@
     font-family: 'Playfair Display', serif;
     font-size: clamp(2.5rem, 8vw, 5rem);
     font-weight: 800;
-    color: var(--cream);
+    color: var(--primary-green);
     margin-bottom: 10px;
     letter-spacing: -2px;
-    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
     position: relative;
     display: inline-block;
 }
@@ -112,7 +112,7 @@
 
 .vm-header p {
     font-size: clamp(1rem, 2.5vw, 1.3rem);
-    color: rgba(164, 214, 94, 0.8);
+    color: var(--accent-green);
     margin-top: 30px;
     font-style: italic;
     letter-spacing: 0.5px;
@@ -228,12 +228,14 @@
 .vision-section .section-title {
     background: linear-gradient(135deg, #1a3a0a, #5a8c3a);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .mission-section .section-title {
     background: linear-gradient(135deg, #1a3a0a, #8c6a1a);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
