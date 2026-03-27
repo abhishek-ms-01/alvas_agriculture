@@ -306,3 +306,28 @@
     .section-content { padding: 40px 25px; }
     .section-title { font-size: 2rem; }
 }
+
+/* Info Highlight Box (Recognition & Affiliations) */
+.vm-info-box {
+    background: linear-gradient(135deg, rgba(26, 58, 10, 0.05), rgba(164, 214, 94, 0.1));
+    border: 1px solid rgba(26, 58, 10, 0.15);
+    border-radius: 20px;
+    padding: 35px 40px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.vm-info-box h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-green);
+    margin-bottom: 12px;
+    font-family: 'Playfair Display', serif;
+}
+
+.vm-info-box p {
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.75;
+}

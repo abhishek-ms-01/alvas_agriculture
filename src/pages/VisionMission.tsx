@@ -22,8 +22,7 @@ const VisionMission = () => {
                     <p>Cultivating Excellence in Agricultural Education & Innovation</p>
                 </div>
 
-                {/* Main Content Grid */}
-                <div className="content-grid">
+                <main className="content-grid">
                     {/* Vision Section */}
                     <div className="vision-section">
                         <div className="organic-bg"></div>
@@ -89,6 +88,14 @@ const VisionMission = () => {
                             </div>
                         </div>
                     </div>
+                </main>
+
+                {/* Recognition & Affiliations (Footer-Adjacent Section) */}
+                <div className="vm-info-box">
+                    <h3>Recognition & Affiliations</h3>
+                    <p>
+                        Alva's IAST is affiliated to the University of Agricultural Sciences (UAS), Dharwad; approved by AICTE; recognised by ICAR, UGC, KSHEC, and KEA; and accredited by NAAC. The institute is a member of the Association of Indian Universities (AIU) and maintains active MOUs with over 150 industry, research, and international partners.
+                    </p>
                 </div>
             </div>
 
