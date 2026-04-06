@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import "../../admissions/Admissions.css";
 
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+
 const BTechFoodTechnology = () => (
   <div className="adm-page">
     <PageBackground count={90} color="22,101,52" opacity={0.13} />
@@ -53,6 +55,78 @@ const BTechFoodTechnology = () => (
               India is one of the world's largest food producers, yet post-harvest losses account for over 30% of produce. B.Tech Food Technology graduates play a critical role in reducing wastage, adding value, and building a robust food processing ecosystem. Students at Alva's have access to state-of-the-art food processing labs, pilot plants, and industry internship tie-ups with leading food companies.
             </p>
           </div>
+        </div>
+
+        {/* Vision, Mission & HOD Tabs */}
+        <div className="adm-section">
+          <Tabs defaultValue="vm" className="w-full">
+            <TabsList className="adm-tabs-list grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="vm" className="adm-tabs-trigger">Vision & Mission</TabsTrigger>
+              <TabsTrigger value="hod" className="adm-tabs-trigger">About HOD</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="vm" className="adm-tabs-content">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="adm-info-box" style={{ marginBottom: 0 }}>
+                  <h3 className="flex items-center gap-2"><FlaskConical className="text-secondary" size={20} /> Department Vision</h3>
+                  <p>To be a premier center of excellence in food technology, fostering innovation and research to ensure global food safety, quality, and nutritional security.</p>
+                </div>
+                <div className="adm-info-box" style={{ marginBottom: 0 }}>
+                  <h3 className="flex items-center gap-2"><Package className="text-secondary" size={20} /> Department Mission</h3>
+                  <p>To empower students with advanced technical skills and ethical values to solve complex challenges in food processing, preservation, and product development.</p>
+                </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="hod" className="adm-tabs-content">
+              {/* HOD Profile - Single Column Layout */}
+              <div className="hod-column-layout">
+                <div className="hod-profile-card">
+                  <div className="hod-image-wrapper">
+                    <img src="/placeholder.svg" alt="Dr. Rajeshwari M." />
+                  </div>
+                  <div className="hod-info-content">
+                    <h3 className="hod-name">Dr. Rajeshwari M.</h3>
+                    <span className="hod-label">Head of Department</span>
+                    <p className="hod-bio-text">
+                      Dr. Rajeshwari M. is an expert in Food Processing and Preservation with over 18 years of academic and research experience. She holds a Ph.D. in Food Technology and has been at the forefront of developing innovative food preservation techniques. Her research focuses on value addition to traditional crops and developing sustainable packaging solutions for the food industry. She has mentored numerous projects that have won accolades at national level symposiums.
+                    </p>
+                    <div className="hod-expert-grid">
+                      <div className="hod-expert-pill"><span>Experience:</span> 18+ Years</div>
+                      <div className="hod-expert-pill"><span>Specialization:</span> Food Processing</div>
+                      <div className="hod-expert-pill"><span>Publications:</span> 25+ Papers</div>
+                      <div className="hod-expert-pill"><span>Qualification:</span> Ph.D.</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Department Faculty Section */}
+                <div className="faculty-section mt-12">
+                  <h3 className="faculty-heading">Department Faculty</h3>
+                  <div className="faculty-grid">
+                    {[
+                      { name: "Dr. Arun Kumar", role: "Associate Professor", dept: "Food Tech", expertise: "Food Chemistry" },
+                      { name: "Ms. Deepa Rao", role: "Assistant Professor", dept: "Food Tech", expertise: "Microbiology" },
+                      { name: "Mr. Sanjay MS", role: "Assistant Professor", dept: "Food Tech", expertise: "Food Engineering" },
+                      { name: "Dr. Preeti G.", role: "Assistant Professor", dept: "Food Tech", expertise: "Quality Control" }
+                    ].map((member, idx) => (
+                      <div key={idx} className="faculty-card">
+                        <div className="faculty-avatar">
+                          <img src="/placeholder.svg" alt={member.name} />
+                        </div>
+                        <div className="faculty-details">
+                          <h4 className="faculty-name">{member.name}</h4>
+                          <span className="faculty-role">{member.role}</span>
+                          <div className="faculty-dept-tag">{member.dept}</div>
+                          <p className="faculty-expertise">Specializes in {member.expertise}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Core subjects */}

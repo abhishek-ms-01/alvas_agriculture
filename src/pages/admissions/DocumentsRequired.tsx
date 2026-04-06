@@ -11,8 +11,9 @@ const DocumentsRequired = () => {
     "12th Standard (PUC/HSC) Mark Sheet & Passing Certificate",
     "Transfer Certificate (TC) from last attended institution",
     "Conduct Certificate from last attended institution",
-    "KCET / COMED-K Rank Card (as applicable)",
-    "Allotment Letter issued by KEA / COMED-K",
+    "KCET / Agri Quota Rank Card (as applicable)",
+    "Allotment Letter issued by KEA / Competent Authority",
+    "Agriculturalist Certificate (Form 1A) for Agri Quota seats",
     "Migration Certificate (for students from boards other than Karnataka)",
     "Study Certificate (Years 1 to 12)",
   ];

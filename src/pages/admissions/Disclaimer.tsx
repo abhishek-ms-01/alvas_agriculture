@@ -24,7 +24,7 @@ const Disclaimer = () => {
     {
       icon: <AlertTriangle />,
       title: "Seat Availability",
-      desc: "Availability of seats under various categories (KCET, COMED-K, Management) is subject to the seat matrix released by regulatory authorities for each academic year. The institute does not guarantee the availability of a specific number of seats in any category.",
+      desc: "Availability of seats under various categories (KCET, Agri Quota, Management) is subject to the seat matrix released by regulatory authorities for each academic year. The institute does not guarantee the availability of a specific number of seats in any category.",
     },
   ];
 

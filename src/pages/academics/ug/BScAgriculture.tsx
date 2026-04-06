@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import "../../admissions/Admissions.css";
 
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+
 const BScAgriculture = () => (
   <div className="adm-page">
     <PageBackground count={90} color="22,101,52" opacity={0.13} />
@@ -53,6 +55,78 @@ const BScAgriculture = () => (
               Students receive hands-on training through farm practicals, field visits, crop production experiments, internships at Krishi Vigyan Kendras (KVKs), and a mandatory Experiential Learning (ELP) module in the final year where they run actual agri-enterprises. The programme produces graduates equipped for roles in research, government services, agri-business, and advanced studies.
             </p>
           </div>
+        </div>
+
+        {/* Vision, Mission & HOD Tabs */}
+        <div className="adm-section">
+          <Tabs defaultValue="vm" className="w-full">
+            <TabsList className="adm-tabs-list grid w-full grid-cols-2 mb-8">
+              <TabsTrigger value="vm" className="adm-tabs-trigger">Vision & Mission</TabsTrigger>
+              <TabsTrigger value="hod" className="adm-tabs-trigger">About HOD</TabsTrigger>
+            </TabsList>
+            
+            <TabsContent value="vm" className="adm-tabs-content">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="adm-info-box" style={{ marginBottom: 0 }}>
+                  <h3 className="flex items-center gap-2"><Sprout className="text-accent" size={20} /> Department Vision</h3>
+                  <p>To emerge as a beacon of agricultural excellence, fostering innovative solutions that bridge traditional wisdom with cutting-edge technology for sustainable global food security.</p>
+                </div>
+                <div className="adm-info-box" style={{ marginBottom: 0 }}>
+                  <h3 className="flex items-center gap-2"><Leaf className="text-accent" size={20} /> Department Mission</h3>
+                  <p>To deliver world-class education that empowers agricultural professionals with modern skills, scientific knowledge, and entrepreneurial spirit to transform farming into a dignified profession.</p>
+                </div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="hod" className="adm-tabs-content">
+              {/* HOD Profile - Single Column Layout */}
+              <div className="hod-column-layout">
+                <div className="hod-profile-card">
+                  <div className="hod-image-wrapper">
+                    <img src="/placeholder.svg" alt="Dr. Suresh Patel" />
+                  </div>
+                  <div className="hod-info-content">
+                    <h3 className="hod-name">Dr. Suresh Patel</h3>
+                    <span className="hod-label">Head of Department</span>
+                    <p className="hod-bio-text">
+                      Dr. Suresh Patel is a distinguished academician with over 25 years of experience in Agronomy and Crop Science. He holds a Ph.D. from a premier agricultural university and has published over 40 research papers in reputable national and international journals. Under his leadership, the department has established several research initiatives focusing on climate-resilient agriculture and organic farming techniques.
+                    </p>
+                    <div className="hod-expert-grid">
+                      <div className="hod-expert-pill"><span>Experience:</span> 25+ Years</div>
+                      <div className="hod-expert-pill"><span>Specialization:</span> Agronomy</div>
+                      <div className="hod-expert-pill"><span>Publications:</span> 40+ Papers</div>
+                      <div className="hod-expert-pill"><span>Qualification:</span> Ph.D.</div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Department Faculty Section */}
+                <div className="faculty-section mt-12">
+                  <h3 className="faculty-heading">Department Faculty</h3>
+                  <div className="faculty-grid">
+                    {[
+                      { name: "Prof. Rajesh Mehra", role: "Associate Professor", dept: "Soil Science", expertise: "Soil Morphology" },
+                      { name: "Dr. Anita Sharma", role: "Assistant Professor", dept: "Horticulture", expertise: "Floriculture" },
+                      { name: "Mr. Vikram Singh", role: "Assistant Professor", dept: "Agronomy", expertise: "Water Management" },
+                      { name: "Dr. Kavita Rao", role: "Assistant Professor", dept: "Plant Pathology", expertise: "Mycology" }
+                    ].map((member, idx) => (
+                      <div key={idx} className="faculty-card">
+                        <div className="faculty-avatar">
+                          <img src="/placeholder.svg" alt={member.name} />
+                        </div>
+                        <div className="faculty-details">
+                          <h4 className="faculty-name">{member.name}</h4>
+                          <span className="faculty-role">{member.role}</span>
+                          <div className="faculty-dept-tag">{member.dept}</div>
+                          <p className="faculty-expertise">Specializes in {member.expertise}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </TabsContent>
+          </Tabs>
         </div>
 
         {/* Core subjects */}
@@ -119,8 +193,8 @@ const BScAgriculture = () => (
           <div className="adm-steps">
             {[
               { title: "Minimum Qualification", desc: "Pass in 10+2 (PUC / HSC) with Physics, Chemistry, and Biology (PCB) or Agriculture as compulsory subjects. Minimum 50% aggregate marks (45% for SC/ST candidates)." },
-              { title: "Entrance Examination", desc: "Admission through Karnataka Examinations Authority (KEA) via KCET score, COMED-K score, or management quota as per Government of Karnataka norms." },
-              { title: "Document Verification", desc: "Original 10th and 12th mark sheets, transfer certificate, caste certificate (if applicable), domicile certificate, and KCET/COMED-K rank card." },
+              { title: "Entrance Examination", desc: "Admission through Karnataka Examinations Authority (KEA) via KCET score, Agri Quota score, or management quota as per Government of Karnataka norms." },
+              { title: "Document Verification", desc: "Original 10th and 12th mark sheets, transfer certificate, caste certificate (if applicable), domicile certificate, and KCET/Agri Quota rank card." },
             ].map((s, i) => (
               <div key={i} className="adm-step">
                 <div className="adm-step-num">{i + 1}</div>

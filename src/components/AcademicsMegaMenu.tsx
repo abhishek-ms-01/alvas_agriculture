@@ -29,22 +29,6 @@ const AcademicsMegaMenu = ({ onClose }: AcademicsMegaMenuProps) => {
         { label: "B.Tech (Food Technology)", path: "/academics/ug/btech-food-technology" },
       ],
     },
-    {
-      category: "PG PROGRAMMES",
-      links: [
-        { label: "MBA Programme", path: "/academics/pg/mba" },
-        { label: "M.Tech", path: "/academics/pg/mtech" },
-      ],
-    },
-    {
-      category: "BASIC SCIENCES",
-      links: [
-        { label: "Chemistry", path: "/academics/basic/chemistry" },
-        { label: "Mathematics", path: "/academics/basic/mathematics" },
-        { label: "Physics", path: "/academics/basic/physics" },
-        { label: "English", path: "/academics/basic/english" },
-      ],
-    },
   ];
 
   const handleNav = (path: string) => {
@@ -58,7 +42,7 @@ const AcademicsMegaMenu = ({ onClose }: AcademicsMegaMenuProps) => {
       initial="hidden"
       animate="visible"
       exit="exit"
-      className="max-w-[900px] w-[90vw] bg-white shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] rounded-2xl border border-slate-200 overflow-hidden"
+      className="max-w-[320px] w-[90vw] bg-white shadow-[0_30px_60px_-15px_rgba(0,0,0,0.15)] rounded-2xl border border-slate-200 overflow-hidden"
     >
       <div className="p-8">
         <div className="flex gap-10">

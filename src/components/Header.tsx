@@ -21,19 +21,10 @@ const navLinks = [
         category: "ADMISSION PROCEDURE",
         links: [
           { label: "Admission Through KCET", to: "/admissions/kcet" },
-          { label: "Admission Through COMED-K", to: "/admissions/comed-k" },
+          { label: "Admission Through Agri Quota", to: "/admissions/agri-quota" },
           { label: "Admission Through Management", to: "/admissions/management" },
           { label: "Documents Required", to: "/admissions/documents" },
           { label: "Disclaimer – Eligibility Criteria", to: "/admissions/disclaimer" },
-        ],
-      },
-      {
-        category: "FEES STRUCTURES",
-        links: [
-          { label: "KCET Students", to: "/admissions/fees/kcet" },
-          { label: "COMED-K Students", to: "/admissions/fees/comed-k" },
-          { label: "Management", to: "/admissions/fees/management" },
-          { label: "Tuition Fees 2025–26", to: "/admissions/fees/tuition-2025" },
         ],
       },
       {

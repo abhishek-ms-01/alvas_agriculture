@@ -51,24 +51,24 @@ const TuitionFees = () => {
                   <tr>
                     <th>Fee Component</th>
                     <th>KCET (₹)</th>
-                    <th>COMED-K (₹)</th>
+                    <th>Agri Quota (₹)</th>
                     <th>Management (₹)</th>
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Tuition Fee</td><td>25,000</td><td>55,000</td><td>85,000</td></tr>
-                  <tr><td>Development Fee</td><td>5,000</td><td>8,000</td><td>12,000</td></tr>
-                  <tr><td>Laboratory Charges</td><td>4,500</td><td>5,000</td><td>6,000</td></tr>
-                  <tr><td>Library Fee</td><td>1,500</td><td>2,000</td><td>2,500</td></tr>
-                  <tr><td>Sports & Cultural</td><td>1,000</td><td>1,500</td><td>2,000</td></tr>
-                  <tr><td>Examination Fee</td><td>2,000</td><td>2,500</td><td>2,500</td></tr>
+                  <tr><td>Tuition Fee</td><td>25,000</td><td>45,000</td><td>85,000</td></tr>
+                  <tr><td>Development Fee</td><td>5,000</td><td>5,000</td><td>12,000</td></tr>
+                  <tr><td>Laboratory Charges</td><td>4,500</td><td>4,000</td><td>6,000</td></tr>
+                  <tr><td>Library Fee</td><td>1,500</td><td>1,500</td><td>2,500</td></tr>
+                  <tr><td>Sports & Cultural</td><td>1,000</td><td>1,000</td><td>2,000</td></tr>
+                  <tr><td>Examination Fee</td><td>2,000</td><td>2,000</td><td>2,500</td></tr>
                   <tr><td>University Fee</td><td>3,500</td><td>3,500</td><td>3,500</td></tr>
                 </tbody>
                 <tfoot>
                   <tr>
                     <td>Total (per annum)</td>
                     <td>₹42,500</td>
-                    <td>₹77,500</td>
+                    <td>₹62,000</td>
                     <td>₹1,13,500</td>
                   </tr>
                 </tfoot>

@@ -56,7 +56,7 @@ const AdmissionManagement = () => {
             <div className="adm-grid">
               {[
                 { icon: <Award />, title: "Academic Criteria", desc: "Candidates must have passed 10+2 with at least 45% marks (40% for SC/ST) in Physics, Chemistry, and Biology/Mathematics." },
-                { icon: <FileText />, title: "No Entrance Test Required", desc: "Unlike KCET/COMED-K, management quota does not mandate a state or national level entrance test score. Admission is merit-based." },
+                { icon: <FileText />, title: "No Entrance Test Required", desc: "Unlike KCET/Agri Quota, management quota does not mandate a state or national level entrance test score. Admission is merit-based." },
                 { icon: <CheckSquare />, title: "Seat Availability", desc: "Management quota seats are limited (approx. 15% of sanctioned intake) and are allotted on a first-come, first-served merit basis." },
                 { icon: <Phone />, title: "Direct Application", desc: "Interested candidates should directly contact the Alva's admissions office for availability, process details, and personal guidance." },
               ].map((item, i) => (

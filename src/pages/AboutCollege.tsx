@@ -1,129 +1,330 @@
-import { Home, ChevronRight, GraduationCap, Leaf, FlaskConical, Users, Award, Microscope, MapPin, Star } from "lucide-react";
+import { 
+  Home, 
+  ChevronRight, 
+  GraduationCap, 
+  Leaf, 
+  FlaskConical, 
+  Users, 
+  Award, 
+  Microscope, 
+  MapPin, 
+  Star, 
+  ShieldCheck, 
+  Sprout, 
+  TrendingUp, 
+  Globe, 
+  BookOpen, 
+  Lightbulb 
+} from "lucide-react";
+import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import "./admissions/Admissions.css";
 
 export default function AboutCollege() {
+  const fadeIn = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
+
   return (
-    <div className="adm-page">
+    <div className="adm-page overflow-x-hidden">
       <PageBackground count={90} color="22,101,52" opacity={0.13} />
       <Header />
+      
       <main>
-        {/* Hero */}
-        <div className="adm-hero">
-          <div className="adm-blob adm-blob-1" /><div className="adm-blob adm-blob-2" />
-          <div className="adm-hero-content">
-            <div className="adm-badge"><MapPin size={14} /> Moodabidri, Karnataka</div>
-            <h1 className="adm-title">Alva's Institute of <span>Agricultural Science & Technology</span></h1>
-            <p className="adm-subtitle">
-              Established in 2005 and affiliated to UAS Dharwad, Alva's IAST is one of Karnataka's premier agricultural institutions — blending classical agrarian wisdom with modern science to shape the agri-professionals of tomorrow.
-            </p>
-            <div className="adm-stat-row">
-              <div className="adm-stat-pill"><strong>2005</strong> Established</div>
-              <div className="adm-stat-pill"><strong>12K+</strong> Alumni</div>
-              <div className="adm-stat-pill"><strong>50 Acres</strong> Campus</div>
-              <div className="adm-stat-pill"><strong>NAAC</strong> Accredited</div>
-            </div>
+        {/* Hero Section - MORE COMPACT */}
+        <div className="adm-hero relative min-h-[55vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
+          <div className="absolute inset-0 z-0">
+            <img 
+              src="https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg" 
+              alt="Alva's Agricultural College Campus" 
+              className="w-full h-full object-cover opacity-20"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-deep-green/60 via-deep-green/40 to-background" />
           </div>
-          <div className="adm-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-              <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
+
+          <div className="adm-hero-content relative z-10 text-center max-w-4xl px-4">
+            <motion.div 
+              {...fadeIn}
+              className="adm-badge mx-auto mb-4 flex items-center justify-center gap-2"
+            >
+              <MapPin size={14} /> Moodbidri, Karnataka
+            </motion.div>
+            
+            <motion.h1 
+              {...fadeIn}
+              transition={{ delay: 0.2 }}
+              className="adm-title text-3xl md:text-5xl font-black mb-4 leading-tight text-white uppercase tracking-tight"
+            >
+              Shaping Future <span className="text-accent underline decoration-accent/30 underline-offset-8">Agri-Innovators</span>
+            </motion.h1>
+            
+            <motion.p 
+              {...fadeIn}
+              transition={{ delay: 0.3 }}
+              className="adm-subtitle text-base md:text-lg text-cream/90 mb-8 max-w-3xl mx-auto font-medium"
+            >
+              Alva's Institute of Agricultural Sciences and Technology (IAST) blends agrarian tradition with cutting-edge bioscience.
+            </motion.p>
+
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.4 }}
+              className="adm-stat-row flex flex-wrap justify-center gap-3"
+            >
+              <div className="adm-stat-pill bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white font-bold text-xs uppercase tracking-wider">
+                <span className="text-accent">2008</span> Established
+              </div>
+              <div className="adm-stat-pill bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white font-bold text-xs uppercase tracking-wider">
+                <span className="text-accent">100%</span> Skill focus
+              </div>
+              <div className="adm-stat-pill bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white font-bold text-xs uppercase tracking-wider">
+                <span className="text-accent">Smart Farm</span>
+              </div>
+              <div className="adm-stat-pill bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white font-bold text-xs uppercase tracking-wider">
+                <span className="text-accent">UAS Dharwad</span>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="adm-wave absolute bottom-0 left-0 w-full leading-[0]">
+            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="fill-background">
+              <path d="M0,64L1440,32L1440,120L0,120Z" />
             </svg>
           </div>
         </div>
 
         {/* Breadcrumb */}
-        <nav className="adm-breadcrumb">
-          <div className="adm-breadcrumb-inner">
-            <Home size={14} /><a href="/">Home</a>
-            <span><ChevronRight size={14} /></span>
-            <span className="adm-cur">About College</span>
+        <nav className="adm-breadcrumb py-4 bg-slate-50/50 border-b border-slate-100">
+          <div className="adm-breadcrumb-inner container mx-auto px-6 flex items-center gap-2 text-[12px] text-slate-500 font-bold uppercase tracking-widest">
+            <Home size={12} className="text-accent" /><a href="/" className="hover:text-accent transition-colors">Home</a>
+            <span><ChevronRight size={12} /></span>
+            <span className="adm-cur text-deep-green">About Institution</span>
           </div>
         </nav>
 
-        <div className="adm-body">
-          {/* Overview */}
-          <div className="adm-section">
-            <h2 className="adm-heading">About the Institution</h2>
-            <div className="adm-info-box">
-              <h3>Alva's Institute of Agricultural Science & Technology</h3>
-              <p>
-                Alva's Institute of Agricultural Science & Technology (IAST), Moodabidri, was founded in 2005 under the Alva's Education Foundation (AEF) by Dr. M. Mohan Alva. Affiliated to the University of Agricultural Sciences (UAS), Dharwad, and recognised by ICAR, the institute offers undergraduate and postgraduate programmes in agricultural sciences, engineering, and allied fields. NAAC accredited and consistently ranked among Karnataka's top agricultural colleges, Alva's IAST is dedicated to producing skilled professionals who serve farming communities, advance research, and lead sustainable agri-business ventures.
+        <div className="adm-body container mx-auto px-6 py-10 space-y-16">
+          
+          {/* Institutional Overview - SMALLER DATA/IMAGE */}
+          <section className="grid lg:grid-cols-2 gap-10 items-center">
+            <motion.div {...fadeIn}>
+              <h2 className="text-2xl md:text-3xl font-black text-deep-green mb-6 flex items-center gap-3">
+                <Leaf className="text-accent w-6 h-6" /> About Alva's IAST
+              </h2>
+              <div className="space-y-4 text-slate-600 leading-relaxed text-base font-medium">
+                <p>
+                  Established in 2008, <strong className="text-deep-green/80">Alva's IAST</strong> is a premier destination for agricultural excellence under the Alva's Education Foundation, led by visionary <strong className="text-deep-green/80">Dr. M. Mohan Alva</strong>.
+                </p>
+                <p>
+                  Our mission is to democratize high-quality bioscience education, preparing agile agri-professionals for a resource-conscious world through field-centric pedagogy.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div 
+              {...fadeIn} 
+              transition={{ delay: 0.3 }}
+              className="relative rounded-[2rem] overflow-hidden shadow-xl group"
+            >
+              <img 
+                src="/agri_students_greenhouse_1775277979747.png" 
+                alt="Greenhouse Learning" 
+                className="w-full h-[350px] object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-deep-green/80 to-transparent text-white">
+                <p className="text-accent font-black uppercase tracking-widest text-[10px] mb-1">Global Standard</p>
+                <h3 className="text-lg font-bold">Industry-Ready Field Training</h3>
+              </div>
+            </motion.div>
+          </section>
+
+          {/* Recognitions Section - MORE COMPACT */}
+          <section className="bg-deep-green rounded-[2.5rem] p-10 md:p-14 text-white shadow-2xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.05),transparent)] pointer-events-none" />
+            
+            <div className="relative z-10 text-center mb-10">
+              <h2 className="text-2xl md:text-4xl font-black mb-4 tracking-tight uppercase">Why Alva's IAST?</h2>
+              <p className="text-cream/60 max-w-xl mx-auto text-sm font-semibold italic">
+                National Recognitions ensuring competitive credentials.
               </p>
             </div>
-          </div>
 
-          {/* Why choose us */}
-          <div className="adm-section">
-            <h2 className="adm-heading">Why Choose Alva's IAST?</h2>
-            <div className="adm-grid">
+            <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto relative z-10">
+              <motion.div 
+                {...fadeIn}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <ShieldCheck className="text-accent w-8 h-8" />
+                  <h3 className="text-xl font-black uppercase tracking-tight">Affiliations</h3>
+                </div>
+                <ul className="space-y-4 text-cream/80 font-medium text-sm">
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                    <span>Affiliated to <strong className="text-white">UAS Dharwad</strong> & Govt. of Karnataka.</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
+                    <span>Approved by <strong className="text-white">ICAR and UGC</strong> standards.</span>
+                  </li>
+                </ul>
+              </motion.div>
+
+              <motion.div 
+                {...fadeIn}
+                transition={{ delay: 0.2 }}
+                className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <Award className="text-accent w-8 h-8" />
+                  <h3 className="text-xl font-black uppercase tracking-tight text-white">Focus</h3>
+                </div>
+                <p className="text-cream/80 leading-relaxed font-medium text-sm mb-4">
+                  Teaching quality & research validated by national benchmarks.
+                </p>
+                <div className="grid grid-cols-2 gap-2 text-[10px] font-black uppercase tracking-widest text-accent">
+                   <span>• Research</span>
+                   <span>• Quality</span>
+                   <span>• Placement</span>
+                   <span>• Innovation</span>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Programs Offered - SMALLER IMAGE/GRID */}
+          <section className="adm-section">
+            <h2 className="text-3xl font-black text-deep-green mb-10 text-center uppercase tracking-tighter italic">Professional Degrees</h2>
+            <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
               {[
-                { icon: <GraduationCap />, title: "UAS Dharwad Affiliated", desc: "Degrees recognised by one of India's most prestigious agricultural universities and valid for all state and central government agricultural recruitment." },
-                { icon: <Leaf />, title: "ICAR Approved Curriculum", desc: "Programmes designed under the ICAR 5th Dean's Committee recommendations — the national gold standard for agricultural education." },
-                { icon: <FlaskConical />, title: "50-Acre Smart Farm", desc: "A working farm equipped with IoT sensors, drip irrigation systems, drone-based monitoring, soil health analysis stations, and precision planting setups." },
-                { icon: <Microscope />, title: "Modern Laboratories", desc: "Fully equipped labs for soil science, plant pathology, entomology, biotechnology, food technology, and agricultural chemistry." },
-                { icon: <Users />, title: "Expert Faculty", desc: "Ph.D. qualified faculty with experience in ICAR research stations and agricultural universities, committed to quality education and mentorship." },
-                { icon: <Award />, title: "Award-Winning Research", desc: "Funded research projects from DST, ICAR, and state agencies. Publications in national and international peer-reviewed journals." },
+                { 
+                  title: "B.Sc. (Hons) Agriculture", 
+                  image: "https://mbcollegeofagriculture.in/img/course-about.jpg",
+                  duration: "4 Yr",
+                  focus: "Crop Production & Soil Health"
+                },
+                { 
+                  title: "B.Tech (Food Technology)", 
+                  image: "/agri_lab_modern_1775277121057.png",
+                  duration: "4 Yr",
+                  focus: "Processing & Quality Control"
+                }
               ].map((item, i) => (
-                <div key={i} className="adm-card">
-                  <div className="adm-card-accent-bar" />
-                  <div className="adm-card-content">
-                    <div className="adm-card-icon">{item.icon}</div>
-                    <h3 className="adm-card-title">{item.title}</h3>
-                    <p className="adm-card-desc">{item.desc}</p>
+                <div key={i} className="group overflow-hidden rounded-[2rem] bg-white border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-500">
+                  <div className="h-56 overflow-hidden relative">
+                    <img src={item.image} alt={item.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                    <div className="absolute top-4 right-4 bg-accent text-deep-green p-2 rounded-full shadow-lg">
+                       <TrendingUp size={16} />
+                    </div>
+                  </div>
+                  <div className="p-6 text-center">
+                    <h3 className="text-xl font-black text-deep-green mb-2">{item.title}</h3>
+                    <p className="text-slate-500 mb-4 text-xs font-bold uppercase tracking-widest">{item.focus}</p>
+                    <a href="/admissions/kcet" className="text-accent font-black text-[11px] uppercase tracking-[0.2em] hover:opacity-80 transition-opacity">
+                      Entrance Criteria —
+                    </a>
                   </div>
                 </div>
               ))}
             </div>
-          </div>
+          </section>
 
-          {/* Programmes Offered */}
-          <div className="adm-section">
-            <h2 className="adm-heading">Programmes Offered</h2>
-            <div className="adm-table-wrap">
-              <table className="adm-table">
-                <thead><tr><th>Level</th><th>Programme</th><th>Duration</th><th>Affiliated To</th></tr></thead>
-                <tbody>
-                  <tr><td>UG</td><td>B.Sc. (Hons) Agriculture</td><td>4 Years</td><td>UAS Dharwad</td></tr>
-                  <tr><td>UG</td><td>B.Tech Food Technology</td><td>4 Years</td><td>UAS Dharwad / AICTE</td></tr>
-                  <tr><td>PG</td><td>M.Sc. Agronomy</td><td>2 Years</td><td>UAS Dharwad</td></tr>
-                  <tr><td>PG</td><td>M.Sc. Soil Science</td><td>2 Years</td><td>UAS Dharwad</td></tr>
-                  <tr><td>PG</td><td>M.Sc. Plant Pathology</td><td>2 Years</td><td>UAS Dharwad</td></tr>
-                  <tr><td>Ph.D.</td><td>Agronomy, Genetics & Biotechnology</td><td>3–5 Years</td><td>UAS Dharwad</td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
+          {/* Infrastructure & Facilities - SMALLER DATA/IMAGE */}
+          <section className="grid lg:grid-cols-2 gap-12 items-center">
+             <motion.div {...fadeIn} className="order-2 lg:order-1">
+               <img 
+                 src="/agri_smart_farm_tech_1775278001852.png" 
+                 alt="Smart Farm Tech" 
+                 className="rounded-[2.5rem] shadow-xl h-[400px] w-full object-cover"
+               />
+             </motion.div>
+             <motion.div {...fadeIn} transition={{ delay: 0.3 }} className="order-1 lg:order-2">
+               <h2 className="text-2xl md:text-3xl font-black text-deep-green mb-6 leading-tight">Next-Gen Infrastructure</h2>
+               <div className="grid grid-cols-2 gap-y-4 gap-x-6">
+                 {[
+                   { icon: <Globe size={16} />, text: "Smart Classrooms" },
+                   { icon: <Microscope size={16} />, text: "Incubation Labs" },
+                   { icon: <BookOpen size={16} />, text: "Campus Wi-Fi" },
+                   { icon: <ShieldCheck size={16} />, text: "Hostels" },
+                   { icon: <TrendingUp size={16} />, text: "Sports Hub" },
+                   { icon: <FlaskConical size={16} />, text: "Cafeteria" },
+                   { icon: <Sprout size={16} />, text: "Medical Center" },
+                   { icon: <Lightbulb size={16} />, text: "Digital Library" },
+                 ].map((item, i) => (
+                   <div key={i} className="flex items-center gap-3 text-slate-800 font-bold group">
+                     <div className="text-accent bg-accent/5 p-2 rounded-xl group-hover:bg-accent group-hover:text-white transition-all shadow-sm">{item.icon}</div>
+                     <span className="text-[11px] uppercase tracking-wider">{item.text}</span>
+                   </div>
+                 ))}
+               </div>
+             </motion.div>
+          </section>
 
-          {/* Campus life */}
-          <div className="adm-section">
-            <h2 className="adm-heading">Campus Facilities</h2>
-            <ul className="adm-checklist">
-              {[
-                "Separate hostels for boys and girls with 24×7 security and Wi-Fi",
-                "Central Library with 30,000+ books, e-journals, ICAR e-databases and digital reading rooms",
-                "Sports complex with courts for cricket, badminton, volleyball, and athletics track",
-                "Health centre with resident nurse, first-aid, and tie-up with Columbia Asia Hospital",
-                "State-of-the-art canteen serving hygienic, nutritious meals at subsidised rates",
-                "Dedicated transport with bus routes across Moodabidri, Mangaluru, and Udupi",
-              ].map((item, i) => (
-                <li key={i}>
-                  <span className="adm-check-icon"><Star size={14} /></span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Placements & Research - COMPACT */}
+          <section className="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <motion.div 
+              {...fadeIn}
+              className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100"
+            >
+              <h3 className="text-xl font-black text-deep-green mb-4">Placement Cell</h3>
+              <p className="text-slate-600 mb-6 text-sm font-medium leading-relaxed">
+                Dedicated training ensures 100% placement support through workshops and industry tie-ups.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {["Workshops", "Global Network", "Industry Ties"].map(li => (
+                  <span key={li} className="px-3 py-1 bg-slate-50 rounded-full text-[9px] font-black tracking-widest text-deep-green border border-slate-200 uppercase">{li}</span>
+                ))}
+              </div>
+            </motion.div>
 
-          <div className="adm-info-box">
-            <h3>Recognition & Affiliations</h3>
-            <p>
-              Alva's IAST is affiliated to the University of Agricultural Sciences (UAS), Dharwad; approved by AICTE; recognised by ICAR, UGC, KSHEC, and KEA; and accredited by NAAC. The institute is a member of the Association of Indian Universities (AIU) and maintains active MOUs with over 150 industry, research, and international partners.
-            </p>
-          </div>
+            <motion.div 
+              {...fadeIn}
+              transition={{ delay: 0.2 }}
+              className="bg-deep-green p-8 rounded-[2rem] text-white relative overflow-hidden"
+            >
+              <h3 className="text-xl font-black mb-4 uppercase tracking-tighter italic">Innovation</h3>
+              <p className="text-cream/70 mb-6 text-sm font-medium">
+                Research focus: Biotech, Precision Agri, and Climate-Resilient Farming. 
+              </p>
+              <div className="flex gap-4">
+                 <div className="text-accent bg-accent/20 p-2 rounded-lg cursor-help" title="Patent Filing"><Sprout size={16} /></div>
+                 <div className="text-accent bg-accent/20 p-2 rounded-lg cursor-help" title="Research Papers"><BookOpen size={16} /></div>
+              </div>
+            </motion.div>
+          </section>
+
+          {/* Admissions CTA - COMPACT */}
+          <section className="bg-accent rounded-[3rem] p-10 md:p-14 text-deep-green text-center shadow-xl relative overflow-hidden">
+             <h2 className="text-3xl md:text-5xl font-black mb-6 uppercase tracking-tighter italic">Join Our Future</h2>
+             <div className="flex flex-wrap justify-center gap-6 mb-10">
+               <div className="p-6 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 text-left min-w-[280px]">
+                 <h4 className="text-lg font-black uppercase mb-1">B.Sc. Agriculture</h4>
+                 <p className="font-bold opacity-80 text-[11px] mb-4 tracking-tight uppercase">10+2 PCB | 45% Gen</p>
+                 <span className="text-[9px] font-black bg-deep-green text-white px-3 py-1 rounded-full uppercase tracking-widest">Entrance: KCET | AG-QUOTA</span>
+               </div>
+               <div className="p-6 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 text-left min-w-[280px]">
+                 <h4 className="text-lg font-black uppercase mb-1">B.Tech Food Tech</h4>
+                 <p className="font-bold opacity-80 text-[11px] mb-4 tracking-tight uppercase">10+2 PCM | 45% Gen</p>
+                 <span className="text-[9px] font-black bg-deep-green text-white px-3 py-1 rounded-full uppercase tracking-widest">Entrance: KCET | AG-QUOTA</span>
+               </div>
+             </div>
+
+             <motion.a 
+               href="/admissions/kcet" 
+               whileHover={{ scale: 1.05 }}
+               whileTap={{ scale: 0.95 }}
+               className="inline-block px-12 py-4 bg-deep-green text-white rounded-2xl font-black uppercase tracking-[0.2em] shadow-lg text-sm"
+             >
+               Apply Now
+             </motion.a>
+          </section>
+
         </div>
       </main>
+      
       <Footer />
     </div>
   );

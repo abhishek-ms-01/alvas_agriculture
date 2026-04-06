@@ -38,12 +38,12 @@ import CampusLife from "./pages/CampusLife";
 
 // Admissions imports
 import AdmissionKCET from "./pages/admissions/AdmissionKCET";
-import AdmissionComedK from "./pages/admissions/AdmissionComedK";
+import AdmissionAgriQuota from "./pages/admissions/AdmissionAgriQuota";
 import AdmissionManagement from "./pages/admissions/AdmissionManagement";
 import DocumentsRequired from "./pages/admissions/DocumentsRequired";
 import Disclaimer from "./pages/admissions/Disclaimer";
 import FeesKCET from "./pages/admissions/FeesKCET";
-import FeesCOMEDK from "./pages/admissions/FeesCOMEDK";
+import FeesAgriQuota from "./pages/admissions/FeesAgriQuota";
 import FeesManagement from "./pages/admissions/FeesManagement";
 import TuitionFees from "./pages/admissions/TuitionFees";
 import ScholarshipsList from "./pages/admissions/ScholarshipsList";
@@ -117,12 +117,12 @@ const App = () => (
 
           {/* Admissions routes */}
           <Route path="/admissions/kcet" element={<AdmissionKCET />} />
-          <Route path="/admissions/comed-k" element={<AdmissionComedK />} />
+          <Route path="/admissions/agri-quota" element={<AdmissionAgriQuota />} />
           <Route path="/admissions/management" element={<AdmissionManagement />} />
           <Route path="/admissions/documents" element={<DocumentsRequired />} />
           <Route path="/admissions/disclaimer" element={<Disclaimer />} />
           <Route path="/admissions/fees/kcet" element={<FeesKCET />} />
-          <Route path="/admissions/fees/comed-k" element={<FeesCOMEDK />} />
+          <Route path="/admissions/fees/agri-quota" element={<FeesAgriQuota />} />
           <Route path="/admissions/fees/management" element={<FeesManagement />} />
           <Route path="/admissions/fees/tuition-2025" element={<TuitionFees />} />
           <Route path="/admissions/scholarships/list" element={<ScholarshipsList />} />

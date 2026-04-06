@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import "../admissions/Admissions.css";
 
-const FeesCOMEDK = () => {
+const FeesAgriQuota = () => {
   return (
     <div className="adm-page">
       <PageBackground count={90} color="22,101,52" opacity={0.13} />
@@ -14,15 +14,15 @@ const FeesCOMEDK = () => {
           <div className="adm-blob adm-blob-1" />
           <div className="adm-blob adm-blob-2" />
           <div className="adm-hero-content">
-            <div className="adm-badge"><DollarSign size={14} /> Fees — COMED-K Students</div>
-            <h1 className="adm-title">Fee Structure — <span>COMED-K Students</span></h1>
+            <div className="adm-badge"><DollarSign size={14} /> Fees — Agri Quota Students</div>
+            <h1 className="adm-title">Fee Structure — <span>Agri Quota Students</span></h1>
             <p className="adm-subtitle">
-              Fee structure for students admitted through COMED-K counselling. Fees are regulated by the COMED-K committee in coordination with the Government of Karnataka.
+              Fee structure for students admitted through the Agriculturalist Quota. Fees are subsidised to support students from farming backgrounds in line with state education policies.
             </p>
             <div className="adm-stat-row">
-              <div className="adm-stat-pill"><strong>COMED-K</strong> Regulated</div>
+              <div className="adm-stat-pill"><strong>Subsidised</strong> Fee</div>
               <div className="adm-stat-pill"><strong>Annual</strong> Payment</div>
-              <div className="adm-stat-pill"><strong>Installment</strong> Option</div>
+              <div className="adm-stat-pill"><strong>Scholarship</strong> Eligible</div>
             </div>
           </div>
           <div className="adm-wave">
@@ -37,13 +37,13 @@ const FeesCOMEDK = () => {
             <Home size={14} /><a href="/">Home</a>
             <span><ChevronRight size={14} /></span><span>Admissions</span>
             <span><ChevronRight size={14} /></span><span>Fees Structures</span>
-            <span><ChevronRight size={14} /></span><span className="adm-cur">COMED-K Students</span>
+            <span><ChevronRight size={14} /></span><span className="adm-cur">Agri Quota Students</span>
           </div>
         </nav>
 
         <div className="adm-body">
           <div className="adm-section">
-            <h2 className="adm-heading">Annual Fee Breakup — B.Sc. Agriculture (COMED-K)</h2>
+            <h2 className="adm-heading">Annual Fee Breakup — B.Sc. Agriculture (Agri Quota)</h2>
             <div className="adm-table-wrap">
               <table className="adm-table">
                 <thead>
@@ -56,16 +56,16 @@ const FeesCOMEDK = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Tuition Fee</td><td>55,000</td><td>55,000</td><td>55,000</td><td>55,000</td></tr>
-                  <tr><td>Development Fee</td><td>8,000</td><td>8,000</td><td>8,000</td><td>8,000</td></tr>
-                  <tr><td>Laboratory Charges</td><td>5,000</td><td>5,000</td><td>5,000</td><td>5,000</td></tr>
-                  <tr><td>Library Fee</td><td>2,000</td><td>2,000</td><td>2,000</td><td>2,000</td></tr>
-                  <tr><td>Sports & Cultural</td><td>1,500</td><td>1,500</td><td>1,500</td><td>1,500</td></tr>
-                  <tr><td>Examination Fee</td><td>2,500</td><td>2,500</td><td>2,500</td><td>2,500</td></tr>
+                  <tr><td>Tuition Fee</td><td>45,000</td><td>45,000</td><td>45,000</td><td>45,000</td></tr>
+                  <tr><td>Development Fee</td><td>5,000</td><td>5,000</td><td>5,000</td><td>5,000</td></tr>
+                  <tr><td>Laboratory Charges</td><td>4,000</td><td>4,000</td><td>4,000</td><td>4,000</td></tr>
+                  <tr><td>Library Fee</td><td>1,500</td><td>1,500</td><td>1,500</td><td>1,500</td></tr>
+                  <tr><td>Sports & Cultural</td><td>1,000</td><td>1,000</td><td>1,000</td><td>1,000</td></tr>
+                  <tr><td>Examination Fee</td><td>2,000</td><td>2,000</td><td>2,000</td><td>2,000</td></tr>
                   <tr><td>University Fee</td><td>3,500</td><td>3,500</td><td>3,500</td><td>3,500</td></tr>
                 </tbody>
                 <tfoot>
-                  <tr><td colSpan={1}>Total (per year)</td><td>₹77,500</td><td>₹77,500</td><td>₹77,500</td><td>₹77,500</td></tr>
+                  <tr><td colSpan={1}>Total (per year)</td><td>₹62,000</td><td>₹62,000</td><td>₹62,000</td><td>₹62,000</td></tr>
                 </tfoot>
               </table>
             </div>
@@ -83,7 +83,6 @@ const FeesCOMEDK = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Hostel Fee (AC Room — 2 sharing)</td><td>50,000</td><td>Including electricity</td></tr>
                   <tr><td>Hostel Fee (Non-AC Room — 3 sharing)</td><td>36,000</td><td>Including electricity</td></tr>
                   <tr><td>Mess Charges</td><td>42,000</td><td>Vegetarian meals</td></tr>
                   <tr><td>Hostel Security Deposit (Refundable)</td><td>5,000</td><td>One-time payment</td></tr>
@@ -93,9 +92,9 @@ const FeesCOMEDK = () => {
           </div>
 
           <div className="adm-info-box">
-            <h3>Payment & Instalment Policy</h3>
+            <h3>Scholarship & Payment Policy</h3>
             <p>
-              COMED-K category fees may be paid in two instalments — 60% at the time of admission and the remaining 40% by the second semester. All payments must be made via demand draft or online transfer in favour of "Alva's Institute of Agricultural Science & Technology". Cash payments above ₹10,000 are not accepted as per government regulations.
+              Agri Quota students are eligible for various state and central government scholarships for children of farmers. Fees can be paid in two instalments each year. All payments should be made through the student portal or via bank transfer. We encourage students to apply for 'Vidyasiri' and other merit-cum-means scholarships.
             </p>
           </div>
         </div>
@@ -105,4 +104,4 @@ const FeesCOMEDK = () => {
   );
 };
 
-export default FeesCOMEDK;
+export default FeesAgriQuota;

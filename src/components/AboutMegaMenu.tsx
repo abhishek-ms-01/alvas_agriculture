@@ -36,18 +36,8 @@ const AboutMegaMenu = ({ onClose }: AboutMegaMenuProps) => {
         { label: "Milestones", path: "/milestones" },
       ]
     },
-    { title: "Accreditations", items: [
-        { label: "NAAC", path: "/about/naac" },
-        { label: "Recognition", path: "/about/recognition" },
-        { label: "Statutory Approvals", path: "/about/statutory-approvals" },
-      ]
-    },
-    { title: "Mandatory Disclosure", items: [
-        { label: "RTI", path: "/about/rti" },
-        { label: "NCTE", path: "/about/ncte" },
-        { label: "Affiliations", path: "/about/affiliations" },
-      ]
-    },
+    { title: "Accreditations", items: [], path: "/about/naac" },
+    { title: "Mandatory Disclosure", items: [], path: "/about/rti" },
     { title: "MOU", items: [], path: "/mou" },
     { title: "AEF", items: [], path: "/aef" },
     { title: "Administration", items: [], path: "/administration" }
