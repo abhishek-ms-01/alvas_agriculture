@@ -34,7 +34,9 @@ import Administration from "./pages/Administration";
 import AboutCollege from "./pages/AboutCollege";
 import VisionMission from "./pages/VisionMission";
 import Milestones from "./pages/Milestones";
-import CampusLife from "./pages/CampusLife";
+import CampusLife from "./pages/campus-life/CampusLife";
+import Library from "./pages/campus-life/library/Library";
+import SportsCulture from "./pages/campus-life/sports-culture/SportsCulture";
 
 // Admissions imports
 import AdmissionKCET from "./pages/admissions/AdmissionKCET";
@@ -92,11 +94,14 @@ const App = () => (
           <Route path="/vision-mission" element={<VisionMission />} />
           <Route path="/milestones" element={<Milestones />} />
           <Route path="/campus-life" element={<CampusLife />} />
+          <Route path="/campus-life/library" element={<Library />} />
+          <Route path="/campus-life/sports-culture" element={<SportsCulture />} />
 
           {/* About sub-page routes */}
           <Route path="/about/naac" element={<NAAC />} />
           <Route path="/about/recognition" element={<Recognition />} />
           <Route path="/about/statutory-approvals" element={<StatutoryApprovals />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/about/rti" element={<RTI />} />
           <Route path="/about/ncte" element={<NCTE />} />
           <Route path="/about/affiliations" element={<Affiliations />} />

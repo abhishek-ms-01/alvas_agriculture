@@ -1,0 +1,305 @@
+:root {
+  --sport-brand: #ff5e00; 
+  --culture-brand: #b8860b; /* Darker Gold for Light Theme */
+  --sc-bg: #f9fafb; /* Clean Light Grey-White */
+  --sc-text: #111827;
+}
+
+.sc-root {
+  background-color: var(--sc-bg);
+  min-height: 100vh;
+  color: var(--sc-text);
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* --- Kinetic Background Animation --- */
+.sc-bg-energy {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.sc-energy-trail {
+  position: absolute;
+  background: linear-gradient(90deg, transparent, rgba(255, 94, 0, 0.2), transparent);
+  height: 2px;
+  filter: blur(1.5px);
+  animation: energy-flow linear infinite;
+}
+
+.sc-energy-trail.culture {
+  background: linear-gradient(90deg, transparent, rgba(184, 134, 11, 0.2), transparent);
+}
+
+@keyframes energy-flow {
+  0% { transform: translateX(-100%) translateY(0); opacity: 0; }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  100% { transform: translateX(200%) translateY(20px); opacity: 0; }
+}
+
+/* --- Split Hero Section --- */
+.sc-hero {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sc-hero-side {
+  flex: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 6rem;
+  transition: flex 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sc-hero-side:hover {
+  flex: 1.4;
+}
+
+.sc-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  filter: grayscale(40%) contrast(110%);
+  transition: transform 1.2s ease, opacity 0.6s ease;
+}
+
+.sc-hero-side:hover .sc-hero-img {
+  transform: scale(1.1);
+  opacity: 0.8;
+  filter: grayscale(0%);
+}
+
+.sc-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.sc-hero-side.sport .sc-hero-overlay {
+  background: linear-gradient(to right, rgba(255, 94, 0, 0.6) 0%, transparent 100%);
+}
+
+.sc-hero-side.culture .sc-hero-overlay {
+  background: linear-gradient(to left, rgba(207, 181, 59, 0.6) 0%, transparent 100%);
+}
+
+.sc-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.sc-hero-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sc-hero-title {
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.9;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+  color: white;
+}
+
+.sc-hero-sub {
+  font-size: 1.1rem;
+  max-width: 400px;
+  opacity: 0.9;
+  line-height: 1.4;
+  color: white;
+}
+
+/* --- Stats Ticker --- */
+.sc-stats-bar {
+  display: flex;
+  background: white;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.sc-stat-item {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.sc-stat-val {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--sport-brand);
+  margin-bottom: 0.25rem;
+}
+
+.sc-stat-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #6b7280;
+  letter-spacing: 1px;
+}
+
+/* --- The Arena Section --- */
+.sc-section {
+  padding: 8rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.sc-sec-header {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.sc-sec-title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+  color: var(--sc-text);
+}
+
+.sc-sec-title em {
+  font-style: normal;
+  color: var(--sport-brand);
+}
+
+.sc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.sc-arena-card {
+  position: relative;
+  height: 480px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: white;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+}
+
+.sc-arena-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: transform 0.8s ease, filter 0.6s ease;
+}
+
+.sc-arena-card:hover .sc-arena-img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  opacity: 0.8;
+}
+
+.sc-arena-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 3rem;
+  z-index: 2;
+}
+
+.sc-arena-tag {
+  color: var(--sport-brand);
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.sc-arena-name {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  line-height: 1;
+  color: white;
+}
+
+/* --- Signature Events Section --- */
+.sc-events {
+  background: white;
+  padding: 10rem 2rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+.sc-event-hero {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.sc-event-content h3 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--culture-brand);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.sc-event-desc {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #4b5563; /* Darker grey for readability */
+  margin-bottom: 3rem;
+}
+
+.sc-event-img-wrap {
+  position: relative;
+  height: 550px;
+  border-radius: 60px;
+  overflow: hidden;
+  box-shadow: 0 40px 100px rgba(0, 0, 0, 0.4);
+}
+
+.sc-event-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .sc-hero { flex-direction: column; height: auto; }
+  .sc-hero-side { padding: 4rem 2rem; }
+  .sc-event-hero { grid-template-columns: 1fr; gap: 4rem; }
+  .sc-event-img-wrap { height: 400px; }
+}

@@ -1,0 +1,600 @@
+:root {
+  --lib-gold: #d4af37;
+  --lib-green: #1a3a32;
+  --lib-cream: #f9f7f2;
+}
+
+.lib-root {
+  background-color: var(--lib-cream);
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  color: #333;
+}
+
+/* --- Background Animation: Drifting Dust Motes --- */
+.lib-bg-particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.lib-particle {
+  position: absolute;
+  background: var(--lib-green);
+  border-radius: 50%;
+  filter: blur(1.5px);
+  animation: float-particle linear infinite;
+  opacity: 0.15;
+}
+
+@keyframes float-particle {
+  0% { transform: translateY(0) translateX(0); opacity: 0; }
+  10% { opacity: 0.5; }
+  90% { opacity: 0.5; }
+  100% { transform: translateY(-100vh) translateX(var(--dx)); opacity: 0; }
+}
+
+/* --- Hero Section --- */
+.lib-hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1a3a32 0%, #2d5a4e 100%);
+  color: white;
+  text-align: center;
+}
+
+.lib-hero-canvas {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+}
+
+.lib-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 2rem;
+}
+
+.lib-hero-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 40px;
+  color: var(--lib-gold);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 2rem;
+}
+
+.lib-hero-title {
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.lib-hero-title em {
+  font-style: normal;
+  color: var(--lib-gold);
+  display: block;
+}
+
+.lib-hero-sub {
+  font-size: 1.25rem;
+  opacity: 0.8;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* --- Stats Section (Unique Staggered Glass) --- */
+.lib-stats-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: -4rem auto 0;
+  z-index: 10;
+  position: relative;
+}
+
+.lib-stat-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(25px);
+  padding: 3rem 1.5rem;
+  border-radius: 40px;
+  text-align: center;
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 30px rgba(26, 58, 50, 0.05);
+  transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.lib-stat-card:nth-child(even) {
+  transform: translateY(30px);
+}
+
+.lib-stat-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.lib-stat-card:hover {
+  transform: translateY(-10px) !important;
+  background: white;
+  box-shadow: 0 40px 80px rgba(26, 58, 50, 0.12);
+  border-color: var(--lib-gold);
+}
+
+.lib-stat-card:hover::before {
+  opacity: 1;
+}
+
+.lib-stat-val {
+  display: block;
+  font-size: 2.8rem;
+  font-weight: 900;
+  color: var(--lib-green);
+  line-height: 1;
+  margin-bottom: 0.75rem;
+  background: linear-gradient(135deg, var(--lib-green) 40%, var(--lib-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lib-stat-label {
+  font-size: 0.75rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #888;
+  letter-spacing: 0.15em;
+}
+
+/* --- Features Section (Light Theme Refinement) --- */
+.lib-features-wrapper {
+  padding: 60px 24px;
+  background: transparent; /* Allow particles to show through */
+  font-family: 'Inter', system-ui, sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+.lib-sec-header {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.lib-sec-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, var(--lib-green) 30%, var(--lib-gold) 100%);
+  -webkit-background-clip: text;
+  background-clip: text; /* Compatibility prefix */
+  -webkit-text-fill-color: transparent;
+}
+
+.lib-sec-desc {
+  color: #8492a6;
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.lib-grid-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.lib-feature-card {
+  position: relative;
+  height: 480px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: white;
+  border: 1px solid rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+}
+
+.lib-feature-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 40px 80px rgba(26, 58, 50, 0.1);
+  border-color: var(--lib-gold);
+}
+
+.lib-card-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.95;
+  filter: grayscale(15%) brightness(0.9);
+  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.lib-feature-card:hover .lib-card-img {
+  transform: scale(1.15);
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+}
+
+.lib-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top, 
+    white 20%, 
+    rgba(255, 255, 255, 0.6) 80%, 
+    transparent 100%
+  );
+  z-index: 1;
+}
+
+.lib-feature-card:hover .lib-card-overlay {
+  background: linear-gradient(
+    to top, 
+    white 0%, 
+    rgba(255, 255, 255, 0.2) 60%, 
+    transparent 100%
+  );
+}
+
+.lib-card-content {
+  position: absolute;
+  inset: 0;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 2;
+}
+
+.lib-icon-box {
+  width: 48px;
+  height: 48px;
+  background: rgba(197, 160, 89, 0.2);
+  border: 1px solid #c5a059;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c5a059;
+  margin-bottom: 20px;
+  backdrop-filter: blur(8px);
+}
+
+.lib-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #c5a059;
+  margin-bottom: 12px;
+}
+
+.lib-title {
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--lib-green) !important;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+
+.lib-description {
+  color: #666 !important;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.lib-feature-card:hover .lib-description {
+  max-height: 100px;
+  opacity: 1;
+  margin-bottom: 25px;
+}
+
+.lib-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--lib-green) !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.8;
+  transition: gap 0.3s ease;
+}
+
+.lib-feature-card:hover .lib-btn {
+  color: var(--lib-gold) !important;
+  gap: 15px;
+}
+
+/* --- Timings Section --- */
+.lib-info-section {
+  background: transparent;
+  padding: 4rem 2rem;
+  position: relative;
+}
+
+.lib-info-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.lib-info-image {
+  height: 600px;
+  border-radius: 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.lib-info-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lib-timings-card {
+  padding: 3rem;
+}
+
+.lib-time-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.lib-day { font-weight: 700; color: var(--lib-green); }
+.lib-hours { font-weight: 500; opacity: 0.7; }
+
+/* --- Visual Tour (Gallery Size Reduction) --- */
+.lib-gallery {
+  padding: 4rem 2rem;
+  background: transparent;
+}
+
+.lib-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.lib-gallery-item {
+  position: relative;
+  height: 400px;
+  border-radius: 32px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.lib-gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.lib-gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.lib-gallery-item.tall { grid-row: span 2; height: 815px; }
+
+.lib-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 58, 50, 0.8) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  display: flex;
+  align-items: flex-end;
+  padding: 3rem;
+}
+
+.lib-gallery-item:hover .lib-gallery-overlay { opacity: 1; }
+
+.lib-gallery-info { color: white; transform: translateY(20px); transition: transform 0.5s ease; }
+.lib-gallery-item:hover .lib-gallery-info { transform: translateY(0); }
+
+/* --- Librarian Profile (User Choice) --- */
+.lib-staff-section {
+  padding: 40px 20px;
+  background: transparent;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+.lib-container {
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.lib-librarian-card {
+  display: flex !important;
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  position: relative;
+  grid-template-columns: none !important;
+}
+
+/* Side accent stripe */
+.lib-librarian-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: linear-gradient(to bottom, #c5a059, #e8d2a6);
+}
+
+.lib-staff-img-wrapper {
+  flex: 0 0 350px;
+  position: relative;
+  overflow: hidden;
+  height: auto !important;
+}
+
+.lib-staff-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.lib-librarian-card:hover .lib-staff-img {
+  transform: scale(1.05);
+}
+
+.lib-staff-content {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lib-staff-badge {
+  display: inline-block;
+  background: #fdf6e9;
+  color: #8a6d3b;
+  padding: 4px 14px;
+  border-radius: 50px !important;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  width: fit-content;
+}
+
+.lib-staff-name {
+  font-size: 2.5rem;
+  color: #1a2a24;
+  margin: 0;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.lib-staff-role {
+  color: #c5a059;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 5px;
+  display: block;
+}
+
+.lib-staff-quote {
+  line-height: 1.8;
+  font-style: italic;
+  color: #555;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.lib-staff-quote::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 4rem;
+  color: var(--lib-gold);
+  opacity: 0.3;
+  line-height: 1;
+}
+
+/* --- Rules Section (Light Theme Refinement) --- */
+.lib-rules-section {
+  padding: 4rem 2rem;
+  background: transparent;
+  color: var(--lib-green);
+  text-align: center;
+}
+
+.lib-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 4rem auto 0;
+}
+
+.lib-rule-item {
+  padding: 2.5rem;
+  border: 1px solid rgba(0,0,0,0.04);
+  border-radius: 24px;
+  transition: all 0.3s ease;
+  background: #fbfbfc;
+}
+
+.lib-rule-item:hover { 
+  background: white;
+  box-shadow: 0 20px 40px rgba(26, 58, 50, 0.08);
+  border-color: var(--lib-gold);
+}
+
+.lib-rule-icon { color: var(--lib-gold); margin-bottom: 1.5rem; }
+.lib-rule-title { font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem; color: var(--lib-green); }
+.lib-rule-text { color: #666; font-size: 0.95rem; line-height: 1.6; }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .lib-info-container { grid-template-columns: 1fr; }
+  .lib-info-image { height: 400px; }
+  .lib-librarian-card { flex-direction: column; }
+  .lib-staff-img { width: 100%; height: 400px; }
+  .lib-staff-content { width: 100%; padding: 3rem; }
+  .lib-gallery-grid { grid-template-columns: 1fr; }
+  .lib-gallery-item.tall { height: 400px; grid-row: auto; }
+}
+
+@media (max-width: 640px) {
+  .lib-hero { height: 70vh; }
+  .lib-hero-title { font-size: 3.5rem; }
+  .lib-grid { grid-template-columns: 1fr; }
+  .lib-sec-title { font-size: 2.2rem; }
+}
