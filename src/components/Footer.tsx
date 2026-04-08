@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
+import { Link } from "react-router-dom";
 import { 
   FaBloggerB, 
   FaFacebookF, 
@@ -10,16 +11,16 @@ import {
 } from "react-icons/fa";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "About", href: "#" },
-  { label: "Admissions", href: "#" },
-  { label: "Academics", href: "#" },
-  { label: "Research", href: "#" },
-  { label: "Placements", href: "#" },
-  { label: "Campus Life", href: "#" },
-  { label: "Exposure Visit", href: "#" },
-  { label: "Internship/RPT", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Home", to: "/" },
+  { label: "About", to: "/about-college" },
+  { label: "Admissions", to: "/admissions/kcet" },
+  { label: "Academics", to: "/academics/ug/bsc-agriculture" },
+  { label: "Research", to: "/research/about" },
+  { label: "Placements", to: "/placements" },
+  { label: "Campus Life", to: "/campus-life" },
+  { label: "Exposure Visit", to: "/exposure-visit" },
+  { label: "Internship/IPT", to: "/internship" },
+  { label: "Contact Us", to: "/contact-us" },
 ];
 
 const Footer = () => {
@@ -60,14 +61,14 @@ const Footer = () => {
             <h4 className="font-sans font-bold text-white uppercase tracking-wider text-sm mb-6">Quick Links</h4>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.to}
                   className="text-cream/60 hover:text-accent text-sm transition-colors py-1 flex items-center gap-2"
                 >
                   <span className="w-1 h-1 rounded-full bg-accent/40" />
                   {link.label}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
