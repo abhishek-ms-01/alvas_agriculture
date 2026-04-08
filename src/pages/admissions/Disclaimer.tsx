@@ -2,6 +2,7 @@ import { Home, ChevronRight, AlertTriangle, Info, ShieldCheck, BookOpen } from "
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../admissions/Admissions.css";
 
 const Disclaimer = () => {
@@ -33,22 +34,15 @@ const Disclaimer = () => {
       <PageBackground count={90} color="22,101,52" opacity={0.13} />
       <Header />
       <main>
-        <div className="adm-hero">
-          <div className="adm-blob adm-blob-1" />
-          <div className="adm-blob adm-blob-2" />
-          <div className="adm-hero-content">
-            <div className="adm-badge"><AlertTriangle size={14} /> Admissions — Disclaimer</div>
-            <h1 className="adm-title">Disclaimer — <span>Eligibility Criteria</span></h1>
-            <p className="adm-subtitle">
-              Prospective students are advised to read the following disclaimer carefully before applying. Admission to Alva's Institute is governed by regulatory guidelines and institutional norms.
-            </p>
-          </div>
-          <div className="adm-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-              <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
-            </svg>
-          </div>
-        </div>
+        <PageHero
+          badgeIcon={<AlertTriangle size={14} />}
+          badgeText="Admissions — Disclaimer"
+          title={<>Disclaimer — <span className="text-accent">Eligibility Criteria</span></>}
+          subtitle="Prospective students are advised to read the following disclaimer carefully before applying. Admission to Alva's Institute is governed by regulatory guidelines and institutional norms."
+          stats={[
+            ,
+          ]}
+        />
 
         <nav className="adm-breadcrumb">
           <div className="adm-breadcrumb-inner">
@@ -80,7 +74,7 @@ const Disclaimer = () => {
             <div className="adm-steps">
               {[
                 { title: "Fee Refund Policy", desc: "Fees paid at the time of admission shall be refunded as per UGC/state government norms in case of withdrawal. Processing charges as applicable may be deducted." },
-                { title: "Reservation Policy", desc: "Reservation of seats for SC, ST, OBC, and other categories shall be as per Karnataka government reservation policy and UAS Dharwad norms." },
+                { title: "Reservation Policy", desc: "Reservation of seats for SC, ST, OBC, and other categories shall be as per Karnataka government reservation policy and Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences norms." },
                 { title: "Course Completion", desc: "The institution does not guarantee employment upon course completion. Placement assistance is provided based on industry requirements and student merit." },
                 { title: "Right to Amend", desc: "Alva's Institute reserves the right to amend, modify, or update the admission criteria, fees, and course offerings without prior notice, subject to regulatory approvals." },
                 { title: "Governing Law", desc: "All disputes regarding admission shall be subject to the jurisdiction of courts in Moodbidri / Mangaluru, Karnataka." },

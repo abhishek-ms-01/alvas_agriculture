@@ -1,7 +1,8 @@
-import { Home, ChevronRight, FlaskConical, Thermometer, Package, Microscope, BarChart2, Leaf } from "lucide-react";
+import { Home, ChevronRight, FlaskConical, Thermometer, Package, Microscope, BarChart2, Leaf, Target } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../../admissions/Admissions.css";
 
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -11,27 +12,18 @@ const BTechFoodTechnology = () => (
     <PageBackground count={90} color="22,101,52" opacity={0.13} />
     <Header />
     <main>
-      <div className="adm-hero">
-        <div className="adm-blob adm-blob-1" /><div className="adm-blob adm-blob-2" />
-        <div className="adm-hero-content">
-          <div className="adm-badge"><FlaskConical size={14} /> UG Programme</div>
-          <h1 className="adm-title">B.Tech <span>Food Technology</span></h1>
-          <p className="adm-subtitle">
-            A 4-year B.Tech programme that combines food science, engineering, and technology — preparing graduates to design and manage food processing systems, ensure food safety, develop new food products, and drive innovation in India's rapidly growing food industry.
-          </p>
-          <div className="adm-stat-row">
-            <div className="adm-stat-pill"><strong>4 Years</strong> Duration</div>
-            <div className="adm-stat-pill"><strong>60</strong> Seats</div>
-            <div className="adm-stat-pill"><strong>AICTE</strong> Approved</div>
-            <div className="adm-stat-pill"><strong>FSSAI</strong> Compliance</div>
-          </div>
-        </div>
-        <div className="adm-wave">
-          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-            <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
-          </svg>
-        </div>
-      </div>
+        <PageHero
+          badgeIcon={<FlaskConical size={14} />}
+          badgeText="UG Programme"
+          title={<>B.Tech <span className="text-accent">Food Technology</span></>}
+          subtitle="A 4-year B.Tech programme that combines food science, engineering, and technology — preparing graduates to design and manage food processing systems, ensure food safety, develop new food products, and drive innovation in India's rapidly growing food industry."
+          stats={[
+            { bold: "4 Years", text: "Duration" },
+            { bold: "60", text: "Seats" },
+            { bold: "AICTE", text: "Approved" },
+            { bold: "FSSAI", text: "Compliance" },
+          ]}
+        />
 
       <nav className="adm-breadcrumb">
         <div className="adm-breadcrumb-inner">
@@ -49,7 +41,7 @@ const BTechFoodTechnology = () => (
           <div className="adm-info-box">
             <h3>About B.Tech Food Technology</h3>
             <p>
-              The B.Tech Food Technology programme at Alva's Institute bridges agricultural production with the food processing industry. It is a 4-year undergraduate engineering degree, AICTE approved and UAS Dharwad affiliated, covering food chemistry, microbiology, processing engineering, packaging, quality assurance, and food regulatory affairs.
+              The B.Tech Food Technology programme at Alva's Institute bridges agricultural production with the food processing industry. It is a 4-year undergraduate engineering degree, AICTE approved and Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences affiliated, covering food chemistry, microbiology, processing engineering, packaging, quality assurance, and food regulatory affairs.
             </p>
             <p style={{ marginTop: "0.75rem" }}>
               India is one of the world's largest food producers, yet post-harvest losses account for over 30% of produce. B.Tech Food Technology graduates play a critical role in reducing wastage, adding value, and building a robust food processing ecosystem. Students at Alva's have access to state-of-the-art food processing labs, pilot plants, and industry internship tie-ups with leading food companies.
@@ -68,12 +60,16 @@ const BTechFoodTechnology = () => (
             <TabsContent value="vm" className="adm-tabs-content">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="adm-info-box" style={{ marginBottom: 0 }}>
-                  <h3 className="flex items-center gap-2"><FlaskConical className="text-secondary" size={20} /> Department Vision</h3>
-                  <p>To be a premier center of excellence in food technology, fostering innovation and research to ensure global food safety, quality, and nutritional security.</p>
+                  <h3 className="flex items-center gap-2"><Leaf className="text-secondary" size={20} /> Department Vision</h3>
+                  <p>To produce globally competent agricultural graduates through quality education, experiential learning, research and extension for sustainable agriculture, food / nutritional security and rural prosperity.</p>
                 </div>
                 <div className="adm-info-box" style={{ marginBottom: 0 }}>
-                  <h3 className="flex items-center gap-2"><Package className="text-secondary" size={20} /> Department Mission</h3>
-                  <p>To empower students with advanced technical skills and ethical values to solve complex challenges in food processing, preservation, and product development.</p>
+                  <h3 className="flex items-center gap-2"><Target className="text-secondary" size={20} /> Department Mission</h3>
+                  <div className="space-y-2 text-sm">
+                    <p>• To implement competency based curriculum integrating theory and practical learning.</p>
+                    <p>• To strengthen skill enhancement through experiential learning and student ready programme.</p>
+                    <p>• To promote climate resilient and sustainable agricultural practices.</p>
+                  </div>
                 </div>
               </div>
             </TabsContent>

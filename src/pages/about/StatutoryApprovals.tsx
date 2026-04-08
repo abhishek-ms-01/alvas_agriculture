@@ -54,7 +54,7 @@ const StatutoryApprovals = () => {
                 },
                 {
                   icon: <ShieldCheck />,
-                  title: "UAS Dharwad — Annual Affiliation",
+                  title: "Keladi Shivappa Nayaka University — Annual Affiliation",
                   desc: "Every academic year, the institution obtains fresh affiliation from the University of Agricultural Sciences, Dharwad, post-inspection and verification of facilities and student progress.",
                 },
                 {
@@ -94,13 +94,13 @@ const StatutoryApprovals = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>Annual Affiliation</td><td>UAS Dharwad</td><td>Yearly</td><td>Compliant</td></tr>
+                  <tr><td>Annual Affiliation</td><td>Keladi Shivappa Nayaka University</td><td>Yearly</td><td>Compliant</td></tr>
                   <tr><td>UGC Recognition Renewal</td><td>UGC, New Delhi</td><td>As applicable</td><td>Active</td></tr>
                   <tr><td>ICAR Curriculum Compliance</td><td>ICAR, New Delhi</td><td>Programme-based</td><td>Compliant</td></tr>
                   <tr><td>Building & Safety Approval</td><td>Local Authority / PWD</td><td>5-yearly</td><td>Compliant</td></tr>
                   <tr><td>Fire Safety NOC</td><td>State Fire Department</td><td>Yearly</td><td>Compliant</td></tr>
                   <tr><td>Environmental Clearance</td><td>Karnataka State PCB</td><td>As applicable</td><td>Compliant</td></tr>
-                  <tr><td>Anti-Ragging Compliance</td><td>UGC / UAS Dharwad</td><td>Yearly</td><td>Compliant</td></tr>
+                  <tr><td>Anti-Ragging Compliance</td><td>UGC / KSN University</td><td>Yearly</td><td>Compliant</td></tr>
                 </tbody>
               </table>
             </div>

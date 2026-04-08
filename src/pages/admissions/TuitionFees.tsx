@@ -2,6 +2,7 @@ import { Home, ChevronRight, DollarSign, Info } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../admissions/Admissions.css";
 
 const TuitionFees = () => {
@@ -10,27 +11,17 @@ const TuitionFees = () => {
       <PageBackground count={90} color="22,101,52" opacity={0.13} />
       <Header />
       <main>
-        <div className="adm-hero">
-          <div className="adm-blob adm-blob-1" />
-          <div className="adm-blob adm-blob-2" />
-          <div className="adm-hero-content">
-            <div className="adm-badge"><DollarSign size={14} /> Fees — 2025–26</div>
-            <h1 className="adm-title">Tuition Fees <span>2025–26</span></h1>
-            <p className="adm-subtitle">
-              Comprehensive tuition fee structure for the academic year 2025–2026 across all admission categories. All figures are in Indian Rupees (₹) per annum.
-            </p>
-            <div className="adm-stat-row">
-              <div className="adm-stat-pill"><strong>AY 2025–26</strong></div>
-              <div className="adm-stat-pill"><strong>All Categories</strong></div>
-              <div className="adm-stat-pill"><strong>UAS Dharwad</strong> Affiliated</div>
-            </div>
-          </div>
-          <div className="adm-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-              <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
-            </svg>
-          </div>
-        </div>
+        <PageHero
+          badgeIcon={<DollarSign size={14} />}
+          badgeText="Fees — 2025–26"
+          title={<>Tuition Fees <span className="text-accent">2025–26</span></>}
+          subtitle="Comprehensive tuition fee structure for the academic year 2025–2026 across all admission categories. All figures are in Indian Rupees (₹) per annum."
+          stats={[
+            "AY 2025–26",
+            "All Categories",
+            { bold: "Keladi Shivappa Nayaka Univ.", text: "Affiliated" },
+          ]}
+        />
 
         <nav className="adm-breadcrumb">
           <div className="adm-breadcrumb-inner">
@@ -126,7 +117,7 @@ const TuitionFees = () => {
           <div className="adm-info-box">
             <h3><Info size={16} style={{display:'inline', marginRight:'6px'}} />Disclaimer on Fee Figures</h3>
             <p>
-              The fee figures mentioned above are applicable for the academic year 2025–26 and are subject to revision by the Fee Fixation Committee of the Government of Karnataka and directives from UAS Dharwad. Fees once paid are non-refundable except as per UGC refund policy. For exact and confirmed fee details, please contact the accounts office at the time of admission.
+              The fee figures mentioned above are applicable for the academic year 2025–26 and are subject to revision by the Fee Fixation Committee of the Government of Karnataka and directives from Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences. Fees once paid are non-refundable except as per UGC refund policy. For exact and confirmed fee details, please contact the accounts office at the time of admission.
             </p>
           </div>
         </div>

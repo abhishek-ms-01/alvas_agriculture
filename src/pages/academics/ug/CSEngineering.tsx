@@ -2,6 +2,7 @@ import { Home, ChevronRight, Monitor, Code, Server, Shield } from "lucide-react"
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../../admissions/Admissions.css";
 
 const CSEngineering = () => (
@@ -9,20 +10,17 @@ const CSEngineering = () => (
     <PageBackground count={90} color="22,101,52" opacity={0.13} />
     <Header />
     <main>
-      <div className="adm-hero">
-        <div className="adm-blob adm-blob-1"/><div className="adm-blob adm-blob-2"/>
-        <div className="adm-hero-content">
-          <div className="adm-badge"><Monitor size={14}/> UG Programme</div>
-          <h1 className="adm-title">Computer Science <span>&amp; Engineering</span></h1>
-          <p className="adm-subtitle">A 4-year B.E. programme covering algorithms, software development, computer networks, databases, and emerging technologies — tailored to develop industry-ready software engineers with a focus on agri-tech solutions.</p>
-          <div className="adm-stat-row">
-            <div className="adm-stat-pill"><strong>4 Years</strong> Duration</div>
-            <div className="adm-stat-pill"><strong>120</strong> Seats</div>
-            <div className="adm-stat-pill"><strong>Industry</strong> Partnerships</div>
-          </div>
-        </div>
-        <div className="adm-wave"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"/></svg></div>
-      </div>
+        <PageHero
+          badgeIcon={<Monitor size={14} />}
+          badgeText="UG Programme"
+          title={<>Computer Science <span className="text-accent">&amp; Engineering</span></>}
+          subtitle="A 4-year B.E. programme covering algorithms, software development, computer networks, databases, and emerging technologies — tailored to develop industry-ready software engineers with a focus on agri-tech solutions."
+          stats={[
+            { bold: "4 Years", text: "Duration" },
+            { bold: "120", text: "Seats" },
+            { bold: "Industry", text: "Partnerships" },
+          ]}
+        />
       <nav className="adm-breadcrumb"><div className="adm-breadcrumb-inner"><Home size={14}/><a href="/">Home</a><span><ChevronRight size={14}/></span><span>Academics</span><span><ChevronRight size={14}/></span><span className="adm-cur">CS &amp; Engineering</span></div></nav>
       <div className="adm-body">
         <div className="adm-section">

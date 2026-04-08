@@ -37,7 +37,7 @@ const AboutMegaMenu = ({ onClose }: AboutMegaMenuProps) => {
       ]
     },
     { title: "Accreditations", items: [], path: "/about/naac" },
-    { title: "Mandatory Disclosure", items: [], path: "/about/rti" },
+    { title: "Mandatory Disclosure", items: [], path: "/about/mandatory-disclosure" },
     { title: "MOU", items: [], path: "/mou" },
     { title: "AEF", items: [], path: "/aef" },
     { title: "Administration", items: [], path: "/administration" }

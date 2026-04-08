@@ -2,6 +2,7 @@ import { Home, ChevronRight, BookOpen, MessageSquare, Globe, PenTool } from "luc
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../../admissions/Admissions.css";
 
 const English = () => (
@@ -9,20 +10,17 @@ const English = () => (
     <PageBackground count={90} color="22,101,52" opacity={0.13} />
     <Header />
     <main>
-      <div className="adm-hero">
-        <div className="adm-blob adm-blob-1"/><div className="adm-blob adm-blob-2"/>
-        <div className="adm-hero-content">
-          <div className="adm-badge"><BookOpen size={14}/> Basic Sciences</div>
-          <h1 className="adm-title">Department of <span>English</span></h1>
-          <p className="adm-subtitle">The English department builds communication excellence — developing students' ability to read scientific literature, write technical reports, present research, and engage confidently in professional agricultural and global contexts.</p>
-          <div className="adm-stat-row">
-            <div className="adm-stat-pill"><strong>Communication</strong> Skills</div>
-            <div className="adm-stat-pill"><strong>Technical Writing</strong></div>
-            <div className="adm-stat-pill"><strong>Soft Skills</strong> Training</div>
-          </div>
-        </div>
-        <div className="adm-wave"><svg viewBox="0 0 1440 120" preserveAspectRatio="none"><path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z"/></svg></div>
-      </div>
+        <PageHero
+          badgeIcon={<BookOpen size={14} />}
+          badgeText="Basic Sciences"
+          title={<>Department of <span className="text-accent">English</span></>}
+          subtitle="The English department builds communication excellence — developing students' ability to read scientific literature, write technical reports, present research, and engage confidently in professional agricultural and global contexts."
+          stats={[
+            { bold: "Communication", text: "Skills" },
+            "Technical Writing",
+            { bold: "Soft Skills", text: "Training" },
+          ]}
+        />
       <nav className="adm-breadcrumb"><div className="adm-breadcrumb-inner"><Home size={14}/><a href="/">Home</a><span><ChevronRight size={14}/></span><span>Academics</span><span><ChevronRight size={14}/></span><span>Basic Sciences</span><span><ChevronRight size={14}/></span><span className="adm-cur">English</span></div></nav>
       <div className="adm-body">
         <div className="adm-section">

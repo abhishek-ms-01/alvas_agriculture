@@ -68,7 +68,7 @@ const gains = [
 ];
 
 const partners = [
-    { icon: "🌾", name: "ICAR Stations" },        { icon: "🔬", name: "UAS Dharwad" },
+    { icon: "🌾", name: "ICAR Stations" },        { icon: "🔬", name: "Keladi Shivappa Nayaka Univ." },
     { icon: "🌿", name: "Karnataka Agri Dept." }, { icon: "🏛️", name: "KVK Centres" },
     { icon: "🌱", name: "Organic Farms" },        { icon: "🏭", name: "Agro Food Units" },
     { icon: "🌳", name: "Forest Dept." },         { icon: "🐄", name: "KMF – Nandini" },

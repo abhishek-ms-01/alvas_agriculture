@@ -76,7 +76,7 @@ const partners = [
     { icon: "🌾", name: "ICAR – Indian Council of Agricultural Research" },
     { icon: "🌿", name: "Karnataka Agri. Dept." },
     { icon: "🏦", name: "NABARD" },
-    { icon: "🔬", name: "UAS Dharwad" },
+    { icon: "🔬", name: "Keladi Shivappa Nayaka Univ." },
     { icon: "🚜", name: "Mahindra Agri" },
     { icon: "🌱", name: "Syngenta India" },
     { icon: "🐄", name: "KMF – Nandini" },

@@ -48,6 +48,14 @@ const Footer = () => {
                 <p className="text-white/80 text-[10px] font-medium tracking-[0.15em] uppercase leading-tight mt-1">
                   Institute of Agricultural Science &amp; Technology
                 </p>
+                <div className="mt-4 flex flex-col gap-1">
+                  <span className="text-accent font-black text-[9px] uppercase tracking-widest border border-accent/30 rounded-full px-3 py-1 w-fit bg-accent/5">
+                    Affiliated to
+                  </span>
+                  <p className="text-white/60 text-[10px] font-bold leading-tight max-w-[200px]">
+                    Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga
+                  </p>
+                </div>
               </div>
             </div>
             <p className="text-cream/60 text-sm leading-relaxed max-w-xs">
@@ -168,8 +176,8 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-white/10 mt-8 pt-6 text-center text-cream/40 text-xs">
-          © {new Date().getFullYear()} Alva's Agricultural College, Moodbidri. All rights reserved.
+        <div className="border-t border-white/10 mt-8 pt-6 text-center text-cream/40 text-[10px] font-medium uppercase tracking-widest">
+          © {new Date().getFullYear()} Alva's Institute of Agricultural Science & Technology, Moodbidri. All rights reserved.
         </div>
       </div>
 
