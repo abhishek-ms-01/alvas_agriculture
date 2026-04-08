@@ -7,27 +7,31 @@ import { useNavigate } from "react-router-dom";
 
 /* ── Gallery Marquee Data ── */
 const topRowImgs = [
-    { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&q=80", title: "Campus Morning", tag: "Nature" },
-    { src: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=700&q=80", title: "Cultural Fest", tag: "Virasat" },
-    { src: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=700&q=80", title: "Student Hub", tag: "Community" },
-    { src: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700&q=80", title: "Tech Lab", tag: "Innovation" },
-    { src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=700&q=80", title: "Athletics", tag: "Sports" },
-    { src: "https://images.unsplash.com/photo-1581093458791-9f302e6d8659?w=700&q=80", title: "Skill Dev", tag: "Workshop" },
+    { src: "/agriculture%20filed.jpeg", title: "Campus Morning", tag: "Nature" },
+    { src: "/apiculture.jpeg", title: "Apiculture", tag: "apiculture" },
+    { src: "/ruraldevellopment.jpeg", title: "Student Hub", tag: "Community" },
+    { src: "/horticulture3.jpeg", title: "Horticulture", tag: "horticulture" },
+    { src: "/sports1.jpeg", title: "Athletics", tag: "Sports" },
+    { src: "/technologidrone.jpeg", title: "Skill Dev", tag: "Workshop" },
+    { src: "/apiculture2.jpeg", title: "Apiculture", tag: "apiculture" },
 ];
 
 const bottomRowImgs = [
-    { src: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=700&q=80", title: "Arts Center", tag: "Culture" },
-    { src: "https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=700&q=80", title: "Library", tag: "Research" },
-    { src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=700&q=80", title: "Team Spirit", tag: "Together" },
-    { src: "https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80", title: "Green Walk", tag: "Campus" },
-    { src: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=700&q=80", title: "Sunrise Field", tag: "Nature" },
-    { src: "https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=700&q=80", title: "Sports Day", tag: "Sports" },
+    { src: "/apiculture123.jpeg", title: "Apiculture", tag: "apiculture" },
+    { src: "/library3.jpg", title: "Library", tag: "Research" },
+    { src: "/together.jpeg", title: "Team Spirit", tag: "Together" },
+    { src: "/A.I.E.T%20CAMPUS%20-2026-180.jpg", title: "Green Walk", tag: "Campus" },
+    { src: "/agriculture%20field2.jpeg", title: "Field", tag: "Nature" },
+    { src: "/sports2.jpeg", title: "Sports Day", tag: "Sports" },
+    { src: "/apiculture8.jpeg", title: "Apiculture", tag: "apiculture" },
 ];
 
 const spotlightItems = [
-    { src: "https://images.unsplash.com/photo-1562774053-701939374585?w=1400&q=90", title: "Green Campus & ATC", sub: "100 acres of living, breathing campus in the Western Ghats", tag: "Infrastructure" },
-    { src: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1400&q=90", title: "Cultural Vibrance", sub: "Celebrating art, music & heritage through the year", tag: "Culture" },
-    { src: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=1400&q=90", title: "Research & Innovation", sub: "Pushing boundaries in agri-science and technology", tag: "Research" },
+    { src: "/agriculture%20filed.jpeg", title: "Green Campus & ATC", sub: "100 acres of living, breathing campus in the Western Ghats", tag: "Infrastructure" },
+    { src: "/apiculture4.jpeg", title: "Apiculture", sub: "Celebrating art, music & heritage through the year", tag: "Culture" },
+    { src: "/sports1.jpeg", title: " Sports", sub: "Pushing boundaries in agri-science and technology", tag: "Research" },
+    { src: "/technologidrone.jpeg", title: "Drone Technologies", sub: "Agri Technologies", tag: "workshop" },
+    { src: "/agrifield.jpeg", title: "Floriculture Field Visit", sub: "promoting hands-on learning in agriculture and floriculture.", tag: "Floriculture Field Visit" },
 ];
 
 /* ─── Spotlight Gallery Component ─── */
