@@ -41,16 +41,7 @@ const SkillLabs = () => (
                     </div>
                 </section>
 
-                {/* ── Breadcrumb ── */}
-                <nav className="ip-breadcrumb">
-                    <div className="ip-breadcrumb-inner">
-                        <Home size={13} /><a href="/">Home</a>
-                        <span><ChevronRight size={13} /></span>
-                        <a href="/campus-life">Campus Life</a>
-                        <span><ChevronRight size={13} /></span>
-                        <span className="ip-cur">Skill Labs & Clubs</span>
-                    </div>
-                </nav>
+
 
                 <div className="ip-body">
 
