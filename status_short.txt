@@ -1,0 +1,84 @@
+A  "public/A.I.E.T CAMPUS -2026-180.jpg"
+A  "public/A.I.E.T CAMPUS -2026-185.jpg"
+A  "public/A.I.E.T CAMPUS -2026-186.jpg"
+A  "public/A.I.E.T CAMPUS -2026-198.jpg"
+A  "public/A.I.E.T CAMPUS -2026-209.jpg"
+A  "public/A.I.E.T CAMPUS -2026-221.jpg"
+A  "public/A.I.E.T CAMPUS -2026-423.jpg"
+A  "public/A.I.E.T CAMPUS -2026-465.jpg"
+A  "public/A.I.E.T CAMPUS -2026-467.jpg"
+A  "public/A.I.E.T CAMPUS -2026-65.jpg"
+A  public/MSM_0722.jpg
+D  public/about_college_full_page_1775277399959.png
+D  public/about_college_full_page_1775278184821.png
+D  public/about_college_hero_1775278124814.png
+A  "public/agriculture field2.jpeg"
+A  "public/agriculture filed.jpeg"
+A  public/agrifield.jpeg
+A  public/agrimarkeing.jpeg
+A  public/apiculture.jpeg
+A  public/apiculture1.jpeg
+A  public/apiculture12.jpeg
+A  public/apiculture123.jpeg
+A  public/apiculture2.jpeg
+A  public/apiculture4.jpeg
+A  public/apiculture5.jpeg
+A  public/apiculture6.jpeg
+A  public/apiculture8.jpeg
+A  public/horticulture.jpeg
+A  public/horticulture1.jpeg
+A  public/horticulture3.jpeg
+A  public/library1.jpg
+A  public/library2.jpg
+A  public/library3.jpg
+A  public/libraryhall.jpg
+A  public/librarystudyhall.jpg
+A  public/librarystudyhall1.jpg
+D  public/media__1775274741592.png
+D  public/media__1775274927507.png
+D  public/media__1775274927660.png
+D  public/media__1775275096178.png
+D  public/media__1775275952613.png
+D  public/media__1775275968113.png
+A  public/nudisiri.jpg
+A  public/punith.png
+A  public/ruraldevellopment.jpeg
+A  public/sports1.jpeg
+A  public/sports2.jpeg
+A  public/sports3.jpeg
+A  public/technologidrone.jpeg
+A  "public/together copy.jpeg"
+A  public/together.jpeg
+A  public/virasath.jpg
+M  src/App.tsx
+M  src/components/Footer.tsx
+M  src/components/HeroSection.tsx
+A  src/components/ScrollToTop.tsx
+A  src/pages/academics/DepartmentPage.css
+A  src/pages/academics/DepartmentPage.tsx
+UD src/pages/academics/basic/Chemistry.tsx
+UD src/pages/academics/basic/English.tsx
+UD src/pages/academics/basic/Mathematics.tsx
+UD src/pages/academics/basic/Physics.tsx
+UD src/pages/academics/pg/MBA.tsx
+UD src/pages/academics/pg/MTech.tsx
+UD src/pages/academics/ug/AIML.tsx
+UD src/pages/academics/ug/AgricultureEngineering.tsx
+UU src/pages/academics/ug/BScAgriculture.tsx
+UU src/pages/academics/ug/BTechFoodTechnology.tsx
+UD src/pages/academics/ug/CSEngineering.tsx
+UD src/pages/academics/ug/CivilEngineering.tsx
+R  src/pages/CampusLife.css -> src/pages/campus-life/CampusLife.css
+R  src/pages/CampusLife.tsx -> src/pages/campus-life/CampusLife.tsx
+A  src/pages/campus-life/library/Library.css
+A  src/pages/campus-life/library/Library.tsx
+A  src/pages/campus-life/sports-culture/SportsCulture.css
+A  src/pages/campus-life/sports-culture/SportsCulture.tsx
+M  src/pages/internship/Internship.tsx
+?? conflicts.txt
+?? events.json
+?? events2.json
+?? events3.txt
+?? reflog.txt
+?? status.txt
+?? status_short.txt

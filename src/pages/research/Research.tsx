@@ -17,6 +17,7 @@ import {
   Database
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import "../internship/Internship.css";
 
 const Research = () => {
   const [activeCategory, setActiveCategory] = useState<string>("areas");
@@ -62,30 +63,25 @@ const Research = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col pt-24">
-      <Header forceDark={true} />
+    <div className="min-h-screen bg-slate-50 flex flex-col">
+      <Header />
       
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden bg-deep-green">
-        {/* Background Patterns */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_30%,#D4AF37_1px,transparent_1px)] bg-[length:32px_32px]" />
+      {/* ── Hero ── */}
+      <section className="ip-hero">
+        <div className="ip-hero-bg-image" style={{ backgroundImage: `url(https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg)` }} />
+        <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
+        <div className="ip-hero-content">
+          <span className="ip-badge"><Microscope size={12} /> Discovery Hub</span>
+          <h1 className="ip-title">Research &amp; <span>Innovation</span></h1>
+          <p className="ip-subtitle">
+            Pushing the boundaries of agricultural science through interdisciplinary exploration, 
+            advanced publications, and sustainable breakthroughs in our state-of-the-art facilities.
+          </p>
         </div>
-        
-        <div className="max-w-[1200px] mx-auto px-6 relative z-10 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h1 className="text-white text-5xl md:text-6xl font-black uppercase tracking-tight mb-6">
-              Research &amp; <span className="text-accent underline decoration-accent/30 underline-offset-8">Innovation</span>
-            </h1>
-            <p className="text-white/70 text-lg max-w-2xl mx-auto leading-relaxed font-medium">
-              Pushing the boundaries of agricultural science through interdisciplinary exploration, 
-              advanced publications, and sustainable breakthroughs in our state-of-the-art facilities.
-            </p>
-          </motion.div>
+        <div className="ip-wave">
+          <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style={{ height: 56 }}>
+            <path d="M0,32 C360,56 1080,0 1440,32 L1440,56 L0,56 Z" fill="#f8fafc" />
+          </svg>
         </div>
       </section>
 

@@ -124,7 +124,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
         <div className="flex items-center gap-4 relative">
 
           {/* Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6">
+          <nav className="hidden xl:flex items-center gap-4 xl:gap-5 2xl:gap-6">
             {navLinks.map((link) =>
               link.label === "About" ? (
                 /* About — uses the hover mega-menu */
@@ -136,7 +136,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
                 >
                   <a
                     href={link.href}
-                    className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap flex items-center gap-1"
+                    className="relative px-1 py-1 text-[12px] xl:text-[13px] font-bold uppercase tracking-wider text-white/90 hover:text-accent transition-colors duration-300 group whitespace-nowrap flex items-center gap-1"
                   >
                     {link.label}
                     <ChevronDown className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
@@ -153,7 +153,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
                 >
                   <a
                     href={link.href}
-                    className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap flex items-center gap-1"
+                    className="relative px-1 py-1 text-[12px] xl:text-[13px] font-bold uppercase tracking-wider text-white/90 hover:text-accent transition-colors duration-300 group whitespace-nowrap flex items-center gap-1"
                   >
                     {link.label}
                     <ChevronDown className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity" />
@@ -163,7 +163,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
               ) : link.megaMenu ? (
                 /* Admissions / Research — inline dropdown mega-menu (white/yellow theme) */
                 <div key={link.label} className="relative group py-2">
-                  <button className="flex items-center gap-1.5 px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 whitespace-nowrap">
+                  <button className="flex items-center gap-1.5 px-1 py-1 text-[12px] xl:text-[13px] font-bold uppercase tracking-wider text-white/90 hover:text-accent transition-colors duration-300 whitespace-nowrap">
                     {link.label}
                     <svg
                       className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180"
@@ -208,7 +208,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
                 <Link
                   key={link.label}
                   to={link.to}
-                  className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap"
+                  className="relative px-1 py-1 text-[12px] xl:text-[13px] font-bold uppercase tracking-wider text-white/90 hover:text-accent transition-colors duration-300 group whitespace-nowrap"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
@@ -218,7 +218,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
                 <a
                   key={link.label}
                   href={link.href}
-                  className="relative px-1 py-1 text-[13px] font-bold uppercase tracking-wider text-cream/80 hover:text-accent transition-colors duration-300 group whitespace-nowrap"
+                  className="relative px-1 py-1 text-[12px] xl:text-[13px] font-bold uppercase tracking-wider text-white/90 hover:text-accent transition-colors duration-300 group whitespace-nowrap"
                 >
                   {link.label}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full rounded-full" />
@@ -229,12 +229,12 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
 
           {/* Mobile Menu */}
           <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger className="lg:hidden text-cream p-2">
+            <SheetTrigger className="xl:hidden text-white p-2">
               <Menu className="w-6 h-6" />
             </SheetTrigger>
 
             <SheetContent side="right" className="bg-deep-green border-primary/20 w-72">
-              <SheetTitle className="text-cream font-serif">Menu</SheetTitle>
+              <SheetTitle className="text-white font-serif">Menu</SheetTitle>
 
               <nav className="flex flex-col gap-2 mt-8">
                 {navLinks.map((link) => (
@@ -255,7 +255,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
                                   key={sub.label}
                                   to={sub.to}
                                   onClick={() => setOpen(false)}
-                                  className="px-8 py-2 text-[15px] text-cream/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
+                                  className="px-8 py-2 text-[15px] text-white/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
                                 >
                                   {sub.label}
                                 </Link>
@@ -268,7 +268,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
                       <Link
                         to={link.to}
                         onClick={() => setOpen(false)}
-                        className="px-4 py-3 text-lg text-cream/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium block"
+                        className="px-4 py-3 text-lg text-white/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium block"
                       >
                         {link.label}
                       </Link>
@@ -276,7 +276,7 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
                       <a
                         href={link.href}
                         onClick={() => setOpen(false)}
-                        className="px-4 py-3 text-lg text-cream/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium block"
+                        className="px-4 py-3 text-lg text-white/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium block"
                       >
                         {link.label}
                       </a>

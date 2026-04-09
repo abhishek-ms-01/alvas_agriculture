@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Remote branch imports
 import ContactUs from "./pages/contact/ContactUs";
@@ -35,7 +36,9 @@ import Administration from "./pages/Administration";
 import AboutCollege from "./pages/AboutCollege";
 import VisionMission from "./pages/VisionMission";
 import Milestones from "./pages/Milestones";
-import CampusLife from "./pages/CampusLife";
+import CampusLife from "./pages/campus-life/CampusLife";
+import Library from "./pages/campus-life/library/Library";
+import SportsCulture from "./pages/campus-life/sports-culture/SportsCulture";
 
 // Admissions imports
 import AdmissionKCET from "./pages/admissions/AdmissionKCET";
@@ -60,18 +63,8 @@ import Affiliations from "./pages/about/Affiliations";
 import MandatoryDisclosure from "./pages/about/MandatoryDisclosure";
 
 // Academics imports
-import AgricultureEngineering from "./pages/academics/ug/AgricultureEngineering";
-import AIML from "./pages/academics/ug/AIML";
-import CSEngineering from "./pages/academics/ug/CSEngineering";
-import CivilEngineering from "./pages/academics/ug/CivilEngineering";
-import BScAgriculture from "./pages/academics/ug/BScAgriculture";
 import BTechFoodTechnology from "./pages/academics/ug/BTechFoodTechnology";
-import MBA from "./pages/academics/pg/MBA";
-import MTech from "./pages/academics/pg/MTech";
-import Chemistry from "./pages/academics/basic/Chemistry";
-import Mathematics from "./pages/academics/basic/Mathematics";
-import Physics from "./pages/academics/basic/Physics";
-import English from "./pages/academics/basic/English";
+import BScAgriculture from "./pages/academics/ug/BScAgriculture";
 
 const queryClient = new QueryClient();
 
@@ -81,6 +74,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
 
@@ -94,11 +88,14 @@ const App = () => (
           <Route path="/vision-mission" element={<VisionMission />} />
           <Route path="/milestones" element={<Milestones />} />
           <Route path="/campus-life" element={<CampusLife />} />
+          <Route path="/campus-life/library" element={<Library />} />
+          <Route path="/campus-life/sports-culture" element={<SportsCulture />} />
 
           {/* About sub-page routes */}
           <Route path="/about/naac" element={<NAAC />} />
           <Route path="/about/recognition" element={<Recognition />} />
           <Route path="/about/statutory-approvals" element={<StatutoryApprovals />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/about/rti" element={<RTI />} />
           <Route path="/about/ncte" element={<NCTE />} />
           <Route path="/about/affiliations" element={<Affiliations />} />
@@ -107,16 +104,6 @@ const App = () => (
           {/* Academics routes */}
           <Route path="/academics/ug/bsc-agriculture" element={<BScAgriculture />} />
           <Route path="/academics/ug/btech-food-technology" element={<BTechFoodTechnology />} />
-          <Route path="/academics/ug/agriculture-engineering" element={<AgricultureEngineering />} />
-          <Route path="/academics/ug/ai-ml" element={<AIML />} />
-          <Route path="/academics/ug/cs-engineering" element={<CSEngineering />} />
-          <Route path="/academics/ug/civil-engineering" element={<CivilEngineering />} />
-          <Route path="/academics/pg/mba" element={<MBA />} />
-          <Route path="/academics/pg/mtech" element={<MTech />} />
-          <Route path="/academics/basic/chemistry" element={<Chemistry />} />
-          <Route path="/academics/basic/mathematics" element={<Mathematics />} />
-          <Route path="/academics/basic/physics" element={<Physics />} />
-          <Route path="/academics/basic/english" element={<English />} />
 
           {/* Admissions routes */}
           <Route path="/admissions/kcet" element={<AdmissionKCET />} />

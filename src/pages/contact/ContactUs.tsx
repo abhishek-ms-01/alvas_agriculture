@@ -59,6 +59,7 @@ const ContactUs = () => {
 
                     {/* ── Hero ── */}
                     <section className="ip-hero">
+                        <div className="ip-hero-bg-image" style={{ backgroundImage: `url(https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg)` }} />
                         <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
                         <div className="ip-hero-content">
                             <span className="ip-badge"><Mail size={12} /> Get In Touch</span>

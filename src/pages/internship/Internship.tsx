@@ -16,7 +16,7 @@ const programs = [
         title: "Field Crop Production Internship",
         desc: "Hands-on experience with modern crop cultivation techniques, soil management, and sustainable farming practices on real agricultural land.",
         duration: "3 – 6 Months",
-        img: "https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=600&q=80",
+        img: "/agriculture filed.jpeg",
         delay: "0.05s",
     },
     {
@@ -24,7 +24,7 @@ const programs = [
         title: "Agricultural Research & Lab Training",
         desc: "Work alongside faculty researchers on ongoing projects in plant pathology, agronomy, soil science, and biotechnology.",
         duration: "2 – 4 Months",
-        img: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&q=80",
+        img: "/apiculture6.jpeg",
         delay: "0.1s",
     },
     {
@@ -32,7 +32,7 @@ const programs = [
         title: "Agribusiness & Market Linkage",
         desc: "Gain insights into agricultural value chains, farm-to-market logistics, commodity trading, and rural entrepreneurship models.",
         duration: "3 Months",
-        img: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=600&q=80",
+        img: "/agrimarkeing.jpeg",
         delay: "0.15s",
     },
     {
@@ -40,7 +40,7 @@ const programs = [
         title: "Precision Agriculture & GIS",
         desc: "Master the use of drones, remote sensing, GIS mapping, and IoT devices for data-driven modern farm management.",
         duration: "1 – 3 Months",
-        img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
+        img: "/technologidrone.jpeg",
         delay: "0.2s",
     },
     {
@@ -48,7 +48,7 @@ const programs = [
         title: "Rural Development & Extension",
         desc: "Engage directly with farming communities; conduct workshops, farmer training programs, and implement government schemes.",
         duration: "2 – 4 Months",
-        img: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&q=80",
+        img: "/ruraldevellopment.jpeg",
         delay: "0.25s",
     },
     {
@@ -56,7 +56,7 @@ const programs = [
         title: "Horticulture & Nursery Management",
         desc: "Learn floriculture, landscape gardening, fruit crop cultivation, and nursery establishment practices in our model garden.",
         duration: "2 – 3 Months",
-        img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
+        img: "/horticulture.jpeg",
         delay: "0.3s",
     },
 ];
@@ -96,6 +96,7 @@ const Internship = () => {
 
                     {/* ── Hero ── */}
                     <section className="ip-hero">
+                        <div className="ip-hero-bg-image" style={{ backgroundImage: `url(https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg)` }} />
                         <div className="ip-blob ip-blob-1" />
                         <div className="ip-blob ip-blob-2" />
                         <div className="ip-blob ip-blob-3" />
@@ -152,7 +153,7 @@ const Internship = () => {
                         <div className="ip-overview">
                             <div className="ip-overview-img">
                                 <img
-                                    src="https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800&q=80"
+                                    src="/apiculture4.jpeg"
                                     alt="Students in agricultural field"
                                 />
                             </div>

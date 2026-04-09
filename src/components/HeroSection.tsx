@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Leaf, Droplets, Sprout, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router-dom";
 
 const heroImages = [
   "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=1920&q=80",
@@ -22,6 +23,7 @@ const floatingIcons = [
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -105,6 +107,7 @@ const HeroSection = () => {
           <Button
             size="lg"
             className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8 py-6 text-base rounded-full shadow-lg hover:shadow-accent/30 hover:shadow-xl transition-all"
+            onClick={() => navigate("/contact")}
           >
             Apply Now
           </Button>
@@ -112,6 +115,7 @@ const HeroSection = () => {
             size="lg"
             variant="outline"
             className="bg-white border-white text-black hover:bg-white/90 font-semibold px-8 py-6 text-base rounded-full shadow-lg"
+            onClick={() => navigate("/campus-life")}
           >
             Explore Campus
           </Button>
