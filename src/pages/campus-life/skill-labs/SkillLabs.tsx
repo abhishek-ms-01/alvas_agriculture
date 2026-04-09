@@ -48,7 +48,7 @@ const SkillLabs = () => (
                     {/* ── Section 1: Innovation Centers ── */}
                     <div className="ip-overview">
                         <div className="ip-overview-img">
-                            <img src="/skill_lab_1.png" alt="Advanced Agri Lab" />
+                            <img src="/LAB2.jpeg" alt="Advanced Agri Lab" />
                         </div>
                         <div className="ip-overview-text">
                             <p className="ip-label skill-labs">Skill Development</p>
@@ -94,7 +94,7 @@ const SkillLabs = () => (
                             </div>
                             <div className="order-1 md:order-2">
                                 <img 
-                                    src="/skill_lab_2.png" 
+                                    src="/LAB1.jpeg" 
                                     className="rounded-3xl shadow-xl w-full object-cover h-[450px]" 
                                     alt="Science Lab"
                                 />
