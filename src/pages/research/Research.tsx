@@ -1,67 +1,14 @@
-import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { 
   Microscope, 
   FlaskConical, 
-  BookOpen, 
-  Globe, 
-  Award, 
-  Users, 
-  FileText, 
-  GraduationCap, 
-  Layout, 
-  ArrowRight,
-  TrendingUp,
-  Database
+  TrendingUp
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import "../internship/Internship.css";
 
 const Research = () => {
-  const [activeCategory, setActiveCategory] = useState<string>("areas");
-
-  const categories = [
-    {
-      id: "areas",
-      label: "Research Areas",
-      icon: <Microscope className="w-5 h-5" />,
-      description: "Explore our diverse research domains and innovative projects.",
-      links: [
-        { label: "Funding", to: "/research/funding", icon: <TrendingUp className="w-4 h-4 text-accent" /> },
-        { label: "IPR", to: "/research/ipr", icon: <Award className="w-4 h-4 text-accent" /> },
-        { label: "Publication", to: "/research/publications", icon: <BookOpen className="w-4 h-4 text-accent" /> },
-        { label: "Patent Application", to: "/research/patent-application", icon: <FileText className="w-4 h-4 text-accent" /> },
-        { label: "Multidisciplinary Research Ideas", to: "/research/multidisciplinary", icon: <Globe className="w-4 h-4 text-accent" /> },
-      ]
-    },
-    {
-      id: "resources",
-      label: "Resources",
-      icon: <Database className="w-5 h-5" />,
-      description: "Dedicated support and knowledge base for research excellence.",
-      links: [
-        { label: "Research Team", to: "/research/team", icon: <Users className="w-4 h-4 text-accent" /> },
-        { label: "Research Policies", to: "/research/policies", icon: <Layout className="w-4 h-4 text-accent" /> },
-        { label: "Research Supervisors", to: "/research/supervisors", icon: <GraduationCap className="w-4 h-4 text-accent" /> },
-        { label: "Journals", to: "/research/journals", icon: <BookOpen className="w-4 h-4 text-accent" /> },
-        { label: "Conference", to: "/research/conference", icon: <Users className="w-4 h-4 text-accent" /> },
-      ]
-    },
-    {
-      id: "facilities",
-      label: "Facilities",
-      icon: <FlaskConical className="w-5 h-5" />,
-      description: "Advanced laboratories and specialized equipment for breakthroughs.",
-      links: [
-        { label: "Facilities", to: "/research/facilities", icon: <Layout className="w-4 h-4 text-accent" /> },
-        { label: "About Research Cell", to: "/research/about", icon: <Users className="w-4 h-4 text-accent" /> },
-        { label: "Yearwise Details", to: "/research/yearwise-details", icon: <TrendingUp className="w-4 h-4 text-accent" /> },
-      ]
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-slate-50 flex flex-col">
       <Header />
@@ -71,11 +18,11 @@ const Research = () => {
         <div className="ip-hero-bg-image" style={{ backgroundImage: `url(https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg)` }} />
         <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
         <div className="ip-hero-content">
-          <span className="ip-badge"><Microscope size={12} /> Discovery Hub</span>
-          <h1 className="ip-title">Research &amp; <span>Innovation</span></h1>
+          <span className="ip-badge"><Microscope size={12} /> Discovery & Innovation</span>
+          <h1 className="ip-title">Research <span>Vision</span></h1>
           <p className="ip-subtitle">
-            Pushing the boundaries of agricultural science through interdisciplinary exploration, 
-            advanced publications, and sustainable breakthroughs in our state-of-the-art facilities.
+            Establishing the foundations for agricultural excellence. Our Research & Development Cell 
+            is dedicated to pioneering sustainable solutions for the future of farming.
           </p>
         </div>
         <div className="ip-wave">
@@ -85,92 +32,86 @@ const Research = () => {
         </div>
       </section>
 
-      {/* Main Content Dashboard */}
-      <section className="flex-grow py-20 px-6 max-w-[1300px] mx-auto w-full">
-        <div className="flex flex-col lg:flex-row gap-12 h-fit">
-          
-          {/* Categories Sidebar */}
-          <div className="lg:w-[320px] flex flex-col gap-4">
-            <p className="text-[11px] font-black tracking-widest text-slate-400 uppercase mb-2">Discovery Hub</p>
-            {categories.map((cat) => (
-              <button
-                key={cat.id}
-                onClick={() => setActiveCategory(cat.id)}
-                className={`flex flex-col group p-6 rounded-2xl border transition-all duration-300 text-left ${
-                  activeCategory === cat.id 
-                  ? "bg-white border-accent shadow-xl shadow-accent/5 translate-x-2" 
-                  : "bg-white/50 border-slate-200 hover:border-accent/40 grayscale active:scale-[0.98]"
-                }`}
-              >
-                <div className="flex items-center gap-4 mb-3">
-                  <div className={`p-2.5 rounded-xl ${activeCategory === cat.id ? 'bg-accent text-white shadow-lg shadow-accent/20' : 'bg-slate-100 text-deep-green group-hover:bg-accent/10 transition-colors'}`}>
-                    {cat.icon}
-                  </div>
-                  <h3 className={`font-black uppercase tracking-wider text-[14px] ${activeCategory === cat.id ? 'text-deep-green' : 'text-slate-400 group-hover:text-deep-green text-opacity-80'}`}>
-                    {cat.label}
-                  </h3>
-                </div>
-                {activeCategory === cat.id && (
-                   <p className="text-slate-500 text-[13px] leading-snug animate-in fade-in slide-in-from-top-1 duration-500">
-                    {cat.description}
-                  </p>
-                )}
-              </button>
-            ))}
-          </div>
+      {/* Main Content */}
+      <section className="flex-grow py-20 px-6 max-w-[1000px] mx-auto w-full">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="bg-white rounded-3xl border border-slate-100 shadow-[0_30px_90px_-20px_rgba(0,0,0,0.08)] overflow-hidden"
+        >
+          <div className="p-12 lg:p-16">
+            <h2 className="text-deep-green font-black text-3xl uppercase tracking-tighter mb-8 flex items-center gap-4">
+              Our Research Journey
+              <div className="h-0.5 flex-1 bg-slate-100" />
+            </h2>
 
-          {/* Dynamic Content Panel */}
-          <div className="flex-1 bg-white rounded-3xl border border-slate-100 shadow-[0_30px_90px_-20px_rgba(0,0,0,0.08)] overflow-hidden min-h-[500px]">
-            <div className="p-12">
-              <h2 className="text-deep-green font-black text-3xl uppercase tracking-tighter mb-12 flex items-center gap-4">
-                {categories.find(c => c.id === activeCategory)?.label}
-                <div className="h-0.5 flex-1 bg-slate-100" />
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {categories.find(c => c.id === activeCategory)?.links.map((link, idx) => (
-                  <motion.div
-                    key={link.label}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: idx * 0.05 }}
-                  >
-                    <Link
-                      to={link.to}
-                      className="group flex flex-col p-6 rounded-2xl bg-slate-50 hover:bg-deep-green transition-all duration-300 border border-slate-100 hover:border-deep-green hover:shadow-2xl hover:shadow-deep-green/10"
-                    >
-                      <div className="flex items-center justify-between mb-4">
-                        <div className="p-2 bg-white rounded-lg shadow-sm group-hover:bg-accent group-hover:text-white transition-all duration-300 transform group-hover:rotate-12">
-                          {link.icon}
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-slate-300 group-hover:text-accent group-hover:translate-x-2 transition-all duration-300" />
-                      </div>
-                      <span className="text-lg font-black text-deep-green group-hover:text-white transition-colors duration-300 uppercase tracking-tight">
-                        {link.label}
-                      </span>
-                    </Link>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-            
-            {/* Context Banner */}
-            <div className="bg-slate-50 px-12 py-8 mt-auto border-t border-slate-100 flex items-center justify-between">
-              <p className="text-[12px] font-bold text-slate-400 leading-relaxed max-w-md italic">
-                Our research initiatives are driven by academic rigor and community impact, leading the way for sustainable farming solutions.
+            <div className="prose prose-slate max-w-none">
+              <p className="text-lg text-slate-600 leading-relaxed mb-8">
+                Alva's Institute of Agricultural Sciences & Technology is proud to announce the formal establishment of its **Research & Development Cell in 2025**. 
+                As a newly established center of excellence, we are currently in the vital phase of building our research infrastructure and academic roadmap.
               </p>
-              <div className="h-12 w-px bg-slate-200 mx-8" />
-              <div className="flex gap-4">
-                <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center shadow-sm text-deep-green">
-                  <Database className="w-4 h-4" />
+
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 my-12">
+                <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100">
+                  <div className="h-12 w-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6">
+                    <TrendingUp className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-black text-deep-green uppercase tracking-tight mb-4">Strategic Roadmap</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">
+                    We are developing a 5-year strategic research plan focused on climate-resilient agriculture, precision farming, and sustainable soil health management.
+                  </p>
                 </div>
-                <div className="h-10 w-10 bg-white rounded-full flex items-center justify-center shadow-sm text-deep-green">
-                  <FlaskConical className="w-4 h-4" />
+
+                <div className="p-8 rounded-2xl bg-slate-50 border border-slate-100">
+                  <div className="h-12 w-12 bg-accent/10 text-accent rounded-xl flex items-center justify-center mb-6">
+                    <FlaskConical className="w-6 h-6" />
+                  </div>
+                  <h3 className="font-black text-deep-green uppercase tracking-tight mb-4">State-of-the-art Facilities</h3>
+                  <p className="text-slate-500 text-sm leading-relaxed">
+                    Our upcoming specialized laboratories are being equipped with modern analytical instruments to support high-impact postgraduate and doctoral research.
+                  </p>
                 </div>
+              </div>
+
+              <h3 className="text-xl font-black text-deep-green uppercase tracking-tight mt-16 mb-6">Core Objectives</h3>
+              <ul className="space-y-4 text-slate-600 list-none p-0">
+                <li className="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-accent" />
+                  <span>Fostering a culture of inquiry and innovation among faculty and undergraduate students.</span>
+                </li>
+                <li className="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-accent" />
+                  <span>Establishing collaborative partnerships with leading agricultural institutions and industries.</span>
+                </li>
+                <li className="flex items-start gap-4 p-4 rounded-xl hover:bg-slate-50 transition-colors">
+                  <div className="mt-1 flex-shrink-0 w-2 h-2 rounded-full bg-accent" />
+                  <span>Promoting interdisciplinary research to address regional and national agricultural challenges.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          {/* Status Footnote */}
+          <div className="bg-deep-green px-12 py-10 text-white flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="max-w-md">
+              <p className="text-[14px] font-bold leading-relaxed italic opacity-80">
+                "Small seeds today, a vast harvest of knowledge tomorrow. We are laying the groundwork for institutional excellence in research."
+              </p>
+            </div>
+            <div className="flex gap-6">
+              <div className="text-center">
+                <p className="text-2xl font-black text-accent mb-0">2025</p>
+                <p className="text-[10px] uppercase tracking-widest font-bold opacity-60">Establishment</p>
+              </div>
+              <div className="h-10 w-px bg-white/20" />
+              <div className="text-center">
+                <p className="text-2xl font-black text-white mb-0">Ongoing</p>
+                <p className="text-[10px] uppercase tracking-widest font-bold opacity-60">Phase 1 Setup</p>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
 
       <Footer />
@@ -179,3 +120,4 @@ const Research = () => {
 };
 
 export default Research;
+

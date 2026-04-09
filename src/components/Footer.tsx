@@ -15,7 +15,7 @@ const navLinks = [
   { label: "About", to: "/about-college" },
   { label: "Admissions", to: "/admissions/kcet" },
   { label: "Academics", to: "/academics/ug/bsc-agriculture" },
-  { label: "Research", to: "/research/about" },
+  { label: "Research", to: "/research" },
   { label: "Placements", to: "/placements" },
   { label: "Campus Life", to: "/campus-life" },
   { label: "Exposure Visit", to: "/exposure-visit" },
