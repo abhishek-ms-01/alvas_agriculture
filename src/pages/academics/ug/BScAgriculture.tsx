@@ -8,6 +8,7 @@ const data: DeptPageProps = {
 
   /* ─── HERO ─── */
   hero: {
+    image: "https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg",
     badge: "UG Programme · B.Sc. Agriculture",
     title: (
       <>

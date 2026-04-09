@@ -7,21 +7,7 @@ import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import "../internship/Internship.css";
 
-const placedStudents = [
-    { name: "Akshay Kumar",  company: "Syngenta",  salary: "8.5 LPA", role: "Research Associate",   img: "https://i.pravatar.cc/150?u=akshay" },
-    { name: "Priya Sharma",  company: "Bayer",     salary: "7.2 LPA", role: "Quality Analyst",       img: "https://i.pravatar.cc/150?u=priya"  },
-    { name: "Rahul Hegde",   company: "Mahindra",  salary: "6.8 LPA", role: "Agri-Tech Engineer",    img: "https://i.pravatar.cc/150?u=rahul"  },
-    { name: "Deepa Rai",     company: "NABARD",    salary: "9.0 LPA", role: "Development Officer",   img: "https://i.pravatar.cc/150?u=deepa"  },
-    { name: "Vikram Singh",  company: "KMF",       salary: "6.5 LPA", role: "Production Supervisor", img: "https://i.pravatar.cc/150?u=vikram" },
-    { name: "Sneha Pai",     company: "Godrej Agrovet", salary: "7.8 LPA", role: "Field Executive", img: "https://i.pravatar.cc/150?u=sneha"  },
-];
 
-const stats = [
-    { icon: <TrendingUp size={22} />, value: "94%",   label: "Placement Rate",    desc: "Consistently high placement across all agricultural streams." },
-    { icon: <Building2  size={22} />, value: "45+",   label: "Recruiters",        desc: "Partnered with leading national and multinational agri-industries." },
-    { icon: <Briefcase  size={22} />, value: "15 LPA",label: "Highest Package",   desc: "Students secure competitive recruitment packages in industry." },
-    { icon: <Users      size={22} />, value: "1500+", label: "Alumni Network",    desc: "A vast network of alumni thriving in top positions globally." },
-];
 
 const steps = [
     { num: "01", title: "Registration",    desc: "Students register with the placement cell and submit polished resumes and portfolios." },
@@ -31,13 +17,7 @@ const steps = [
     { num: "05", title: "Offer Letter",    desc: "Selected candidates receive formal offer letters with salary and joining details." },
 ];
 
-const recruiters = [
-    { icon: "🌾", name: "ICAR" },         { icon: "🏦", name: "NABARD" },
-    { icon: "🌱", name: "Syngenta" },      { icon: "🚜", name: "Mahindra Agri" },
-    { icon: "🐄", name: "KMF – Nandini"}, { icon: "🔬", name: "Keladi Shivappa Nayaka Univ." },
-    { icon: "💊", name: "Bayer" },         { icon: "💧", name: "Jain Irrigation" },
-    { icon: "🥚", name: "Godrej Agrovet"},
-];
+
 
 const Placement = () => (
     <div className="ip-page">
@@ -48,6 +28,7 @@ const Placement = () => (
 
                 {/* ── Hero ── */}
                 <section className="ip-hero">
+                    <div className="ip-hero-bg-image" style={{ backgroundImage: `url(https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg)` }} />
                     <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
                     <div className="ip-hero-content">
                         <span className="ip-badge"><Target size={12} /> Placement Cell</span>
@@ -55,18 +36,7 @@ const Placement = () => (
                         <p className="ip-subtitle">
                             Empowering agricultural graduates through industry-focused training, expert mentorship, and placement opportunities with leading national and global agri-organisations.
                         </p>
-                        <div className="ip-stat-row">
-                            {[
-                                { val: "94%",   label: "Placement Rate" },
-                                { val: "45+",   label: "Recruiting Partners" },
-                                { val: "15 LPA",label: "Highest Package" },
-                                { val: "1500+", label: "Alumni Network" },
-                            ].map(s => (
-                                <div key={s.label} className="ip-stat-pill">
-                                    <strong>{s.val}</strong> {s.label}
-                                </div>
-                            ))}
-                        </div>
+
                     </div>
                     <div className="ip-wave">
                         <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style={{ height: 56 }}>
@@ -89,7 +59,7 @@ const Placement = () => (
                     {/* ── Overview ── */}
                     <div className="ip-overview">
                         <div className="ip-overview-img">
-                            <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="Placement session" />
+                            <img src="/PLACEMENT.jpg" alt="Placement session" />
                         </div>
                         <div className="ip-overview-text">
                             <p className="ip-label">About the Cell</p>
@@ -111,27 +81,17 @@ const Placement = () => (
                         </div>
                     </div>
 
-                    {/* ── Placed Students ── */}
+                    {/* ── Placed Students Info ── */}
                     <div className="ip-section">
-                        <p className="ip-label">Success Stories</p>
-                        <h2 className="ip-heading">Our Placed Students</h2>
-                        <p className="ip-para">A glimpse of our graduates thriving in leading agricultural organisations across the country.</p>
-                        <div className="ip-programs-grid">
-                            {placedStudents.map((s, i) => (
-                                <div key={i} className="ip-program-card" style={{ animationDelay: `${i * 0.07}s` }}>
-                                    <div className="ip-card-img-wrap" style={{ height: 140 }}>
-                                        <img src={s.img} alt={s.name} className="ip-card-img" style={{ objectPosition: "top" }} />
-                                        <span className="ip-card-tag">{s.salary}</span>
-                                    </div>
-                                    <div className="ip-card-body">
-                                        <h3 className="ip-card-title">{s.name}</h3>
-                                        <p className="ip-card-desc">{s.role}</p>
-                                        <span className="ip-card-duration" style={{ color: "var(--ip-green-mid)", fontWeight: 700 }}>
-                                            {s.company}
-                                        </span>
-                                    </div>
-                                </div>
-                            ))}
+                        <p className="ip-label">First Batch</p>
+                        <h2 className="ip-heading">Upcoming Graduates</h2>
+                        <div style={{ background: "linear-gradient(135deg, rgba(22, 101, 52, 0.05), rgba(22, 101, 52, 0.1))", border: "1px solid rgba(22, 101, 52, 0.15)", borderRadius: "16px", padding: "40px", textAlign: "center", marginTop: "24px" }}>
+                            <Award size={48} style={{ color: "var(--ip-green-dark)", opacity: 0.8, fill: "var(--ip-green-light)", marginBottom: "16px" }} />
+                            <h3 style={{ color: "var(--ip-content)", fontSize: "1.6rem", fontWeight: 700, marginBottom: "12px", fontFamily: "var(--ip-font-heading)" }}>Preparing for Excellence</h3>
+                            <p style={{ color: "var(--ip-muted)", fontSize: "1.1rem", maxWidth: "680px", margin: "0 auto", lineHeight: 1.6 }}>
+                                Alva's Institute of Agricultural Sciences embarked on its educational journey in <strong>2025</strong>. 
+                                Our maiden batch of agricultural professionals is currently undergoing rigorous academic and practical training. We are actively building industry partnerships and look forward to our first placement drive as these students prepare to become future agricultural leaders!
+                            </p>
                         </div>
                     </div>
 
@@ -151,39 +111,6 @@ const Placement = () => (
                         </div>
                     </div>
 
-                    {/* ── Stats ── */}
-                    <div className="ip-section">
-                        <p className="ip-label">Our Impact</p>
-                        <h2 className="ip-heading">Legacy of Achievement</h2>
-                        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(240px, 1fr))", gap: 20, marginTop: 24 }}>
-                            {stats.map((stat, i) => (
-                                <div key={i} className="ip-program-card" style={{ animationDelay: `${i * 0.07}s` }}>
-                                    <div className="ip-card-body" style={{ display: "flex", gap: 14 }}>
-                                        <div className="ip-bullet" style={{ flexShrink: 0, width: 44, height: 44, borderRadius: 10, fontSize: 22 }}>{stat.icon}</div>
-                                        <div>
-                                            <h4 className="ip-card-title" style={{ fontSize: "1.4rem" }}>{stat.value}</h4>
-                                            <p style={{ fontWeight: 700, color: "var(--ip-green-mid)", fontSize: "0.85rem", margin: "2px 0" }}>{stat.label}</p>
-                                            <p className="ip-card-desc" style={{ margin: 0 }}>{stat.desc}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-
-                    {/* ── Recruiters ── */}
-                    <div className="ip-partners">
-                        <p className="ip-label" style={{ textAlign: "center" }}>Top Recruiters</p>
-                        <h2 className="ip-heading" style={{ textAlign: "center", margin: "4px 0 0" }}>Companies Visited</h2>
-                        <p style={{ fontSize: "0.9rem", color: "var(--ip-muted)", marginTop: 8 }}>
-                            We have formal MoU-based placements with leading agri-organisations nationally.
-                        </p>
-                        <div className="ip-partners-grid">
-                            {recruiters.map(r => (
-                                <span key={r.name} className="ip-partner-chip"><span>{r.icon}</span> {r.name}</span>
-                            ))}
-                        </div>
-                    </div>
 
                     {/* ── CTA ── */}
                     <div className="ip-cta">

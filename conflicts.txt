@@ -1,0 +1,12 @@
+src/pages/academics/basic/Chemistry.tsx
+src/pages/academics/basic/English.tsx
+src/pages/academics/basic/Mathematics.tsx
+src/pages/academics/basic/Physics.tsx
+src/pages/academics/pg/MBA.tsx
+src/pages/academics/pg/MTech.tsx
+src/pages/academics/ug/AIML.tsx
+src/pages/academics/ug/AgricultureEngineering.tsx
+src/pages/academics/ug/BScAgriculture.tsx
+src/pages/academics/ug/BTechFoodTechnology.tsx
+src/pages/academics/ug/CSEngineering.tsx
+src/pages/academics/ug/CivilEngineering.tsx

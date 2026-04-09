@@ -9,51 +9,51 @@ import "../internship/Internship.css";
 
 const destinations = [
     {
-        tag: "Research",
-        title: "ICAR Research Stations",
-        desc: "Visiting various ICAR stations across India to witness the latest in crop improvement, plant protection, and agricultural biotechnology.",
-        img: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=600&q=80",
-        date: "Semester IV & VI",
+        tag: "University",
+        title: "KSNUAHS Campus",
+        desc: "Interaction sessions and campus tours at Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, exploring their advanced research facilities.",
+        img: "/ksnuahs.jpg",
+        date: "Semester V",
         delay: "0.05s",
     },
     {
-        tag: "Sustainability",
-        title: "Organic Model Farms",
-        desc: "Hands-on exposure to integrated farming systems, zero-budget natural farming, and traditional organic cultivation practices.",
-        img: "https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=600&q=80",
+        tag: "Organic Farming",
+        title: "Sanjeevini Gaudhama",
+        desc: "Hands-on exposure to indigenous cattle conservation, organic manure production, and traditional gaushala management systems.",
+        img: "/Sanjeevini Gaudhama.jpg",
         date: "Annual Visit",
         delay: "0.1s",
+    },
+    {
+        tag: "AgriTech",
+        title: "Drone Technology",
+        desc: "Live demonstrations of modern agricultural drones used for precision spraying, crop monitoring, and aerial field scouting.",
+        img: "/drone.jpg",
+        date: "Semester VI",
+        delay: "0.15s",
+    },
+    {
+        tag: "Research Center",
+        title: "ZAHRS Brahmavar",
+        desc: "Detailed field visits to the Zonal Agricultural and Horticultural Research Station to study coastal agricultural practices and ongoing crop research.",
+        img: "/ZAHRS Brahmavar.jpg",
+        date: "Semester IV",
+        delay: "0.2s",
+    },
+    {
+        tag: "Horticulture",
+        title: "Nursery Management",
+        desc: "Understanding seedling propagation, poly-house cultivation, and climate-controlled greenhouse management from field experts.",
+        img: "/nursary.jpg",
+        date: "Semester III",
+        delay: "0.25s",
     },
     {
         tag: "Industry",
         title: "Agro-Processing Units",
         desc: "Learning about the value chain from farm to fork by visiting large-scale food processing and preservation facilities.",
-        img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
-        date: "Semester V",
-        delay: "0.15s",
-    },
-    {
-        tag: "Horticulture",
-        title: "State Forest Nurseries",
-        desc: "Understanding propagation techniques for forest species and ornamental plants in large, climate-controlled nursery environments.",
-        img: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&q=80",
-        date: "Semester III",
-        delay: "0.2s",
-    },
-    {
-        tag: "Education",
-        title: "Agricultural Universities",
-        desc: "Interaction sessions with scientists and professors at premier agricultural universities including UAS Bangalore and Dharwad.",
-        img: "https://images.unsplash.com/photo-1523050337458-5c56e75b0dd2?w=600&q=80",
-        date: "Inter-State Visit",
-        delay: "0.25s",
-    },
-    {
-        tag: "Technology",
-        title: "High-Tech Greenhouses",
-        desc: "Experiencing poly-house cultivation, hydroponics, aeroponics, and advanced precision farming setups in state-of-the-art facilities.",
-        img: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?w=600&q=80",
-        date: "Semester VIII",
+        img: "/Agro.jpg",
+        date: "Semester VII",
         delay: "0.3s",
     },
 ];
@@ -83,6 +83,7 @@ const ExposureVisit = () => (
 
                 {/* ── Hero ── */}
                 <section className="ip-hero">
+                    <div className="ip-hero-bg-image" style={{ backgroundImage: `url(https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg)` }} />
                     <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
                     <div className="ip-hero-content">
                         <span className="ip-badge"><Bus size={12} /> Exposure & Educational Visits</span>
@@ -124,7 +125,7 @@ const ExposureVisit = () => (
                     {/* ── Overview ── */}
                     <div className="ip-overview">
                         <div className="ip-overview-img">
-                            <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80" alt="Students on field visit" />
+                            <img src="/agriculture filed.jpeg" alt="Students on field visit" />
                         </div>
                         <div className="ip-overview-text">
                             <p className="ip-label">Educational Journeys</p>

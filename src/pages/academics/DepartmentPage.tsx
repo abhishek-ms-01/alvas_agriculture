@@ -12,6 +12,7 @@ export interface DeptHero {
   title: React.ReactNode;
   subtitle: string;
   pills: { label: string; value: string }[];
+  image?: string;
 }
 
 export interface DeptAbout {
@@ -155,6 +156,9 @@ const DepartmentPage: React.FC<DeptPageProps> = ({
             HERO
         ══════════════════════════════ */}
         <div className="dp-hero">
+          {hero.image && (
+            <div className="dp-hero-bg-image" style={{ backgroundImage: `url(${hero.image})` }} />
+          )}
           <div className="dp-blob dp-blob-1" />
           <div className="dp-blob dp-blob-2" />
           <div className="dp-hero-content">

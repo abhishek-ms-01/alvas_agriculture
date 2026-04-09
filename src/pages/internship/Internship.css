@@ -36,6 +36,16 @@
 }
 
 /* ══ HERO ═══════════════════════════════════════ */
+.ip-hero-bg-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+    mix-blend-mode: luminosity;
+}
+
 .ip-hero {
     position: relative;
     overflow: hidden;

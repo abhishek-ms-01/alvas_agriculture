@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./CampusLife.css";
+import "../internship/Internship.css";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -141,8 +142,25 @@ export default function CampusLife() {
 
     return (
         <>
+        <Header />
         <div className="cl-root">
-            <Header />
+            {/* ── Hero ── */}
+            <section className="ip-hero">
+                <div className="ip-hero-bg-image" style={{ backgroundImage: `url(https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg)` }} />
+                <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
+                <div className="ip-hero-content">
+                    <span className="ip-badge">Alva's IAST</span>
+                    <h1 className="ip-title">Campus <span>Life</span></h1>
+                    <p className="ip-subtitle">
+                        Discover 100 acres of living, breathing campus in the Western Ghats—where academics, culture, and nature blend seamlessly.
+                    </p>
+                </div>
+                <div className="ip-wave">
+                    <svg viewBox="0 0 1440 56" preserveAspectRatio="none" style={{ height: 56 }}>
+                        <path d="M0,32 C360,56 1080,0 1440,32 L1440,56 L0,56 Z" fill="#f0ead8" />
+                    </svg>
+                </div>
+            </section>
 
             {/* ══ 6-TILE CAMPUS LIFE SECTION ══ */}
             <section className="cl-page-section cl-tiles-section">

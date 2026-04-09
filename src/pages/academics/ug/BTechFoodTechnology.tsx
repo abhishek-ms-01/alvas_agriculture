@@ -8,6 +8,7 @@ const data: DeptPageProps = {
 
   /* ─── HERO ─── */
   hero: {
+    image: "https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg",
     badge: "UG Programme · B.Tech Food Technology",
     title: (
       <>
@@ -26,7 +27,7 @@ const data: DeptPageProps = {
 
   /* ─── ABOUT ─── */
   about: {
-    mainImage: "https://images.unsplash.com/photo-1555620956-6f81e375ef7c?auto=format&fit=crop&q=80&w=1200",
+    mainImage: "/ai.png",
     badge1: { label: "CFTRI Collaboration", sub: "Technical Guidance" },
     badge2: { label: "95% Placement", sub: "Top Food Industries" },
     mainDescription: "The B.Tech. in Food Technology at Alva's is a dynamic program designed to master the chemistry and engineering of food. We combine theoretical knowledge with extensive hands-on experience in our state-of-the-art laboratories. Our graduates are industry-ready professionals, capable of innovating in food safety, processing, and preservation to meet the growing global demand for high-quality and sustainable nutritional solutions.",
