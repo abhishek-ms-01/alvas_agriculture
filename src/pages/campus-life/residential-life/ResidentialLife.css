@@ -1,174 +1,24 @@
-:root {
-  --res-green: #1a3a32;
-  --res-gold: #d4af37;
-  --res-cream: #fdfbf7;
-  --res-text: #2d3748;
+/* 
+  ResidentialLife.css
+  This file is now largely a supplement to Internship.css (imported in the TSX).
+  It handles page-specific layout adjustments if needed.
+*/
+
+.ip-page {
+  background-color: hsl(40, 25%, 91%); /* Match the wave fill and breadcrumb background */
 }
 
-.trl-root {
-  background-color: var(--res-cream);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Ensure the hero content is centered correctly */
+.ip-hero-content {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
 
-/* --- HERO --- */
-.trl-hero {
-  position: relative;
-  height: 60vh;
-  min-height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  background: var(--res-green);
+.ip-body {
+  padding-bottom: 80px;
 }
 
-.trl-hero-img {
-  position: absolute;
-  inset: 0;
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  transform: scale(1.05);
-}
-
-.trl-hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, var(--res-green), rgba(26,58,50,0.3));
-}
-
-.trl-hero-content {
-  position: relative;
-  z-index: 10;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.trl-hero-title {
-  font-family: 'Syne', sans-serif;
-  font-size: clamp(2rem, 5vw, 4rem);
-  color: white;
-  font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 20px;
-}
-
-/* --- STICKY TABS --- */
-.trl-tabs-container {
-  position: sticky;
-  top: 80px; /* Adjust based on header height */
-  z-index: 40;
-  background: white;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-}
-
-.trl-tabs-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  padding: 0 20px;
-}
-
-.trl-tab-btn {
-  padding: 20px 30px;
-  font-size: 13px;
-  font-weight: 800;
-  color: #666;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.trl-tab-btn.active {
-  color: var(--res-green);
-}
-
-.trl-tab-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: var(--res-gold);
-}
-
-/* --- CONTENT AREA --- */
-.trl-content-section {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 80px 20px;
-  flex: 1;
-}
-
-.trl-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.trl-info-title {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--res-green);
-  margin-bottom: 30px;
-  line-height: 1.1;
-}
-
-.trl-info-p {
-  color: var(--res-text);
-  font-size: 1.1rem;
-  line-height: 1.7;
-  margin-bottom: 40px;
-  opacity: 0.8;
-}
-
-.trl-feature-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-
-.trl-feature-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding: 15px;
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.03);
-  font-size: 14px;
-  font-weight: 700;
-  color: var(--res-green);
-}
-
-.trl-image-wrapper {
-  position: relative;
-  border-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
-}
-
-.trl-image-wrapper img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* --- RESPONSIVE --- */
-@media (max-width: 1024px) {
-  .trl-tab-btn { padding: 15px 20px; font-size: 11px; }
-  .trl-grid { grid-template-columns: 1fr; gap: 40px; }
-  .trl-info-title { font-size: 2rem; }
-}
-
-@media (max-width: 640px) {
-  .trl-tabs-inner { overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
-  .trl-tab-btn { white-space: nowrap; }
+@media (max-width: 768px) {
+  .ip-hero {
+    height: 70vh;
+  }
 }
