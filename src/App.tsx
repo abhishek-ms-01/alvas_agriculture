@@ -12,6 +12,7 @@ import ContactUs from "./pages/contact/ContactUs";
 import Internship from "./pages/internship/Internship";
 import ExposureVisit from "./pages/exposure/ExposureVisit";
 import Placement from "./pages/placement/Placement";
+import Research from "./pages/research/Research";
 import Funding from "./pages/research/Funding";
 import IPR from "./pages/research/IPR";
 import Publications from "./pages/research/Publications";
@@ -59,6 +60,7 @@ import StatutoryApprovals from "./pages/about/StatutoryApprovals";
 import RTI from "./pages/about/RTI";
 import NCTE from "./pages/about/NCTE";
 import Affiliations from "./pages/about/Affiliations";
+import MandatoryDisclosure from "./pages/about/MandatoryDisclosure";
 
 // Academics imports
 import BTechFoodTechnology from "./pages/academics/ug/BTechFoodTechnology";
@@ -97,6 +99,7 @@ const App = () => (
           <Route path="/about/rti" element={<RTI />} />
           <Route path="/about/ncte" element={<NCTE />} />
           <Route path="/about/affiliations" element={<Affiliations />} />
+          <Route path="/about/mandatory-disclosure" element={<MandatoryDisclosure />} />
 
           {/* Academics routes */}
           <Route path="/academics/ug/bsc-agriculture" element={<BScAgriculture />} />
@@ -120,6 +123,7 @@ const App = () => (
           <Route path="/internship" element={<Internship />} />
           <Route path="/exposure-visit" element={<ExposureVisit />} />
           <Route path="/placements" element={<Placement />} />
+          <Route path="/research" element={<Research />} />
           <Route path="/research/funding" element={<Funding />} />
           <Route path="/research/ipr" element={<IPR />} />
           <Route path="/research/publications" element={<Publications />} />

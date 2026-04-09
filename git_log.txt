@@ -1,0 +1,4 @@
+﻿372f0d2 about
+fe3e884 Add new pages: NCTE, MOU, ChairmanMessage, CampusLife, AdminPages, AEF, DeanMessage, TuitionFees; update main.tsx and Placement
+4dc35cd research tabs
+d73bae8 tabs contact and etc

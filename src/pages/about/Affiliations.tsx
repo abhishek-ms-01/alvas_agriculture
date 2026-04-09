@@ -10,7 +10,7 @@ const Affiliations = () => {
       name: "University of Agricultural Sciences (UAS), Dharwad",
       type: "Parent University",
       since: "2008",
-      desc: "Alva's Institute of Agricultural Science & Technology is an affiliated college of UAS Dharwad — one of India's premier agricultural universities, established in 1949. UAS Dharwad governs the curriculum, examinations, and degree award for all programmes at our institute.",
+      desc: "Alva's Institute of Agricultural Science & Technology is an affiliated college of Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences — one of India's premier agricultural universities, established in 1949. The university governs the curriculum, examinations, and degree award for all programmes at our institute.",
     },
     {
       name: "Indian Council of Agricultural Research (ICAR), New Delhi",
@@ -114,7 +114,7 @@ const Affiliations = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  <tr><td>UAS Dharwad</td><td>Academic Affiliation</td><td>2008</td><td>State</td></tr>
+                  <tr><td>KSN University</td><td>Academic Affiliation</td><td>2008</td><td>State</td></tr>
                   <tr><td>ICAR</td><td>Curriculum Standards</td><td>2010</td><td>National</td></tr>
                   <tr><td>KSHEC</td><td>Policy Compliance</td><td>2008</td><td>State</td></tr>
                   <tr><td>KEA</td><td>Admission Authority</td><td>2009</td><td>State</td></tr>

@@ -20,6 +20,7 @@ import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "./admissions/Admissions.css";
 
 export default function AboutCollege() {
@@ -36,67 +37,18 @@ export default function AboutCollege() {
       <Header />
       
       <main>
-        {/* Hero Section - MORE COMPACT */}
-        <div className="adm-hero relative min-h-[55vh] flex items-center justify-center pt-28 pb-16 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <img 
-              src="https://i.ytimg.com/vi/9iSx-AjpdoI/maxresdefault.jpg" 
-              alt="Alva's Agricultural College Campus" 
-              className="w-full h-full object-cover opacity-20"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-deep-green/60 via-deep-green/40 to-background" />
-          </div>
-
-          <div className="adm-hero-content relative z-10 text-center max-w-4xl px-4">
-            <motion.div 
-              {...fadeIn}
-              className="adm-badge mx-auto mb-4 flex items-center justify-center gap-2"
-            >
-              <MapPin size={14} /> Moodbidri, Karnataka
-            </motion.div>
-            
-            <motion.h1 
-              {...fadeIn}
-              transition={{ delay: 0.2 }}
-              className="adm-title text-3xl md:text-5xl font-black mb-4 leading-tight text-white uppercase tracking-tight"
-            >
-              Shaping Future <span className="text-accent underline decoration-accent/30 underline-offset-8">Agri-Innovators</span>
-            </motion.h1>
-            
-            <motion.p 
-              {...fadeIn}
-              transition={{ delay: 0.3 }}
-              className="adm-subtitle text-base md:text-lg text-cream/90 mb-8 max-w-3xl mx-auto font-medium"
-            >
-              Alva's Institute of Agricultural Sciences and Technology (IAST) blends agrarian tradition with cutting-edge bioscience.
-            </motion.p>
-
-            <motion.div 
-              {...fadeIn}
-              transition={{ delay: 0.4 }}
-              className="adm-stat-row flex flex-wrap justify-center gap-3"
-            >
-              <div className="adm-stat-pill bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white font-bold text-xs uppercase tracking-wider">
-                <span className="text-accent">2008</span> Established
-              </div>
-              <div className="adm-stat-pill bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white font-bold text-xs uppercase tracking-wider">
-                <span className="text-accent">100%</span> Skill focus
-              </div>
-              <div className="adm-stat-pill bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white font-bold text-xs uppercase tracking-wider">
-                <span className="text-accent">Smart Farm</span>
-              </div>
-              <div className="adm-stat-pill bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 text-white font-bold text-xs uppercase tracking-wider">
-                <span className="text-accent">UAS Dharwad</span>
-              </div>
-            </motion.div>
-          </div>
-
-          <div className="adm-wave absolute bottom-0 left-0 w-full leading-[0]">
-            <svg viewBox="0 0 1440 80" preserveAspectRatio="none" className="fill-background">
-              <path d="M0,64L1440,32L1440,120L0,120Z" />
-            </svg>
-          </div>
-        </div>
+        {/* Hero Section */}
+        <PageHero
+          badgeIcon={<MapPin size={14} />}
+          badgeText="Moodbidri, Karnataka"
+          title={<>Shaping Future <span className="text-accent underline decoration-accent/30 underline-offset-8">Agri-Innovators</span></>}
+          subtitle="Alva's Institute of Agricultural Sciences and Technology (IAST) blends agrarian tradition with cutting-edge bioscience."
+          stats={[
+            { bold: "2025", text: "Established" },
+            { bold: "100%", text: "Skill focus" },
+            { bold: "Smart Farm", text: "" },
+          ]}
+        />
 
         {/* Breadcrumb */}
         <nav className="adm-breadcrumb py-4 bg-slate-50/50 border-b border-slate-100">
@@ -117,7 +69,7 @@ export default function AboutCollege() {
               </h2>
               <div className="space-y-4 text-slate-600 leading-relaxed text-base font-medium">
                 <p>
-                  Established in 2008, <strong className="text-deep-green/80">Alva's IAST</strong> is a premier destination for agricultural excellence under the Alva's Education Foundation, led by visionary <strong className="text-deep-green/80">Dr. M. Mohan Alva</strong>.
+                  Established in 2025, <strong className="text-deep-green/80">Alva's IAST</strong> is a premier destination for agricultural excellence under the Alva's Education Foundation, led by visionary <strong className="text-deep-green/80">Dr. M. Mohan Alva</strong>.
                 </p>
                 <p>
                   Our mission is to democratize high-quality bioscience education, preparing agile agri-professionals for a resource-conscious world through field-centric pedagogy.
@@ -130,7 +82,7 @@ export default function AboutCollege() {
               className="relative rounded-[2rem] overflow-hidden shadow-xl group"
             >
               <img 
-                src="/agri_students_greenhouse_1775277979747.png" 
+                src="https://www.aiet.org.in/wp-content/themes/aiet-2019/images/banner.jpg" 
                 alt="Greenhouse Learning" 
                 className="w-full h-[350px] object-cover transition-transform duration-700 group-hover:scale-105"
               />
@@ -164,7 +116,7 @@ export default function AboutCollege() {
                 <ul className="space-y-4 text-cream/80 font-medium text-sm">
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
-                    <span>Affiliated to <strong className="text-white">UAS Dharwad</strong> & Govt. of Karnataka.</span>
+                    <span>Affiliated to <strong className="text-white">Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences</strong> & Govt. of Karnataka.</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
@@ -208,7 +160,7 @@ export default function AboutCollege() {
                 },
                 { 
                   title: "B.Tech (Food Technology)", 
-                  image: "/agri_lab_modern_1775277121057.png",
+                  image: "ai.png",
                   duration: "4 Yr",
                   focus: "Processing & Quality Control"
                 }
@@ -236,7 +188,7 @@ export default function AboutCollege() {
           <section className="grid lg:grid-cols-2 gap-12 items-center">
              <motion.div {...fadeIn} className="order-2 lg:order-1">
                <img 
-                 src="/agri_smart_farm_tech_1775278001852.png" 
+                 src="Examination Hall.jpeg" 
                  alt="Smart Farm Tech" 
                  className="rounded-[2.5rem] shadow-xl h-[400px] w-full object-cover"
                />

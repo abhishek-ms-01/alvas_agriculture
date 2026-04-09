@@ -37,40 +37,7 @@ const navLinks = [
     ],
   },
   { label: "Academics", href: "#", isAcademics: true },
-  {
-    label: "Research",
-    href: "#",
-    megaMenu: [
-      {
-        category: "RESEARCH AREAS",
-        links: [
-          { label: "Funding", to: "/research/funding" },
-          { label: "IPR", to: "/research/ipr" },
-          { label: "Publication", to: "/research/publications" },
-          { label: "Patent Application", to: "/research/patent-application" },
-          { label: "Multidisciplinary Research Ideas", to: "/research/multidisciplinary" },
-        ],
-      },
-      {
-        category: "RESOURCES",
-        links: [
-          { label: "Research Team", to: "/research/team" },
-          { label: "Research Policies", to: "/research/policies" },
-          { label: "Research Supervisors", to: "/research/supervisors" },
-          { label: "Journals", to: "/research/journals" },
-          { label: "Conference", to: "/research/conference" },
-        ],
-      },
-      {
-        category: "FACILITIES",
-        links: [
-          { label: "Facilities", to: "/research/facilities" },
-          { label: "About", to: "/research/about" },
-          { label: "Yearwise Details", to: "/research/yearwise-details" },
-        ],
-      },
-    ],
-  },
+  { label: "Research", href: "#", to: "/research" },
   { label: "Placements", href: "#", to: "/placements" },
   { label: "Campus Life", href: "#", to: "/campus-life" },
   { label: "Exposure Visit", href: "#", to: "/exposure-visit" },

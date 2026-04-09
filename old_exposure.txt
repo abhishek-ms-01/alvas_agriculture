@@ -1,4 +1,4 @@
-import {
+﻿import {
     Bus, MapPin, Globe, BookOpen, Users, Leaf, Camera, ExternalLink,
     Home, ChevronRight, CheckCircle, ArrowRight, Clock,
 } from "lucide-react";
@@ -68,10 +68,10 @@ const gains = [
 ];
 
 const partners = [
-    { icon: "🌾", name: "ICAR Stations" },        { icon: "🔬", name: "Keladi Shivappa Nayaka Univ." },
-    { icon: "🌿", name: "Karnataka Agri Dept." }, { icon: "🏛️", name: "KVK Centres" },
-    { icon: "🌱", name: "Organic Farms" },        { icon: "🏭", name: "Agro Food Units" },
-    { icon: "🌳", name: "Forest Dept." },         { icon: "🐄", name: "KMF – Nandini" },
+    { icon: "≡ƒî╛", name: "ICAR Stations" },        { icon: "≡ƒö¼", name: "Keladi Shivappa Nayaka Univ." },
+    { icon: "≡ƒî┐", name: "Karnataka Agri Dept." }, { icon: "≡ƒÅ¢∩╕Å", name: "KVK Centres" },
+    { icon: "≡ƒî▒", name: "Organic Farms" },        { icon: "≡ƒÅ¡", name: "Agro Food Units" },
+    { icon: "≡ƒî│", name: "Forest Dept." },         { icon: "≡ƒÉä", name: "KMF ΓÇô Nandini" },
 ];
 
 const ExposureVisit = () => (
@@ -81,7 +81,7 @@ const ExposureVisit = () => (
             <Header />
             <main className="ip-main" style={{ flex: 1 }}>
 
-                {/* ── Hero ── */}
+                {/* ΓöÇΓöÇ Hero ΓöÇΓöÇ */}
                 <section className="ip-hero">
                     <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
                     <div className="ip-hero-content">
@@ -110,7 +110,7 @@ const ExposureVisit = () => (
                     </div>
                 </section>
 
-                {/* ── Breadcrumb ── */}
+                {/* ΓöÇΓöÇ Breadcrumb ΓöÇΓöÇ */}
                 <nav className="ip-breadcrumb">
                     <div className="ip-breadcrumb-inner">
                         <Home size={13} /><a href="/">Home</a>
@@ -121,7 +121,7 @@ const ExposureVisit = () => (
 
                 <div className="ip-body">
 
-                    {/* ── Overview ── */}
+                    {/* ΓöÇΓöÇ Overview ΓöÇΓöÇ */}
                     <div className="ip-overview">
                         <div className="ip-overview-img">
                             <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80" alt="Students on field visit" />
@@ -130,7 +130,7 @@ const ExposureVisit = () => (
                             <p className="ip-label">Educational Journeys</p>
                             <h2 className="ip-heading">Bridging Theory <br />&amp; Practice</h2>
                             <p className="ip-para">
-                                Exposure visits are a mandatory, integral part of the curriculum at Alva's IAST. These visits provide students with a unique opportunity to interact with industry experts, scientists, and progressive farmers — witnessing real-world applications of classroom concepts in action.
+                                Exposure visits are a mandatory, integral part of the curriculum at Alva's IAST. These visits provide students with a unique opportunity to interact with industry experts, scientists, and progressive farmers ΓÇö witnessing real-world applications of classroom concepts in action.
                             </p>
                             <ul className="ip-highlight-list">
                                 {[
@@ -146,7 +146,7 @@ const ExposureVisit = () => (
                         </div>
                     </div>
 
-                    {/* ── Destinations ── */}
+                    {/* ΓöÇΓöÇ Destinations ΓöÇΓöÇ */}
                     <div className="ip-section">
                         <p className="ip-label">Site Categories</p>
                         <h2 className="ip-heading">Key Visit Destinations</h2>
@@ -168,7 +168,7 @@ const ExposureVisit = () => (
                         </div>
                     </div>
 
-                    {/* ── What Students Gain ── */}
+                    {/* ΓöÇΓöÇ What Students Gain ΓöÇΓöÇ */}
                     <div className="ip-section">
                         <p className="ip-label">The Experience</p>
                         <h2 className="ip-heading">What Students Gain</h2>
@@ -188,7 +188,7 @@ const ExposureVisit = () => (
                         </div>
                     </div>
 
-                    {/* ── Partners ── */}
+                    {/* ΓöÇΓöÇ Partners ΓöÇΓöÇ */}
                     <div className="ip-partners">
                         <p className="ip-label" style={{ textAlign: "center" }}>Where Our Students Go</p>
                         <h2 className="ip-heading" style={{ textAlign: "center", margin: "4px 0 0" }}>Visit Partner Organisations</h2>
@@ -202,7 +202,7 @@ const ExposureVisit = () => (
                         </div>
                     </div>
 
-                    {/* ── CTA ── */}
+                    {/* ΓöÇΓöÇ CTA ΓöÇΓöÇ */}
                     <div className="ip-cta">
                         <h2 className="ip-cta-title">Join Our Next Exposure Visit!</h2>
                         <p className="ip-cta-sub">

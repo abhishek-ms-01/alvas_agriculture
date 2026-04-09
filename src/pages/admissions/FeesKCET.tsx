@@ -2,6 +2,7 @@ import { Home, ChevronRight, DollarSign } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../admissions/Admissions.css";
 
 const FeesKCET = () => {
@@ -10,27 +11,17 @@ const FeesKCET = () => {
       <PageBackground count={90} color="22,101,52" opacity={0.13} />
       <Header />
       <main>
-        <div className="adm-hero">
-          <div className="adm-blob adm-blob-1" />
-          <div className="adm-blob adm-blob-2" />
-          <div className="adm-hero-content">
-            <div className="adm-badge"><DollarSign size={14} /> Fees — KCET Students</div>
-            <h1 className="adm-title">Fee Structure — <span>KCET Students</span></h1>
-            <p className="adm-subtitle">
-              KCET category fees are regulated by the Karnataka government and the Karnataka Examinations Authority. Below is the detailed fee structure for students admitted through KCET.
-            </p>
-            <div className="adm-stat-row">
-              <div className="adm-stat-pill"><strong>Govt.</strong> Regulated</div>
-              <div className="adm-stat-pill"><strong>Annual</strong> Payment</div>
-              <div className="adm-stat-pill"><strong>Scholarship</strong> Eligible</div>
-            </div>
-          </div>
-          <div className="adm-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-              <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
-            </svg>
-          </div>
-        </div>
+        <PageHero
+          badgeIcon={<DollarSign size={14} />}
+          badgeText="Fees — KCET Students"
+          title={<>Fee Structure — <span className="text-accent">KCET Students</span></>}
+          subtitle="KCET category fees are regulated by the Karnataka government and the Karnataka Examinations Authority. Below is the detailed fee structure for students admitted through KCET."
+          stats={[
+            { bold: "Govt.", text: "Regulated" },
+            { bold: "Annual", text: "Payment" },
+            { bold: "Scholarship", text: "Eligible" },
+          ]}
+        />
 
         <nav className="adm-breadcrumb">
           <div className="adm-breadcrumb-inner">

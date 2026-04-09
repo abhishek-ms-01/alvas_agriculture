@@ -2,6 +2,7 @@ import { Home, ChevronRight, GraduationCap, Clipboard, CheckSquare, BookOpen, Al
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../admissions/Admissions.css";
 
 const AdmissionKCET = () => {
@@ -21,27 +22,17 @@ const AdmissionKCET = () => {
       <Header />
       <main>
         {/* Hero */}
-        <div className="adm-hero">
-          <div className="adm-blob adm-blob-1" />
-          <div className="adm-blob adm-blob-2" />
-          <div className="adm-hero-content">
-            <div className="adm-badge"><GraduationCap size={14} /> Admissions — KCET</div>
-            <h1 className="adm-title">Admission Through <span>KCET</span></h1>
-            <p className="adm-subtitle">
-              Secure your seat to a world-class agricultural education through the Karnataka Common Entrance Test. Join Karnataka's premier agri-science institution.
-            </p>
-            <div className="adm-stat-row">
-              <div className="adm-stat-pill"><strong>60%</strong> Seats via KCET</div>
-              <div className="adm-stat-pill"><strong>Merit Based</strong> Allotment</div>
-              <div className="adm-stat-pill"><strong>Govt.</strong> Regulated Fees</div>
-            </div>
-          </div>
-          <div className="adm-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-              <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
-            </svg>
-          </div>
-        </div>
+        <PageHero
+          badgeIcon={<GraduationCap size={14} />}
+          badgeText="Admissions — KCET"
+          title={<>Admission Through <span className="text-accent">KCET</span></>}
+          subtitle="Secure your seat to a world-class agricultural education through the Karnataka Common Entrance Test. Join Karnataka's premier agri-science institution."
+          stats={[
+            { bold: "60%", text: "Seats via KCET" },
+            { bold: "Merit Based", text: "Allotment" },
+            { bold: "Govt.", text: "Regulated Fees" },
+          ]}
+        />
 
         {/* Breadcrumb */}
         <nav className="adm-breadcrumb">

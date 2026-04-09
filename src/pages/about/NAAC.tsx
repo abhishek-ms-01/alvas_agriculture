@@ -1,109 +1,156 @@
-import { Home, ChevronRight, Shield, Award, Star, CheckCircle, BookOpen } from "lucide-react";
+import { Home, ChevronRight, BadgeCheck, Building, FlaskConical, Clock, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../admissions/Admissions.css";
+
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 }
+};
 
 const NAAC = () => {
   return (
-    <div className="adm-page">
+    <div className="adm-page overflow-x-hidden">
       <PageBackground count={90} color="22,101,52" opacity={0.13} />
       <Header />
       <main>
-        <div className="adm-hero">
-          <div className="adm-blob adm-blob-1" />
-          <div className="adm-blob adm-blob-2" />
-          <div className="adm-hero-content">
-            <div className="adm-badge"><Shield size={14} /> Accreditations</div>
-            <h1 className="adm-title">NAAC <span>Accreditation</span></h1>
-            <p className="adm-subtitle">
-              Alva's Institute of Agricultural Science & Technology is committed to quality assurance in higher education, assessed and accredited by the National Assessment and Accreditation Council (NAAC), an autonomous body under the UGC.
-            </p>
-            <div className="adm-stat-row">
-              <div className="adm-stat-pill"><strong>NAAC</strong> Accredited</div>
-              <div className="adm-stat-pill"><strong>UGC</strong> Recognised</div>
-              <div className="adm-stat-pill"><strong>Quality</strong> Education</div>
-            </div>
-          </div>
-          <div className="adm-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-              <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
-            </svg>
-          </div>
-        </div>
 
-        <nav className="adm-breadcrumb">
-          <div className="adm-breadcrumb-inner">
-            <Home size={14} /><a href="/">Home</a>
-            <span><ChevronRight size={14} /></span><span>About</span>
-            <span><ChevronRight size={14} /></span><span>Accreditations</span>
-            <span><ChevronRight size={14} /></span><span className="adm-cur">NAAC</span>
+        {/* ── HERO ── */}
+        <PageHero
+          badgeIcon={<MapPin size={14} />}
+          badgeText="Institution at a Glance"
+          title={<>Accreditations &amp; <span className="text-accent underline decoration-accent/30 underline-offset-8">Recognition</span></>}
+          subtitle="Formally recognised and approved by leading national regulatory and statutory bodies."
+          stats={[
+            { bold: "NAAC", text: "" },
+            { bold: "ICAR", text: "" },
+            { bold: "Govt. of Karnataka", text: "" },
+          ]}
+        />
+
+        {/* Breadcrumb */}
+        <nav className="adm-breadcrumb py-4 bg-slate-50/50 border-b border-slate-100">
+          <div className="adm-breadcrumb-inner container mx-auto px-6 flex items-center gap-2 text-[12px] text-slate-500 font-bold uppercase tracking-widest">
+            <Home size={12} className="text-accent" />
+            <a href="/" className="hover:text-accent transition-colors">Home</a>
+            <span><ChevronRight size={12} /></span>
+            <span>Institution at a Glance</span>
+            <span><ChevronRight size={12} /></span>
+            <span className="adm-cur text-deep-green">Accreditations</span>
           </div>
         </nav>
 
-        <div className="adm-body">
-          {/* About NAAC */}
-          <div className="adm-section">
-            <h2 className="adm-heading">What is NAAC?</h2>
-            <div className="adm-info-box">
-              <h3>National Assessment and Accreditation Council</h3>
-              <p>
-                NAAC (National Assessment and Accreditation Council) is an autonomous body established by the University Grants Commission (UGC) in 1994, with the mandate to assess and accredit institutions of higher education in India. The council evaluates institutions on seven criteria: Curricular Aspects, Teaching–Learning, Research & Extension, Infrastructure, Student Support, Governance, and Institutional Values.
+        <div className="adm-body container mx-auto px-6 py-10 space-y-14">
+
+          {/* Accreditations */}
+          <motion.section {...fadeIn}>
+            <h2 className="text-2xl md:text-3xl font-black text-deep-green mb-8 flex items-center gap-3">
+              <BadgeCheck className="text-accent w-6 h-6" /> Accreditations
+            </h2>
+            <div className="space-y-5">
+              {[
+                {
+                  icon: <BadgeCheck size={24} />,
+                  title: "NAAC",
+                  full: "National Assessment and Accreditation Council",
+                  desc: "Ensures quality assurance and assessment of higher education institutions in India based on academic and institutional standards.",
+                  status: "Accredited",
+                  color: "bg-green-50 border-green-200 text-green-700"
+                },
+                {
+                  icon: <FlaskConical size={24} />,
+                  title: "ICAR",
+                  full: "Indian Council of Agricultural Research",
+                  desc: "The apex body responsible for coordinating, guiding, and managing research and education in agriculture and allied sciences in India.",
+                  status: "Accredited",
+                  color: "bg-green-50 border-green-200 text-green-700"
+                },
+                {
+                  icon: <Building size={24} />,
+                  title: "Statutory Approval – Government of Karnataka",
+                  full: "",
+                  desc: "The institute is duly approved by the Government of Karnataka to offer academic programs.",
+                  status: "Approved",
+                  color: "bg-blue-50 border-blue-200 text-blue-700"
+                },
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="flex gap-5 items-start bg-white rounded-2xl border border-slate-100 px-6 py-5 shadow-sm hover:shadow-md hover:border-accent/20 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-deep-green/5 border-2 border-accent/20 group-hover:border-accent group-hover:bg-accent/5 flex items-center justify-center text-accent transition-all duration-300 flex-shrink-0">
+                    {item.icon}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 flex-wrap mb-1">
+                      <h3 className="font-black text-deep-green text-base">{item.title}</h3>
+                      {item.full && <span className="text-xs text-slate-500 font-medium">({item.full})</span>}
+                      <span className={`text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full border ${item.color}`}>
+                        {item.status}
+                      </span>
+                    </div>
+                    <p className="text-slate-600 text-sm leading-relaxed font-medium">{item.desc}</p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+
+          {/* Upcoming Accreditations */}
+          <motion.section {...fadeIn}>
+            <h2 className="text-2xl md:text-3xl font-black text-deep-green mb-8 flex items-center gap-3">
+              <Clock className="text-accent w-6 h-6" /> Upcoming Accreditations
+            </h2>
+            <div className="adm-info-box mb-6">
+              <p className="text-slate-700 font-medium">
+                The institute is in the process of applying for accreditation with the following bodies:
               </p>
             </div>
-          </div>
-
-          {/* NAAC criteria */}
-          <div className="adm-section">
-            <h2 className="adm-heading">NAAC Assessment Criteria</h2>
-            <div className="adm-grid">
+            <div className="space-y-4">
               {[
-                { icon: <BookOpen />, title: "Curricular Aspects", desc: "Evaluation of curriculum design, development, and its alignment with the institution's stated mission, graduate attributes, and national quality benchmarks." },
-                { icon: <Star />, title: "Teaching-Learning & Evaluation", desc: "Assessment of teaching-learning processes, student-centric methods, ICT integration, and evaluation transparency." },
-                { icon: <Award />, title: "Research, Consultancy & Extension", desc: "Promotion and publication of research, innovation, consultancy, and extension activities that benefit local communities and agricultural sectors." },
-                { icon: <CheckCircle />, title: "Infrastructure & Learning Resources", desc: "Physical infrastructure, library, laboratory facilities, ICT tools, and student amenities that support the learning environment." },
-                { icon: <Shield />, title: "Student Support & Progression", desc: "Student mentoring, career counselling, scholarships, grievance redressal, and alumni engagement systems." },
-                { icon: <Star />, title: "Governance & Leadership", desc: "Institutional governance, financial management, strategic planning, decentralisation, and transparency in administration." },
+                {
+                  icon: <FlaskConical size={22} />,
+                  title: "ICAR",
+                  full: "Indian Council of Agricultural Research",
+                },
+                {
+                  icon: <BadgeCheck size={22} />,
+                  title: "NAAC",
+                  full: "National Assessment and Accreditation Council",
+                },
               ].map((item, i) => (
-                <div key={i} className="adm-card">
-                  <div className="adm-card-accent-bar" />
-                  <div className="adm-card-content">
-                    <div className="adm-card-icon">{item.icon}</div>
-                    <h3 className="adm-card-title">{item.title}</h3>
-                    <p className="adm-card-desc">{item.desc}</p>
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  className="flex gap-5 items-center bg-amber-50 border border-amber-200 rounded-2xl px-6 py-4 hover:shadow-md transition-all duration-300"
+                >
+                  <div className="w-10 h-10 rounded-xl bg-amber-100 border border-amber-300 flex items-center justify-center text-amber-700 flex-shrink-0">
+                    {item.icon}
                   </div>
-                </div>
+                  <div>
+                    <span className="font-black text-amber-900 text-base">{item.title}</span>
+                    <span className="text-xs text-amber-700 font-medium ml-2">({item.full})</span>
+                  </div>
+                  <span className="ml-auto text-[10px] font-black uppercase tracking-widest px-2.5 py-1 rounded-full border bg-amber-100 border-amber-300 text-amber-700">
+                    In Progress
+                  </span>
+                </motion.div>
               ))}
             </div>
-          </div>
+          </motion.section>
 
-          {/* Accreditation details */}
-          <div className="adm-section">
-            <h2 className="adm-heading">Our NAAC Journey</h2>
-            <div className="adm-steps">
-              {[
-                { title: "Institutional Self-Study Report (IIQA)", desc: "The institution prepared a comprehensive Institutional Information for Quality Assessment (IIQA) documenting all academic and administrative activities." },
-                { title: "Self-Study Report (SSR) Submission", desc: "A detailed Self-Study Report covering all seven NAAC criteria was meticulously prepared and submitted to the NAAC secretariat." },
-                { title: "Peer Team Visit", desc: "A NAAC Peer Team conducted an on-site visit to evaluate the institution's facilities, teaching practices, research output, and governance systems." },
-                { title: "Accreditation Awarded", desc: "Following the peer review, NAAC awarded accreditation to the institution, recognising its commitment to quality education and continuous improvement." },
-              ].map((s, i) => (
-                <div key={i} className="adm-step">
-                  <div className="adm-step-num">{i + 1}</div>
-                  <div className="adm-step-body">
-                    <h3>{s.title}</h3>
-                    <p>{s.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="adm-info-box">
-            <h3>NAAC Certificate & Score</h3>
-            <p>
-              The NAAC accreditation certificate and Cumulative Grade Point Average (CGPA) are publicly disclosed as part of the institution's mandatory transparency obligations. For details of the NAAC accreditation certificate, score, and peer team report, please contact the IQAC (Internal Quality Assurance Cell) at: <strong>iqac@alvas.ac.in</strong>.
-            </p>
-          </div>
         </div>
       </main>
       <Footer />

@@ -2,6 +2,7 @@ import { Home, ChevronRight, DollarSign } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "../admissions/Admissions.css";
 
 const FeesManagement = () => {
@@ -10,27 +11,17 @@ const FeesManagement = () => {
       <PageBackground count={90} color="22,101,52" opacity={0.13} />
       <Header />
       <main>
-        <div className="adm-hero">
-          <div className="adm-blob adm-blob-1" />
-          <div className="adm-blob adm-blob-2" />
-          <div className="adm-hero-content">
-            <div className="adm-badge"><DollarSign size={14} /> Fees — Management Quota</div>
-            <h1 className="adm-title">Fee Structure — <span>Management</span></h1>
-            <p className="adm-subtitle">
-              Fee structure for students admitted under the Management Quota at Alva's Institute of Agricultural Science & Technology. These fees are set by the institutional management committee.
-            </p>
-            <div className="adm-stat-row">
-              <div className="adm-stat-pill"><strong>Institutional</strong> Fees</div>
-              <div className="adm-stat-pill"><strong>Flexible</strong> Instalments</div>
-              <div className="adm-stat-pill"><strong>Merit</strong> Discounts Available</div>
-            </div>
-          </div>
-          <div className="adm-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-              <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
-            </svg>
-          </div>
-        </div>
+        <PageHero
+          badgeIcon={<DollarSign size={14} />}
+          badgeText="Fees — Management Quota"
+          title={<>Fee Structure — <span className="text-accent">Management</span></>}
+          subtitle="Fee structure for students admitted under the Management Quota at Alva's Institute of Agricultural Science & Technology. These fees are set by the institutional management committee."
+          stats={[
+            { bold: "Institutional", text: "Fees" },
+            { bold: "Flexible", text: "Instalments" },
+            { bold: "Merit", text: "Discounts Available" },
+          ]}
+        />
 
         <nav className="adm-breadcrumb">
           <div className="adm-breadcrumb-inner">

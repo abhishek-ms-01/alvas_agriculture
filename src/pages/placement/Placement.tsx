@@ -34,7 +34,7 @@ const steps = [
 const recruiters = [
     { icon: "🌾", name: "ICAR" },         { icon: "🏦", name: "NABARD" },
     { icon: "🌱", name: "Syngenta" },      { icon: "🚜", name: "Mahindra Agri" },
-    { icon: "🐄", name: "KMF – Nandini"}, { icon: "🔬", name: "UAS Dharwad" },
+    { icon: "🐄", name: "KMF – Nandini"}, { icon: "🔬", name: "Keladi Shivappa Nayaka Univ." },
     { icon: "💊", name: "Bayer" },         { icon: "💧", name: "Jain Irrigation" },
     { icon: "🥚", name: "Godrej Agrovet"},
 ];

@@ -1,125 +1,115 @@
-import { Home, ChevronRight, Trophy, GraduationCap, Microscope, Globe, Handshake, Cpu, Award, Rocket } from "lucide-react";
+import { Home, ChevronRight, Trophy, GraduationCap, MapPin } from "lucide-react";
+import { motion } from "framer-motion";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
+import PageHero from "@/components/PageHero";
 import "./admissions/Admissions.css";
 
 const milestones = [
-  { year: "2001", icon: <Trophy />, title: "AEF Established", desc: "Alva's Education Foundation constituted by Dr. M. Mohan Alva with a vision to build world-class educational institutions in coastal Karnataka." },
-  { year: "2005", icon: <GraduationCap />, title: "IAST Inaugurated", desc: "Alva's IAST opened its doors with the B.Sc. (Hons) Agriculture programme, affiliated to UAS Dharwad. First batch of 60 students enrolled." },
-  { year: "2007", icon: <Microscope />, title: "Research Labs Established", desc: "State-of-the-art laboratories for Soil Science, Plant Pathology, Entomology, and Agricultural Biotechnology commissioned." },
-  { year: "2009", icon: <Award />, title: "NAAC Accreditation", desc: "Alva's IAST received NAAC accreditation — a formal recognition of the institution's commitment to quality standards in higher education." },
-  { year: "2011", icon: <GraduationCap />, title: "PG Programmes Launched", desc: "M.Sc. Agronomy, M.Sc. Plant Pathology, and M.Sc. Soil Science postgraduate programmes started, expanding research capabilities." },
-  { year: "2013", icon: <Globe />, title: "Farmer Outreach — 3,000+ Farmers", desc: "Large-scale community outreach programmes connecting over 3,000 small and marginal farmers to modern agricultural knowledge and techniques." },
-  { year: "2015", icon: <Handshake />, title: "First Industry MOU", desc: "Signed the first of many industry partnerships — enabling student internships, collaborative research, and technology transfer with agri-companies." },
-  { year: "2018", icon: <Cpu />, title: "50-Acre Smart Farm", desc: "Launch of the flagship 50-acre IoT-enabled smart farm featuring satellite monitoring, precision drip systems, drone-based crop health assessment, and robotic sorting." },
-  { year: "2020", icon: <Microscope />, title: "Digital Learning Infrastructure", desc: "Full digital infrastructure deployed for e-learning, virtual labs, and remote mentoring — enabling uninterrupted education during the pandemic." },
-  { year: "2022", icon: <Trophy />, title: "Karnataka State Award", desc: "Honoured by the Government of Karnataka for outstanding contribution to agricultural education, research, and rural community development." },
-  { year: "2023", icon: <Globe />, title: "International Academic Collaborations", desc: "Academic exchange programmes and research MOUs signed with universities in the Netherlands and Israel — bringing global best practices to Alva's IAST." },
-  { year: "2025", icon: <Rocket />, title: "Vision 2030 Roadmap", desc: "Launched the Vision 2030 strategic plan — targeting a position among the global top-50 agricultural institutions through research, innovation, and international partnerships." },
+  {
+    year: "2001",
+    icon: <Trophy size={20} />,
+    title: "AEF Established",
+    desc: "Alva's Education Foundation constituted by Dr. M. Mohan Alva with a vision to build world-class educational institutions in coastal Karnataka."
+  },
+  {
+    year: "2025",
+    icon: <GraduationCap size={20} />,
+    title: "IAST Established",
+    desc: "Alva's Institute of Agricultural Science & Technology was established in 2025, affiliated to Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga."
+  },
 ];
 
-const numbers = [
-  { val: "12,000+", label: "Alumni" },
-  { val: "₹8 Cr+", label: "Research Funding" },
-  { val: "150+", label: "Industry MOUs" },
-  { val: "94%", label: "Placement Rate" },
-];
+const fadeIn = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.6 }
+};
 
 export default function Milestones() {
   return (
-    <div className="adm-page">
+    <div className="adm-page overflow-x-hidden">
       <PageBackground count={90} color="22,101,52" opacity={0.13} />
       <Header />
+
       <main>
-        {/* Hero */}
-        <div className="adm-hero">
-          <div className="adm-blob adm-blob-1" /><div className="adm-blob adm-blob-2" />
-          <div className="adm-hero-content">
-            <div className="adm-badge"><Trophy size={14} /> 2001 – Present</div>
-            <h1 className="adm-title">Our <span>Milestones</span></h1>
-            <p className="adm-subtitle">
-              Two decades of excellence, innovation, and service — follow the path of Alva's IAST's remarkable journey from a single programme to a nationally recognised agricultural institution.
-            </p>
-            <div className="adm-stat-row">
-              {numbers.map((n) => (
-                <div key={n.label} className="adm-stat-pill"><strong>{n.val}</strong> {n.label}</div>
-              ))}
-            </div>
-          </div>
-          <div className="adm-wave">
-            <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-              <path d="M0,64L80,69.3C160,75,320,85,480,80C640,75,800,53,960,48C1120,43,1280,53,1360,58.7L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
-            </svg>
-          </div>
-        </div>
+        {/* ── HERO ── */}
+        <PageHero
+          badgeIcon={<MapPin size={14} />}
+          badgeText="Institution at a Glance"
+          title={<>Our <span className="text-accent underline decoration-accent/30 underline-offset-8">Milestones</span></>}
+          subtitle="Two decades of excellence, innovation, and service — the remarkable journey of Alva's IAST."
+          stats={[
+            { bold: "2001", text: "AEF Founded" },
+            { bold: "2025", text: "IAST Established" },
+          ]}
+        />
 
         {/* Breadcrumb */}
-        <nav className="adm-breadcrumb">
-          <div className="adm-breadcrumb-inner">
-            <Home size={14} /><a href="/">Home</a>
-            <span><ChevronRight size={14} /></span><span>About</span>
-            <span><ChevronRight size={14} /></span>
-            <span className="adm-cur">Milestones</span>
+        <nav className="adm-breadcrumb py-4 bg-slate-50/50 border-b border-slate-100">
+          <div className="adm-breadcrumb-inner container mx-auto px-6 flex items-center gap-2 text-[12px] text-slate-500 font-bold uppercase tracking-widest">
+            <Home size={12} className="text-accent" /><a href="/" className="hover:text-accent transition-colors">Home</a>
+            <span><ChevronRight size={12} /></span>
+            <span>Institution at a Glance</span>
+            <span><ChevronRight size={12} /></span>
+            <span className="adm-cur text-deep-green">Milestones</span>
           </div>
         </nav>
 
-        <div className="adm-body">
+        <div className="adm-body container mx-auto px-6 py-10 space-y-16">
+
           {/* Overview */}
-          <div className="adm-section">
-            <h2 className="adm-heading">Our Journey</h2>
+          <motion.section {...fadeIn}>
+            <h2 className="text-2xl md:text-3xl font-black text-deep-green mb-6 flex items-center gap-3">
+              <Trophy className="text-accent w-6 h-6" /> Our Journey
+            </h2>
             <div className="adm-info-box">
-              <h3>Two Decades of Agricultural Excellence</h3>
               <p>
-                From a modest beginning with a single undergraduate programme in 2005, Alva's Institute of Agricultural Science & Technology has grown into a comprehensive agricultural institution offering UG, PG, and Ph.D. programmes. Every milestone along this journey reflects our unwavering commitment to quality education, impactful research, and meaningful community service.
+                Alva's Institute of Agricultural Science &amp; Technology was established in 2025 under the Alva's Education Foundation, founded by Dr. M. Mohan Alva in 2001. Affiliated to Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga.
               </p>
             </div>
-          </div>
+          </motion.section>
 
-          {/* Timeline as steps */}
-          <div className="adm-section">
-            <h2 className="adm-heading">Timeline of Achievements</h2>
-            <div className="adm-steps">
-              {milestones.map((m, i) => (
-                <div key={i} className="adm-step">
-                  <div className="adm-step-num" style={{ fontSize: "0.7rem", minWidth: "52px" }}>{m.year}</div>
-                  <div className="adm-step-body">
-                    <h3>{m.title}</h3>
-                    <p>{m.desc}</p>
-                  </div>
-                </div>
-              ))}
+          {/* Timeline */}
+          <section>
+            <h2 className="text-2xl md:text-3xl font-black text-deep-green mb-8 flex items-center gap-3">
+              <Trophy className="text-accent w-6 h-6" /> Timeline of Achievements
+            </h2>
+            <div className="relative">
+              {/* Vertical line */}
+              <div className="absolute left-[28px] top-0 bottom-0 w-[2px] bg-gradient-to-b from-accent/40 via-accent/20 to-transparent hidden md:block" />
+
+              <div className="space-y-6">
+                {milestones.map((m, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -24 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ duration: 0.5, delay: i * 0.04 }}
+                    className="flex gap-5 items-start group"
+                  >
+                    {/* Year badge + icon */}
+                    <div className="flex flex-col items-center gap-1 flex-shrink-0 z-10">
+                      <div className="w-14 h-14 rounded-2xl bg-deep-green/5 border-2 border-accent/20 group-hover:border-accent group-hover:bg-accent/5 flex items-center justify-content-center justify-center text-accent transition-all duration-300">
+                        {m.icon}
+                      </div>
+                      <span className="text-[10px] font-black text-accent tracking-widest uppercase">{m.year}</span>
+                    </div>
+
+                    {/* Card */}
+                    <div className="flex-1 bg-white rounded-2xl border border-slate-100 px-6 py-5 shadow-sm group-hover:shadow-md group-hover:border-accent/20 transition-all duration-300">
+                      <h3 className="font-black text-deep-green text-base mb-1">{m.title}</h3>
+                      <p className="text-slate-600 text-sm leading-relaxed font-medium">{m.desc}</p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
-          </div>
+          </section>
 
-          {/* Looking ahead */}
-          <div className="adm-section">
-            <h2 className="adm-heading">Vision 2030 Pillars</h2>
-            <div className="adm-grid">
-              {[
-                { icon: <Microscope />, title: "Centre of Excellence", desc: "Establish dedicated Centres of Excellence in Precision Agriculture, Food Technology, and Climate-Smart Farming with ICAR / DST funding." },
-                { icon: <Globe />, title: "Global Partnerships", desc: "Expand academic exchange programmes to 10+ countries with joint research, student mobility, and faculty exchange agreements." },
-                { icon: <Cpu />, title: "AgriTech Innovation Hub", desc: "Build an on-campus agri-tech startup incubator supporting student and faculty ventures in drone-tech, AI-in-agriculture, and biotech." },
-                { icon: <GraduationCap />, title: "Doctoral Research Programme", desc: "Scale up Ph.D. enrolment and funded research to position Alva's IAST among India's top agricultural research institutions by 2030." },
-              ].map((item, i) => (
-                <div key={i} className="adm-card">
-                  <div className="adm-card-accent-bar" />
-                  <div className="adm-card-content">
-                    <div className="adm-card-icon">{item.icon}</div>
-                    <h3 className="adm-card-title">{item.title}</h3>
-                    <p className="adm-card-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="adm-info-box">
-            <h3>The Journey Continues...</h3>
-            <p>
-              Each year brings new achievements, new partnerships, and new students who carry Alva's values into the world. As we work toward Vision 2030, our commitment to excellence in agricultural education, research, and community service remains as strong as the day we opened our gates.
-            </p>
-          </div>
         </div>
       </main>
       <Footer />
