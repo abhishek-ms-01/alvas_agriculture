@@ -25,7 +25,7 @@ const SkillLabs = () => (
 
                 {/* ── Hero ── */}
                 <section className="ip-hero skill-labs">
-                    <div className="ip-hero-bg-image" style={{ backgroundImage: `url(/skill_lab_1.png)` }} />
+                    <img src="/skill_lab_1.png" className="ip-hero-bg-image" alt="Skill Labs & Innovation Hubs" />
                     <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
                     <div className="ip-hero-content">
                         <span className="ip-badge skill-labs"><Microscope size={12} /> Applied Excellence</span>
