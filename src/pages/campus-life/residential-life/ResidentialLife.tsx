@@ -56,11 +56,11 @@ const ResidentialLife = () => (
                     {/* ── Overview: Green Campus ── */}
                     <div className="ip-overview">
                         <div className="ip-overview-img">
-                            <img src="/hostel_exterior_ai_1775730756346.png" alt="Alva's Green Campus" />
+                            <img src="/HOSTEL2.jpg" alt="Alva's Green Campus" />
                         </div>
                         <div className="ip-overview-text">
                             <p className="ip-label">Green Infrastructure</p>
-                            <h2 className="ip-heading">Nature's Own <br />Classroom</h2>
+                            <h2 className="ip-heading">Where Strangers Become <br />Family</h2>
                             <p className="ip-para">
                                 Spanning over 100 acres in the serene Western Ghats region, our campus is a masterpiece of sustainable infrastructure. With a carbon-neutral vision, we have integrated rain-water harvesting, organic waste management, and solar-enabled facilities into our daily operations.
                             </p>
@@ -108,7 +108,7 @@ const ResidentialLife = () => (
                             </div>
                             <div className="order-1 md:order-2">
                                 <img 
-                                    src="/hostel_room_ai_1775730782476.png" 
+                                    src="/HOSTEL 1.jpg" 
                                     className="rounded-3xl shadow-xl w-full object-cover h-[400px]" 
                                     alt="Modern Hostel Room"
                                 />
@@ -121,7 +121,7 @@ const ResidentialLife = () => (
                         <div className="grid md:grid-cols-2 gap-12 items-center">
                             <div>
                                 <img 
-                                    src="/hostel_dining_ai_1775730805999.png" 
+                                    src="/hostel4.jpg" 
                                     className="rounded-3xl shadow-xl w-full object-cover h-[400px]" 
                                     alt="Luxury Dining Hall"
                                 />

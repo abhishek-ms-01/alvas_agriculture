@@ -248,7 +248,7 @@ export default function CampusLife() {
                             onClick={() => {
                                 if (i === 1) navigate("/campus-life/residential-life");
                                 if (i === 2) navigate("/campus-life/sports-culture");
-                                if (i === 3) navigate("/campus-life/skill-labs");
+                                if (i === 3) window.open("/campus-life/skill-labs", "_blank");
                                 if (i === 4) navigate("/campus-life/library");
                             }}
                         >

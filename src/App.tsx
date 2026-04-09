@@ -28,6 +28,7 @@ import Research from "./pages/research/Research";
 // import YearwiseDetails from "./pages/research/YearwiseDetails";
 
 import ResidentialLife from "./pages/campus-life/residential-life/ResidentialLife";
+import SkillLabs from "./pages/campus-life/skill-labs/SkillLabs";
 
 // Local branch imports
 import ChairmanMessage from "./pages/ChairmanMessage";
@@ -91,6 +92,7 @@ const App = () => (
           <Route path="/milestones" element={<Milestones />} />
           <Route path="/campus-life" element={<CampusLife />} />
           <Route path="/campus-life/residential-life" element={<ResidentialLife />} />
+          <Route path="/campus-life/skill-labs" element={<SkillLabs />} />
           <Route path="/campus-life/library" element={<Library />} />
           <Route path="/campus-life/sports-culture" element={<SportsCulture />} />
 
