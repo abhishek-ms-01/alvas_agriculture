@@ -4,7 +4,7 @@ import {
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
-import "../internship/Internship.css";
+import "../../internship/Internship.css";
 
 const amenities = [
     "Premium twin & multi-sharing rooms with modern furniture.",
