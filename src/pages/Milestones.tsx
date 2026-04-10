@@ -10,13 +10,13 @@ const milestones = [
   {
     year: "2001",
     icon: <Trophy size={20} />,
-    title: "AEF Established",
-    desc: "Alva's Education Foundation constituted by Dr. M. Mohan Alva with a vision to build world-class educational institutions in coastal Karnataka."
+    title: "Genesis of AEF",
+    desc: "Alva's Education Foundation Established by Dr. M. Mohan Alva with a vision to build world-class educational institutions in coastal Karnataka."
   },
   {
     year: "2025",
     icon: <GraduationCap size={20} />,
-    title: "IAST Established",
+    title: "About AIAST",
     desc: "Alva's Institute of Agricultural Science & Technology was established in 2025, affiliated to Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga."
   },
 ];

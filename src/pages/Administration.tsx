@@ -37,7 +37,7 @@ const trustees = [
 const management = [
   {
     name: "Dr. Peter Fernandes",
-    role: "Principal, AIAST",
+    role: "Dean, AIAST",
     quote: "Fostering rigorous academic standards and research excellence to position AIAST among the premier agricultural science institutions globally.",
   },
   {

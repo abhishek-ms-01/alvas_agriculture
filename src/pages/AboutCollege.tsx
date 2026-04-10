@@ -118,10 +118,6 @@ export default function AboutCollege() {
                     <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
                     <span>Affiliated to <strong className="text-white">Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences</strong> & Govt. of Karnataka.</span>
                   </li>
-                  <li className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
-                    <span>Approved by <strong className="text-white">ICAR and UGC</strong> standards.</span>
-                  </li>
                 </ul>
               </motion.div>
 
@@ -135,7 +131,7 @@ export default function AboutCollege() {
                   <h3 className="text-xl font-black uppercase tracking-tight text-white">Focus</h3>
                 </div>
                 <p className="text-cream/80 leading-relaxed font-medium text-sm mb-4">
-                  Teaching quality & research validated by national benchmarks.
+                  Quality Teaching & research validated by national benchmarks.
                 </p>
                 <div className="grid grid-cols-2 gap-2 text-[10px] font-black uppercase tracking-widest text-accent">
                    <span>• Research</span>
@@ -156,13 +152,13 @@ export default function AboutCollege() {
                   title: "B.Sc. (Hons) Agriculture", 
                   image: "https://mbcollegeofagriculture.in/img/course-about.jpg",
                   duration: "4 Yr",
-                  focus: "Crop Production & Soil Health"
+                  focus: "Soil Health, Crop/Seed Production, Pest Control"
                 },
                 { 
                   title: "B.Tech (Food Technology)", 
                   image: "ai.png",
                   duration: "4 Yr",
-                  focus: "Processing & Quality Control"
+                  focus: "Processing, Value Addition & Quality Control"
                 }
               ].map((item, i) => (
                 <div key={i} className="group overflow-hidden rounded-[2rem] bg-white border border-slate-100 shadow-lg hover:shadow-xl transition-all duration-500">
@@ -255,12 +251,12 @@ export default function AboutCollege() {
                <div className="p-6 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 text-left min-w-[280px]">
                  <h4 className="text-lg font-black uppercase mb-1">B.Sc. Agriculture</h4>
                  <p className="font-bold opacity-80 text-[11px] mb-4 tracking-tight uppercase">10+2 PCB | 45% Gen</p>
-                 <span className="text-[9px] font-black bg-deep-green text-white px-3 py-1 rounded-full uppercase tracking-widest">Entrance: KCET | AG-QUOTA</span>
+                 <span className="text-[9px] font-black bg-deep-green text-white px-3 py-1 rounded-full uppercase tracking-widest">Entrance: KCET</span>
                </div>
                <div className="p-6 bg-white/20 backdrop-blur-xl rounded-2xl border border-white/30 text-left min-w-[280px]">
                  <h4 className="text-lg font-black uppercase mb-1">B.Tech Food Tech</h4>
                  <p className="font-bold opacity-80 text-[11px] mb-4 tracking-tight uppercase">10+2 PCM | 45% Gen</p>
-                 <span className="text-[9px] font-black bg-deep-green text-white px-3 py-1 rounded-full uppercase tracking-widest">Entrance: KCET | AG-QUOTA</span>
+                 <span className="text-[9px] font-black bg-deep-green text-white px-3 py-1 rounded-full uppercase tracking-widest">Entrance: KCET</span>
                </div>
              </div>
 

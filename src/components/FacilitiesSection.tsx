@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './FacilitiesSection.css';
 
 interface Spore {
@@ -13,6 +14,7 @@ interface Spore {
 
 const FacilitiesSection: React.FC = () => {
   const [spores, setSpores] = useState<Spore[]>([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const newSpores: Spore[] = [];
@@ -100,7 +102,7 @@ const FacilitiesSection: React.FC = () => {
           </div>
 
           {/* 2: Modern Laboratories */}
-          <div className="hex-item">
+          <div className="hex-item" onClick={() => navigate('/campus-life/skill-labs')}>
             <div className="hex-head">
               <div 
                 className="hex-bg" 
@@ -140,7 +142,7 @@ const FacilitiesSection: React.FC = () => {
           </div>
 
           {/* 4: Library */}
-          <div className="hex-item">
+          <div className="hex-item" onClick={() => navigate('/campus-life/library')}>
             <div className="hex-head">
               <div 
                 className="hex-bg" 
@@ -160,7 +162,7 @@ const FacilitiesSection: React.FC = () => {
           </div>
 
           {/* 5: Hostel */}
-          <div className="hex-item">
+          <div className="hex-item" onClick={() => navigate('/campus-life/hostel')}>
             <div className="hex-head">
               <div 
                 className="hex-bg" 

@@ -207,7 +207,7 @@ const VisionMission = () => {
               <h3 className="vm2-aff-title">Affiliation &amp; Recognition</h3>
               <p className="vm2-aff-text">
                 Affiliated to <strong>Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences</strong>,
-                approved by AICTE, recognised by ICAR &amp; UGC, and actively contributing to the{" "}
+                actively contributing to the{" "}
                 <strong>Vision 2030</strong> roadmap for sustainable rural empowerment.
               </p>
             </div>

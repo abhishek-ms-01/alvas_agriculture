@@ -6,9 +6,8 @@ import "../admissions/Admissions.css";
 
 const RTI = () => {
   const officers = [
-    { role: "First Appellate Authority", name: "Dr. Vasudev", designation: "Dean, Agriculture", email: "dean@alvas.ac.in", phone: "+91-824-2277285" },
-    { role: "Public Information Officer (PIO)", name: "Administrative Officer", designation: "Admin Department", email: "rti@alvas.ac.in", phone: "+91-824-2277286" },
-    { role: "Assistant PIO", name: "Office Superintendent", designation: "Administrative Section", email: "admin@alvas.ac.in", phone: "+91-824-2277287" },
+    { role: "First Appellate Authority", name: "Dr. S N Vasudevan", designation: "Dean (Agri.)", email: "deanaiast@gmail.com", phone: "9448300046" },
+    { role: "Administrative Officer (AO)", name: "Administrative Officer", designation: "Admin Department", email: "rti@alvas.ac.in", phone: "+91-824-2277286" },
   ];
 
   return (
@@ -88,29 +87,7 @@ const RTI = () => {
             </div>
           </div>
 
-          {/* How to apply */}
-          <div className="adm-section">
-            <h2 className="adm-heading">How to File an RTI Application</h2>
-            <div className="adm-steps">
-              {[
-                { title: "Draft Your Application", desc: "Write a clear, specific application stating exactly what information you need. The application must include your name, address, and contact details. No reason for seeking information is required." },
-                { title: "Pay Application Fee", desc: "Attach an application fee of ₹10 (by postal order, DD, or court fee stamp). BPL card holders are exempt from fee payment." },
-                { title: "Submit Application", desc: "Send the application by post or email to the PIO at: rti@alvas.ac.in or Alva's Institute of Agricultural Science & Technology, Moodbidri – 574 227, D.K., Karnataka." },
-                { title: "Receive Response", desc: "The PIO is obligated to respond within 30 days. If information pertains to life or liberty, response must be within 48 hours." },
-                { title: "File Appeal (If Needed)", desc: "If unsatisfied with the response, file a First Appeal to the First Appellate Authority (Dean) within 30 days. A Second Appeal may be filed with the State Information Commission." },
-              ].map((s, i) => (
-                <div key={i} className="adm-step">
-                  <div className="adm-step-num">{i + 1}</div>
-                  <div className="adm-step-body">
-                    <h3>{s.title}</h3>
-                    <p>{s.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
 
-          {/* Proactive disclosure */}
           <div className="adm-section">
             <h2 className="adm-heading">Proactive Disclosure (Section 4)</h2>
             <div className="adm-grid">

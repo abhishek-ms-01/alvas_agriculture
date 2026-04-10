@@ -11,8 +11,9 @@ const AdmissionKCET = () => {
     { title: "Fill Application Form", desc: "Accurately fill in the KCET application form including choice of subjects, examination centre, and category details." },
     { title: "Pay Application Fee", desc: "Submit the requisite fee online via net banking, credit/debit card or UPI. Keep the payment receipt safe." },
     { title: "Download Hall Ticket", desc: "Download and print your KCET hall ticket from the KEA portal. Carry it along with a valid photo ID to the exam centre." },
-    { title: "Appear for KCET Exam", desc: "Attend the Karnataka Common Entrance Test. The exam covers Biology, Physics, Mathematics/Computer Science." },
+    { title: "Appear for KCET Exam", desc: "Attend the Karnataka Common Entrance Test. Candidates seeking admission under Farmer's Quota (50% reservation) should follow specific guidelines for practical exams." },
     { title: "Check Results & Counselling", desc: "Results are published on the KEA portal. Eligible candidates are called for centralised counselling for seat allotment." },
+    { title: "Practical Exam (Farmer's Quota)", desc: "Candidates seeking reservation must appear for a Practical Exam for 200 marks conducted by Farm Universities of Karnataka State." },
     { title: "Seat Allotment & Admission", desc: "After counselling, report to Alva's Institute of Agricultural Science & Technology with original documents and pay prescribed fees." },
   ];
 
@@ -51,9 +52,7 @@ const AdmissionKCET = () => {
             <div className="adm-grid">
               {[
                 { icon: <BookOpen />, title: "Qualifying Exam", desc: "Candidates must have passed 10+2 or equivalent with Physics, Chemistry, and Biology/Mathematics as compulsory subjects from a recognised board." },
-                { icon: <CheckSquare />, title: "Minimum Marks", desc: "General category candidates must secure at least 45% aggregate in PCB/PCM. SC/ST/OBC candidates require 40% as per KEA norms." },
                 { icon: <Clipboard />, title: "KCET Score", desc: "Must have appeared and qualified in the Karnataka CET conducted by KEA. Valid CET rank is mandatory for counselling." },
-                { icon: <AlertCircle />, title: "Age Limit", desc: "Candidate must have attained 17 years of age as on 31st December of the year of admission. There is no upper age limit for B.Sc. Agriculture." },
               ].map((item, i) => (
                 <div key={i} className="adm-card">
                   <div className="adm-card-accent-bar" />
@@ -64,6 +63,28 @@ const AdmissionKCET = () => {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+
+          {/* Farmer's Quota Rank Consideration */}
+          <div className="adm-section">
+            <h2 className="adm-heading">Farmer's Quota Rank Calculation</h2>
+            <div className="adm-info-box">
+              <p className="font-bold mb-4">Rank declaration under Farmer's Quota is based on the following weightage:</p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="bg-white/50 p-4 rounded-xl border border-accent/20 text-center">
+                  <div className="text-2xl font-black text-accent mb-1">25%</div>
+                  <div className="text-xs uppercase tracking-widest font-bold">PCMB Marks</div>
+                </div>
+                <div className="bg-white/50 p-4 rounded-xl border border-accent/20 text-center">
+                  <div className="text-2xl font-black text-accent mb-1">25%</div>
+                  <div className="text-xs uppercase tracking-widest font-bold">KCET Score</div>
+                </div>
+                <div className="bg-white/50 p-4 rounded-xl border border-accent/20 text-center">
+                  <div className="text-2xl font-black text-accent mb-1">50%</div>
+                  <div className="text-xs uppercase tracking-widest font-bold">Practical Marks</div>
+                </div>
+              </div>
             </div>
           </div>
 

@@ -30,12 +30,12 @@ const data: DeptPageProps = {
     mainImage: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80&w=1200",
     badge1: { label: "1st in Costal Karnataka", sub: "Private Agri College" },
     badge2: { label: "K.S.N.U.A.H.S.,Shivamogga Affiliated", sub: "Top University" },
-    mainDescription: "Established in 2025, our B.Sc. (Hons) Agriculture program is committed to producing the next generation of agricultural leaders. We bridge the gap between traditional farming wisdom and modern technological advancements. Our curriculum is designed to provide students with a deep understanding of soil science, crop production, and sustainable management practices, ensuring they are well-equipped to tackle real-world agricultural challenges.",
+    mainDescription: "Established in 2025, our B.Sc. (Hons) Agriculture program is committed to producing the next generation agricultural leaders. We bridge the gap between traditional farming wisdom and modern technological advancements. Our curriculum is designed as per the 6TH dean committee Syllabus Approved by Indian Council of Agricultural Research (ICAR) ,NEW DELHI in order to provide students with a deep understanding of soil heath, crop / seed production, control of pest and diseases, organic farming and sustainable management practices, ensuring they are well-equipped to tackle real-world agricultural challenges.",
     cards: [
       {
         icon: "🌾",
         title: "Programme Overview",
-        body: "The B.Sc. (Hons) Agriculture is the flagship UG offering of Alva's Institute of Agricultural Science & Technology, affiliated to UAS Dharwad. It follows the ICAR 5th Dean's Committee curriculum ensuring national-standard quality across all agricultural universities in India.",
+        body: "The B.Sc. (Hons) Agriculture is the flagship UG offering of Alva's Institute of Agricultural Science & Technology. It follows the ICAR 6TH Dean's Committee curriculum ensuring national-standard quality across all agricultural universities in India.",
         wide: true,
       },
       {
@@ -62,11 +62,11 @@ const data: DeptPageProps = {
     name: "Dr. S N Vasudevan",
     title: "Dean — B.Sc. (Hons) Agriculture",
     photo: "/MSM_0722.jpg",
-    experience: "25+ Years",
+    experience: "40+ Years",
     qualification: "Ph.D. Agronomy",
     specialization: "Agronomy",
-    publications: "40+ Papers",
-    bio: "Dr. S N Vasudevan is a distinguished academician with over 25 years of experience in Agronomy and Crop Science. He holds a Ph.D. from a premier agricultural university and has published over 40 research papers in reputable national and international journals. Under his leadership, the department has established several research initiatives focusing on climate-resilient agriculture and organic farming techniques, significantly improving graduate placement outcomes.",
+    publications: "200+ Papers",
+    bio: "Dr. S N Vasudevan is a distinguished academician with over 40 years of experience in the field of Seed Science and Technology. He holds a Ph.D. from a premier Agricultural University, Bangalore and has published over 200 research papers in reputable National and International journals. Under his leadership, the department has established several research initiatives focusing on climate-resilient agriculture and organic farming techniques, significantly improving graduate placement outcomes.",
     quote:
       "Agriculture is not just a profession — it is a calling to steward the earth and nourish humanity. At our department, we cultivate scientists, entrepreneurs, and changemakers.",
   },

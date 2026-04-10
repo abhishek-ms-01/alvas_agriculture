@@ -25,10 +25,10 @@ const AdmissionManagement = () => {
           badgeIcon={<Users size={14} />}
           badgeText="Admissions — Management Quota"
           title={<>Admission Through <span className="text-accent">Management</span></>}
-          subtitle="Management quota admissions offer an opportunity for deserving students to secure a seat at Alva's Institute of Agricultural Science & Technology based on merit and institutional assessment."
+          subtitle="Admission through Management Quota at Alva's Institute of Agricultural Science & Technology is same as per KCET ranking, offering an opportunity for deserving students based on merit."
           stats={[
             { bold: "15%", text: "Management Seats" },
-            "Merit + Interview",
+            { bold: "KCET Rank", text: "Based" },
             { bold: "Direct", text: "Application" },
           ]}
         />
@@ -42,26 +42,7 @@ const AdmissionManagement = () => {
         </nav>
 
         <div className="adm-body">
-          <div className="adm-section">
-            <h2 className="adm-heading">Eligibility & Key Points</h2>
-            <div className="adm-grid">
-              {[
-                { icon: <Award />, title: "Academic Criteria", desc: "Candidates must have passed 10+2 with at least 45% marks (40% for SC/ST) in Physics, Chemistry, and Biology/Mathematics." },
-                { icon: <FileText />, title: "No Entrance Test Required", desc: "Unlike KCET/Agri Quota, management quota does not mandate a state or national level entrance test score. Admission is merit-based." },
-                { icon: <CheckSquare />, title: "Seat Availability", desc: "Management quota seats are limited (approx. 15% of sanctioned intake) and are allotted on a first-come, first-served merit basis." },
-                { icon: <Phone />, title: "Direct Application", desc: "Interested candidates should directly contact the Alva's admissions office for availability, process details, and personal guidance." },
-              ].map((item, i) => (
-                <div key={i} className="adm-card">
-                  <div className="adm-card-accent-bar" />
-                  <div className="adm-card-content">
-                    <div className="adm-card-icon">{item.icon}</div>
-                    <h3 className="adm-card-title">{item.title}</h3>
-                    <p className="adm-card-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+
 
           <div className="adm-section">
             <h2 className="adm-heading">Admission Process — Step by Step</h2>
