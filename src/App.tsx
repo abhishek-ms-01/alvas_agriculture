@@ -13,19 +13,22 @@ import Internship from "./pages/internship/Internship";
 import ExposureVisit from "./pages/exposure/ExposureVisit";
 import Placement from "./pages/placement/Placement";
 import Research from "./pages/research/Research";
-import Funding from "./pages/research/Funding";
-import IPR from "./pages/research/IPR";
-import Publications from "./pages/research/Publications";
-import PatentApplication from "./pages/research/PatentApplication";
-import MultidisciplinaryResearch from "./pages/research/MultidisciplinaryResearch";
-import ResearchTeam from "./pages/research/ResearchTeam";
-import ResearchPolicies from "./pages/research/ResearchPolicies";
-import ResearchSupervisors from "./pages/research/ResearchSupervisors";
-import Journals from "./pages/research/Journals";
-import Conference from "./pages/research/Conference";
-import Facilities from "./pages/research/Facilities";
-import ResearchAbout from "./pages/research/ResearchAbout";
-import YearwiseDetails from "./pages/research/YearwiseDetails";
+// import Funding from "./pages/research/Funding";
+// import IPR from "./pages/research/IPR";
+// import Publications from "./pages/research/Publications";
+// import PatentApplication from "./pages/research/PatentApplication";
+// import MultidisciplinaryResearch from "./pages/research/MultidisciplinaryResearch";
+// import ResearchTeam from "./pages/research/ResearchTeam";
+// import ResearchPolicies from "./pages/research/ResearchPolicies";
+// import ResearchSupervisors from "./pages/research/ResearchSupervisors";
+// import Journals from "./pages/research/Journals";
+// import Conference from "./pages/research/Conference";
+// import Facilities from "./pages/research/Facilities";
+// import ResearchAbout from "./pages/research/ResearchAbout";
+// import YearwiseDetails from "./pages/research/YearwiseDetails";
+
+import ResidentialLife from "./pages/campus-life/residential-life/ResidentialLife";
+import SkillLabs from "./pages/campus-life/skill-labs/SkillLabs";
 
 // Local branch imports
 import ChairmanMessage from "./pages/ChairmanMessage";
@@ -88,6 +91,8 @@ const App = () => (
           <Route path="/vision-mission" element={<VisionMission />} />
           <Route path="/milestones" element={<Milestones />} />
           <Route path="/campus-life" element={<CampusLife />} />
+          <Route path="/campus-life/residential-life" element={<ResidentialLife />} />
+          <Route path="/campus-life/skill-labs" element={<SkillLabs />} />
           <Route path="/campus-life/library" element={<Library />} />
           <Route path="/campus-life/sports-culture" element={<SportsCulture />} />
 
@@ -124,6 +129,7 @@ const App = () => (
           <Route path="/exposure-visit" element={<ExposureVisit />} />
           <Route path="/placements" element={<Placement />} />
           <Route path="/research" element={<Research />} />
+          {/* 
           <Route path="/research/funding" element={<Funding />} />
           <Route path="/research/ipr" element={<IPR />} />
           <Route path="/research/publications" element={<Publications />} />
@@ -137,6 +143,7 @@ const App = () => (
           <Route path="/research/facilities" element={<Facilities />} />
           <Route path="/research/about" element={<ResearchAbout />} />
           <Route path="/research/yearwise-details" element={<YearwiseDetails />} />
+          */}
 
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

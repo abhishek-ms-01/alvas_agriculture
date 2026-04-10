@@ -1,0 +1,24 @@
+/* 
+  ResidentialLife.css
+  This file is now largely a supplement to Internship.css (imported in the TSX).
+  It handles page-specific layout adjustments if needed.
+*/
+
+.ip-page {
+  background-color: hsl(40, 25%, 91%); /* Match the wave fill and breadcrumb background */
+}
+
+/* Ensure the hero content is centered correctly */
+.ip-hero-content {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.ip-body {
+  padding-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .ip-hero {
+    height: 70vh;
+  }
+}

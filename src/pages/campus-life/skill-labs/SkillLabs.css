@@ -1,0 +1,42 @@
+/* SkillLabs.css */
+
+.ip-page.skill-labs {
+  background-color: #f0f7f9; /* Soft cyan-tinted light background */
+}
+
+.ip-hero.skill-labs {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  position: relative;
+  min-height: 480px; /* Ensure consistent height */
+}
+
+/* Fix for <img> background tag */
+img.ip-hero-bg-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.15;
+  z-index: 0;
+  pointer-events: none;
+  mix-blend-mode: luminosity;
+}
+
+.ip-label.skill-labs {
+  color: #0891b2; /* Cyan theme */
+}
+
+.ip-badge.skill-labs {
+  background: rgba(8, 145, 178, 0.1);
+  border-color: rgba(8, 145, 178, 0.3);
+  color: #0891b2;
+}
+
+.ip-bullet.skill-labs {
+  color: #0891b2;
+}
+
+.ip-heading.skill-labs span {
+  color: #0891b2;
+}
