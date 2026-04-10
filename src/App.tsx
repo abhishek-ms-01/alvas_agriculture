@@ -29,6 +29,8 @@ import Research from "./pages/research/Research";
 
 import ResidentialLife from "./pages/campus-life/residential-life/ResidentialLife";
 import SkillLabs from "./pages/campus-life/skill-labs/SkillLabs";
+import StartupsAchievements from "./pages/campus-life/startups-achievements/StartupsAchievements";
+import GreenCampus from "./pages/campus-life/green-campus/GreenCampus";
 
 // Local branch imports
 import ChairmanMessage from "./pages/ChairmanMessage";
@@ -95,6 +97,8 @@ const App = () => (
           <Route path="/campus-life/skill-labs" element={<SkillLabs />} />
           <Route path="/campus-life/library" element={<Library />} />
           <Route path="/campus-life/sports-culture" element={<SportsCulture />} />
+          <Route path="/campus-life/startups-achievements" element={<StartupsAchievements />} />
+          <Route path="/campus-life/green-campus" element={<GreenCampus />} />
 
           {/* About sub-page routes */}
           <Route path="/about/naac" element={<NAAC />} />

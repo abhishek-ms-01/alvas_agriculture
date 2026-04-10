@@ -98,7 +98,7 @@ function SpotlightGallery({ items }: { items: typeof spotlightItems }) {
 
 /* ─── 6 tile cards ─── */
 const tileCards = [
-    { pill: "01 · Campus",  tag: "Infrastructure",           name: "Green Campus\n& ATC",         sub: "100-acre campus in the Western Ghats" },
+    { pill: "01 · Campus",  tag: "Infrastructure",           name: "Green Campus\n& ATC",         sub: "" },
     { pill: "02 · Hostel",  tag: "Living Spaces",            name: "Residential\nLife & Green\nSpaces", sub: "Comfortable hostels amid nature", stem: true },
     { pill: "03 · Sports",  tag: "Athletics",                name: "Sports &\nCulture",           sub: "" },
     { pill: "04 · Labs",    tag: "Future Tech · Placements", name: "Skill Labs\n& Clubs",         sub: "Industry-ready, hands-on learning" },
@@ -243,13 +243,15 @@ export default function CampusLife() {
                     {tileCards.map((card, i) => (
                         <div
                             key={i}
-                            className={`cl-card${cardsEntered[i] ? " cl-card-entered" : ""}${(i === 1 || i === 2 || i === 3 || i === 4) ? " cursor-pointer" : ""}`}
+                            className={`cl-card${cardsEntered[i] ? " cl-card-entered" : ""}${(i === 0 || i === 1 || i === 2 || i === 3 || i === 4 || i === 5) ? " cursor-pointer" : ""}`}
                             style={{ transition: `opacity 0.6s ease ${150 + i * 100}ms, transform 0.6s ease ${150 + i * 100}ms` }}
                             onClick={() => {
+                                if (i === 0) navigate("/campus-life/green-campus");
                                 if (i === 1) navigate("/campus-life/residential-life");
                                 if (i === 2) navigate("/campus-life/sports-culture");
                                 if (i === 3) window.open("/campus-life/skill-labs", "_blank");
                                 if (i === 4) navigate("/campus-life/library");
+                                if (i === 5) navigate("/campus-life/startups-achievements");
                             }}
                         >
                             <div className={`cl-card-img cl-card-img-${i + 1}`} />

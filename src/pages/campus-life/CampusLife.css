@@ -189,14 +189,19 @@
 }
 .cl-card:hover .cl-card-img { transform: scale(1.07); filter: brightness(.78) saturate(1.05); }
 
-.cl-card-img-1 { background-image: url('https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80&auto=format&fit=crop'); }
-/* Hostel / Residential Life */
-.cl-card-img-2 { background-image: url('https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=80&auto=format&fit=crop'); }
-.cl-card-img-3 { background-image: url('https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&q=80&auto=format&fit=crop'); }
-/* Skill Labs / Future Tech */
-.cl-card-img-4 { background-image: url('https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600&q=80&auto=format&fit=crop'); }
-.cl-card-img-5 { background-image: url('https://images.unsplash.com/photo-1461896836934-ffe607ba8211?w=600&q=80&auto=format&fit=crop'); }
-.cl-card-img-6 { background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=700&q=80&auto=format&fit=crop'); }
+/* 01 Green Campus & ATC — actual agriculture field */
+.cl-card-img-1 { background-image: url('/agriculture%20filed.jpeg'); }
+/* 02 Residential Life — actual hostel exterior */
+.cl-card-img-2 { background-image: url('/HOSTEL%201.jpg'); }
+/* 03 Sports & Culture — campus sports/cultural photo */
+.cl-card-img-3 { background-image: url('/sports1.jpeg'); }
+/* 04 Skill Labs & Clubs — actual lab photo */
+.cl-card-img-4 { background-image: url('/LAB1.jpeg'); }
+/* 05 Library & Research — actual library */
+.cl-card-img-5 { background-image: url('/library1.jpg'); }
+/* 06 Startups & Achievements — campus innovation/tech */
+.cl-card-img-6 { background-image: url('/technologidrone.jpeg'); }
+
 
 .cl-card-overlay { position: absolute; inset: 0; z-index: 1; }
 .cl-card:nth-child(1) .cl-card-overlay { background: linear-gradient(160deg, transparent 20%, rgba(20,40,10,.88) 100%); }
