@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import PageHero from "@/components/PageHero";
-import "./admissions/Admissions.css";
+import "../admissions/Admissions.css";
 
 const milestones = [
   {
@@ -17,7 +17,7 @@ const milestones = [
     year: "2025",
     icon: <GraduationCap size={20} />,
     title: "About AIAST",
-    desc: "Alva's Institute of Agricultural Science & Technology was established in 2025, affiliated to Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga."
+    desc: "Alva's Institute of Agricultural Sciences & Technology was established in 2025, affiliated to Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga."
   },
 ];
 
@@ -67,7 +67,7 @@ export default function Milestones() {
             </h2>
             <div className="adm-info-box">
               <p>
-                Alva's Institute of Agricultural Science &amp; Technology was established in 2025 under the Alva's Education Foundation, founded by Dr. M. Mohan Alva in 2001. Affiliated to Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga.
+                Alva's Institute of Agricultural Sciences &amp; Technology was established in 2025 under the Alva's Education Foundation, founded by Dr. M. Mohan Alva in 2001. Affiliated to Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga.
               </p>
             </div>
           </motion.section>

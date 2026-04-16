@@ -27,9 +27,7 @@ const NAAC = () => {
           title={<>Accreditations &amp; <span className="text-accent underline decoration-accent/30 underline-offset-8">Recognition</span></>}
           subtitle="Formally recognised and approved by leading national regulatory and statutory bodies."
           stats={[
-            { bold: "NAAC", text: "" },
-            { bold: "ICAR", text: "" },
-            { bold: "Govt. of Karnataka", text: "" },
+            { bold: "Govt. of Karnataka", text: "Approved" },
           ]}
         />
 
@@ -54,22 +52,6 @@ const NAAC = () => {
             </h2>
             <div className="space-y-5">
               {[
-                {
-                  icon: <BadgeCheck size={24} />,
-                  title: "NAAC",
-                  full: "National Assessment and Accreditation Council",
-                  desc: "Ensures quality assurance and assessment of higher education institutions in India based on academic and institutional standards.",
-                  status: "Accredited",
-                  color: "bg-green-50 border-green-200 text-green-700"
-                },
-                {
-                  icon: <FlaskConical size={24} />,
-                  title: "ICAR",
-                  full: "Indian Council of Agricultural Research",
-                  desc: "The apex body responsible for coordinating, guiding, and managing research and education in agriculture and allied sciences in India.",
-                  status: "Accredited",
-                  color: "bg-green-50 border-green-200 text-green-700"
-                },
                 {
                   icon: <Building size={24} />,
                   title: "Statutory Approval – Government of Karnataka",

@@ -647,91 +647,95 @@
    ============================================ */
 .dp-staff-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
 }
-
-@media (max-width: 1100px) { .dp-staff-grid { grid-template-columns: repeat(2,1fr); } }
-@media (max-width: 600px)  { .dp-staff-grid { grid-template-columns: 1fr; } }
 
 .dp-staff-card {
   background: white;
-  border-radius: 20px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: var(--dp-card-shadow);
-  border: 1px solid var(--dp-border);
-  text-align: center;
-  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
 }
 
 .dp-staff-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(21,128,61,0.12);
-  border-color: rgba(21,128,61,0.2);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  border-color: var(--dp-primary);
 }
 
-/* Top accent bar */
-.dp-staff-card-top {
-  height: 5px;
-  background: linear-gradient(90deg, var(--dp-primary), var(--dp-accent));
-}
-
-/* Avatar circle */
+/* Photo area */
 .dp-staff-avatar {
-  width: 100px; height: 100px;
-  margin: 24px auto 16px;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 3px solid white;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.10);
-  background: #f0fdf4;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 2.8rem;
-  color: rgba(21,128,61,0.3);
+  width: 100%;
+  height: 280px;
+  margin: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background: #f8fafc;
+  position: relative;
 }
+
 .dp-staff-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 20%;
+}
+
+.dp-staff-card-top {
+  display: none; /* Removed the top thin bar for a cleaner look */
 }
 
 .dp-staff-card-body {
-  padding: 0 20px 24px;
+  padding: 24px;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .dp-staff-name {
   font-family: 'Playfair Display', serif;
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--dp-text);
-  margin-bottom: 4px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--dp-primary-dark);
+  margin-bottom: 6px;
+  line-height: 1.2;
 }
 
 .dp-staff-role {
   display: block;
-  font-size: 0.78rem;
+  font-size: 0.85rem;
   color: var(--dp-accent);
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
 }
 
 .dp-staff-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  justify-content: center;
+  gap: 8px;
+  margin-top: auto;
+  justify-content: flex-start;
 }
 
 .dp-staff-tag {
   display: inline-block;
-  padding: 3px 10px;
-  background: rgba(21,128,61,0.08);
-  color: var(--dp-primary);
-  border-radius: 6px;
-  font-size: 11.5px;
-  font-weight: 600;
+  padding: 4px 12px;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 /* ============================================

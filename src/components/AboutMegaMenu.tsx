@@ -86,9 +86,13 @@ const AboutMegaMenu = ({ onClose }: AboutMegaMenuProps) => {
                 >
                   <a 
                     href={item.path || "#"} 
-                    className={`flex items-center justify-between w-full py-2.5 transition-all duration-300 group`}
+                    className={`flex items-center justify-between w-full py-2.5 transition-all duration-300 group cursor-pointer`}
                     onClick={(e) => {
-                      if (hasSubItems) e.preventDefault();
+                      e.preventDefault();
+                      if (!hasSubItems && item.path) {
+                        navigate(item.path);
+                        onClose();
+                      }
                     }}
                   >
                     <h3 className={`text-[14px] font-bold tracking-tight transition-all duration-300 ${isActive ? 'text-accent' : 'text-deep-green group-hover:text-accent'}`}>

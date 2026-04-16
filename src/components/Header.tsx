@@ -21,10 +21,8 @@ const navLinks = [
         category: "ADMISSION PROCEDURE",
         links: [
           { label: "Admission Through KCET", to: "/admissions/kcet" },
-          { label: "Admission Through Agri Quota", to: "/admissions/agri-quota" },
           { label: "Admission Through Management", to: "/admissions/management" },
           { label: "Documents Required", to: "/admissions/documents" },
-          { label: "Disclaimer – Eligibility Criteria", to: "/admissions/disclaimer" },
         ],
       },
       {
@@ -50,6 +48,9 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
   const [open, setOpen] = useState(false);
   const [showAboutMenu, setShowAboutMenu] = useState(false);
   const [showAcademicsMenu, setShowAcademicsMenu] = useState(false);
+  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const [mobileAcademicsOpen, setMobileAcademicsOpen] = useState(false);
+  const [mobileAdmissionsOpen, setMobileAdmissionsOpen] = useState(false);
 
   // Timer refs — bridge the gap between nav trigger and floating menu
   const aboutTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -107,11 +108,11 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
             alt="Alva's Logo"
             className="h-16 w-auto object-contain drop-shadow-md"
           />
-          <div className="hidden sm:block">
-            <p className="font-sans font-black text-white text-2xl leading-none tracking-wider uppercase">
+          <div className="flex flex-col">
+            <p className="font-sans font-black text-white text-lg sm:text-2xl leading-none tracking-wider uppercase">
               ALVA'S
             </p>
-            <p className="text-white/80 text-[11px] font-medium tracking-[0.14em] uppercase leading-tight mt-0.5">
+            <p className="text-white/80 text-[9px] sm:text-[11px] font-medium tracking-[0.08em] sm:tracking-[0.14em] uppercase leading-tight mt-0.5 max-w-[180px] sm:max-w-none">
               Institute of Agricultural Sciences &amp; Technology
             </p>
           </div>
@@ -239,30 +240,103 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
               <nav className="flex flex-col gap-2 mt-8">
                 {navLinks.map((link) => (
                   <div key={link.label}>
-                    {link.megaMenu ? (
+                    {link.label === "About" ? (
+                      /* About — mobile accordion */
                       <div className="flex flex-col">
-                        <span className="px-4 py-2 text-sm font-bold uppercase tracking-widest text-accent/60 mt-4 mb-1">
-                          {link.label}
-                        </span>
-                        {link.megaMenu.map((cat) => (
-                          <div key={cat.category} className="mb-4">
-                            <span className="px-6 py-1 text-[10px] font-black text-white/40 uppercase tracking-widest">
-                              {cat.category}
-                            </span>
-                            <div className="flex flex-col gap-1 mt-1">
-                              {cat.links.map((sub) => (
-                                <Link
-                                  key={sub.label}
-                                  to={sub.to}
-                                  onClick={() => setOpen(false)}
-                                  className="px-8 py-2 text-[15px] text-white/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
-                                >
-                                  {sub.label}
-                                </Link>
-                              ))}
-                            </div>
+                        <button
+                          onClick={() => setMobileAboutOpen((v) => !v)}
+                          className="px-4 py-3 text-lg text-white/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium flex items-center justify-between w-full"
+                        >
+                          About
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileAboutOpen ? 'rotate-180 text-accent' : 'opacity-50'}`} />
+                        </button>
+                        {mobileAboutOpen && (
+                          <div className="flex flex-col gap-1 pl-4 border-l border-white/10 ml-4 mt-1 mb-2">
+                            {[
+                              { label: "About College", to: "/about-college" },
+                              { label: "Vision & Mission", to: "/vision-mission" },
+                              { label: "Milestones", to: "/milestones" },
+                              { label: "Chairman's Message", to: "/chairman-message" },
+                              { label: "Dean's Message", to: "/dean-message" },
+                              { label: "Administration", to: "/administration" },
+                              { label: "MOU", to: "/mou" },
+                              { label: "AEF", to: "/aef" },
+                              { label: "Accreditations", to: "/about/naac" },
+                              { label: "Mandatory Disclosure", to: "/about/mandatory-disclosure" },
+                            ].map((sub) => (
+                              <Link
+                                key={sub.label}
+                                to={sub.to}
+                                onClick={() => { setOpen(false); setMobileAboutOpen(false); }}
+                                className="px-3 py-2 text-[15px] text-white/70 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
+                              >
+                                {sub.label}
+                              </Link>
+                            ))}
                           </div>
-                        ))}
+                        )}
+                      </div>
+                    ) : (link as any).isAcademics ? (
+                      /* Academics — mobile accordion */
+                      <div className="flex flex-col">
+                        <button
+                          onClick={() => setMobileAcademicsOpen((v) => !v)}
+                          className="px-4 py-3 text-lg text-white/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium flex items-center justify-between w-full"
+                        >
+                          Academics
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileAcademicsOpen ? 'rotate-180 text-accent' : 'opacity-50'}`} />
+                        </button>
+                        {mobileAcademicsOpen && (
+                          <div className="flex flex-col gap-1 pl-4 border-l border-white/10 ml-4 mt-1 mb-2">
+                            {[
+                              { label: "B.Sc Agriculture", to: "/academics/ug/bsc-agriculture" },
+                              { label: "B.Tech Food Technology", to: "/academics/ug/btech-food-technology" },
+                            ].map((sub) => (
+                              <Link
+                                key={sub.label}
+                                to={sub.to}
+                                onClick={() => { setOpen(false); setMobileAcademicsOpen(false); }}
+                                className="px-3 py-2 text-[15px] text-white/70 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
+                              >
+                                {sub.label}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ) : link.megaMenu ? (
+                      /* Admissions — mobile accordion */
+                      <div className="flex flex-col">
+                        <button
+                          onClick={() => setMobileAdmissionsOpen((v) => !v)}
+                          className="px-4 py-3 text-lg text-white/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium flex items-center justify-between w-full"
+                        >
+                          Admissions
+                          <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${mobileAdmissionsOpen ? 'rotate-180 text-accent' : 'opacity-50'}`} />
+                        </button>
+                        {mobileAdmissionsOpen && (
+                          <div className="flex flex-col gap-4 pl-4 border-l border-white/10 ml-4 mt-1 mb-4">
+                            {link.megaMenu.map((cat) => (
+                              <div key={cat.category}>
+                                <span className="px-3 py-1 text-[10px] font-black text-white/40 uppercase tracking-widest block mb-2">
+                                  {cat.category}
+                                </span>
+                                <div className="flex flex-col gap-1">
+                                  {cat.links.map((sub) => (
+                                    <Link
+                                      key={sub.label}
+                                      to={sub.to}
+                                      onClick={() => { setOpen(false); setMobileAdmissionsOpen(false); }}
+                                      className="px-3 py-2 text-[15px] text-white/80 hover:text-accent hover:bg-white/5 rounded-lg transition-all font-medium"
+                                    >
+                                      {sub.label}
+                                    </Link>
+                                  ))}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     ) : link.to ? (
                       <Link

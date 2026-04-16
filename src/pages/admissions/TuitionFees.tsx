@@ -42,7 +42,7 @@ const TuitionFees = () => {
                   <tr>
                     <th>Fee Component</th>
                     <th>KCET (₹)</th>
-                    <th>Agri Quota (₹)</th>
+                    <th>Farmer's Quota (₹)</th>
                     <th>Management (₹)</th>
                   </tr>
                 </thead>

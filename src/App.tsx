@@ -33,26 +33,23 @@ import StartupsAchievements from "./pages/campus-life/startups-achievements/Star
 import GreenCampus from "./pages/campus-life/green-campus/GreenCampus";
 
 // Local branch imports
-import ChairmanMessage from "./pages/ChairmanMessage";
-import DeanMessage from "./pages/DeanMessage";
-import MOU from "./pages/MOU";
-import AEF from "./pages/AEF";
-import Administration from "./pages/Administration";
-import AboutCollege from "./pages/AboutCollege";
-import VisionMission from "./pages/VisionMission";
-import Milestones from "./pages/Milestones";
+import ChairmanMessage from "./pages/about/ChairmanMessage";
+import DeanMessage from "./pages/about/DeanMessage";
+import MOU from "./pages/about/MOU";
+import AEF from "./pages/about/AEF";
+import Administration from "./pages/about/Administration";
+import AboutCollege from "./pages/about/AboutCollege";
+import VisionMission from "./pages/about/VisionMission";
+import Milestones from "./pages/about/Milestones";
 import CampusLife from "./pages/campus-life/CampusLife";
 import Library from "./pages/campus-life/library/Library";
 import SportsCulture from "./pages/campus-life/sports-culture/SportsCulture";
 
 // Admissions imports
 import AdmissionKCET from "./pages/admissions/AdmissionKCET";
-import AdmissionAgriQuota from "./pages/admissions/AdmissionAgriQuota";
 import AdmissionManagement from "./pages/admissions/AdmissionManagement";
 import DocumentsRequired from "./pages/admissions/DocumentsRequired";
-import Disclaimer from "./pages/admissions/Disclaimer";
 import FeesKCET from "./pages/admissions/FeesKCET";
-import FeesAgriQuota from "./pages/admissions/FeesAgriQuota";
 import FeesManagement from "./pages/admissions/FeesManagement";
 import TuitionFees from "./pages/admissions/TuitionFees";
 import ScholarshipsList from "./pages/admissions/ScholarshipsList";
@@ -117,12 +114,9 @@ const App = () => (
 
           {/* Admissions routes */}
           <Route path="/admissions/kcet" element={<AdmissionKCET />} />
-          <Route path="/admissions/agri-quota" element={<AdmissionAgriQuota />} />
           <Route path="/admissions/management" element={<AdmissionManagement />} />
           <Route path="/admissions/documents" element={<DocumentsRequired />} />
-          <Route path="/admissions/disclaimer" element={<Disclaimer />} />
           <Route path="/admissions/fees/kcet" element={<FeesKCET />} />
-          <Route path="/admissions/fees/agri-quota" element={<FeesAgriQuota />} />
           <Route path="/admissions/fees/management" element={<FeesManagement />} />
           <Route path="/admissions/fees/tuition-2025" element={<TuitionFees />} />
           <Route path="/admissions/scholarships/list" element={<ScholarshipsList />} />

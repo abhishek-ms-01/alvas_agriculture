@@ -18,7 +18,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import PageHero from "@/components/PageHero";
-import "./admissions/Admissions.css";
+import "../admissions/Admissions.css";
 import "./VisionMission.css";
 
 const missionPoints = [

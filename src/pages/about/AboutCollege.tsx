@@ -21,7 +21,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import PageHero from "@/components/PageHero";
-import "./admissions/Admissions.css";
+import "../admissions/Admissions.css";
 
 export default function AboutCollege() {
   const fadeIn = {
@@ -131,7 +131,7 @@ export default function AboutCollege() {
                   <h3 className="text-xl font-black uppercase tracking-tight text-white">Focus</h3>
                 </div>
                 <p className="text-cream/80 leading-relaxed font-medium text-sm mb-4">
-                  Quality Teaching & research validated by national benchmarks.
+                  Committed to academic excellence, hands-on research, and producing industry-ready agri-professionals.
                 </p>
                 <div className="grid grid-cols-2 gap-2 text-[10px] font-black uppercase tracking-widest text-accent">
                    <span>• Research</span>

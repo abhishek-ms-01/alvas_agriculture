@@ -54,16 +54,15 @@ const MandatoryDisclosure = () => {
 
             <div className="adm-info-box mb-6">
               <p className="text-slate-700 font-medium">
-                In compliance with the Right to Information Act, 2005, Alva's Institute of Agricultural Science & Technology proactively discloses institutional information to promote transparency and accountability.
+                In compliance with the Right to Information Act, 2005, Alva's Institute of Agricultural Sciences & Technology proactively discloses institutional information to promote transparency and accountability.
               </p>
             </div>
 
             {/* RTI Officials */}
             <div className="space-y-4 mb-8">
               {[
-                { role: "First Appellate Authority", name: "Dr. Vasudev", designation: "Dean, Agriculture", email: "dean@alvas.ac.in", phone: "+91-824-2277285" },
+                { role: "First Appellate Authority", name: "Dr. S N Vasudevan", designation: "Dean (Agri.)", email: "deanaiast@gmail.com", phone: "9448300046" },
                 { role: "Public Information Officer (PIO)", name: "Administrative Officer", designation: "Admin Department", email: "rti@alvas.ac.in", phone: "+91-824-2277286" },
-                { role: "Assistant PIO", name: "Office Superintendent", designation: "Administrative Section", email: "admin@alvas.ac.in", phone: "+91-824-2277287" },
               ].map((o, i) => (
                 <motion.div
                   key={i}
@@ -88,18 +87,6 @@ const MandatoryDisclosure = () => {
               ))}
             </div>
 
-            {/* How to file */}
-            <div className="bg-white rounded-2xl border border-slate-100 px-6 py-5 shadow-sm">
-              <h3 className="font-black text-deep-green text-base mb-3 flex items-center gap-2">
-                <Clock size={18} className="text-accent" /> How to File an RTI Application
-              </h3>
-              <ul className="space-y-2 text-slate-600 text-sm font-medium leading-relaxed">
-                <li className="flex gap-2"><span className="text-accent font-black">1.</span> Draft a clear, specific application with your name, address, and contact details.</li>
-                <li className="flex gap-2"><span className="text-accent font-black">2.</span> Attach application fee of ₹10 (postal order / DD / court fee stamp). BPL card holders are exempt.</li>
-                <li className="flex gap-2"><span className="text-accent font-black">3.</span> Send to PIO at: rti@alvas.ac.in or Alva's IAST, Moodbidri – 574 227, D.K., Karnataka.</li>
-                <li className="flex gap-2"><span className="text-accent font-black">4.</span> PIO must respond within 30 days. For life/liberty matters, response within 48 hours.</li>
-              </ul>
-            </div>
           </motion.section>
 
           {/* 2. Affiliations */}

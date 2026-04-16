@@ -7,7 +7,7 @@ import "../admissions/Admissions.css";
 const RTI = () => {
   const officers = [
     { role: "First Appellate Authority", name: "Dr. S N Vasudevan", designation: "Dean (Agri.)", email: "deanaiast@gmail.com", phone: "9448300046" },
-    { role: "Administrative Officer (AO)", name: "Administrative Officer", designation: "Admin Department", email: "rti@alvas.ac.in", phone: "+91-824-2277286" },
+    { role: "Public Information Officer (PIO)", name: "Administrative Officer", designation: "Admin Department", email: "rti@alvas.ac.in", phone: "+91-824-2277286" },
   ];
 
   return (
@@ -22,7 +22,7 @@ const RTI = () => {
             <div className="adm-badge"><Eye size={14} /> Mandatory Disclosure</div>
             <h1 className="adm-title">Right to <span>Information (RTI)</span></h1>
             <p className="adm-subtitle">
-              In compliance with the Right to Information Act, 2005, Alva's Institute of Agricultural Science & Technology proactively discloses institutional information to promote transparency and accountability.
+              In compliance with the Right to Information Act, 2005, Alva's Institute of Agricultural Sciences & Technology proactively discloses institutional information to promote transparency and accountability.
             </p>
             <div className="adm-stat-row">
               <div className="adm-stat-pill"><strong>RTI Act, 2005</strong></div>

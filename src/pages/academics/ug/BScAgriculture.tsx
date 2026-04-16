@@ -30,18 +30,23 @@ const data: DeptPageProps = {
     mainImage: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?auto=format&fit=crop&q=80&w=1200",
     badge1: { label: "1st in Costal Karnataka", sub: "Private Agri College" },
     badge2: { label: "K.S.N.U.A.H.S.,Shivamogga Affiliated", sub: "Top University" },
-    mainDescription: "Established in 2025, our B.Sc. (Hons) Agriculture program is committed to producing the next generation agricultural leaders. We bridge the gap between traditional farming wisdom and modern technological advancements. Our curriculum is designed as per the 6TH dean committee Syllabus Approved by Indian Council of Agricultural Research (ICAR) ,NEW DELHI in order to provide students with a deep understanding of soil heath, crop / seed production, control of pest and diseases, organic farming and sustainable management practices, ensuring they are well-equipped to tackle real-world agricultural challenges.",
+    mainDescription: "Established in 2025, our B.Sc. (Hons) Agriculture program is committed to producing the next generation agricultural leaders. We bridge the gap between traditional farming wisdom and modern technological advancements. Our curriculum is designed as per the 5th dean committee Syllabus Approved by Indian Council of Agricultural Research (ICAR) ,NEW DELHI in order to provide students with a deep understanding of soil heath, crop / seed production, control of pest and diseases, organic farming and sustainable management practices, ensuring they are well-equipped to tackle real-world agricultural challenges.",
     cards: [
       {
         icon: "🌾",
         title: "Programme Overview",
-        body: "The B.Sc. (Hons) Agriculture is the flagship UG offering of Alva's Institute of Agricultural Science & Technology. It follows the ICAR 6TH Dean's Committee curriculum ensuring national-standard quality across all agricultural universities in India.",
+        body: "The B.Sc. (Hons) Agriculture is the flagship UG offering of Alva's Institute of Agricultural Sciences & Technology. It follows the ICAR 5th Dean's Committee curriculum ensuring national-standard quality across all agricultural universities in India.",
         wide: true,
+      },
+      {
+        icon: "✨",
+        title: "Skill Enhancement Courses",
+        body: "Specifically designed modules to build practical expertise in niche areas like Apiculture, Mushroom Cultivation, Nursery Management, and Organic Input production, enhancing student employability.",
       },
       {
         icon: "🔬",
         title: "Hands-on Learning",
-        body: "Students receive training through farm practicals, field visits, crop production experiments, and internships at Krishi Vigyan Kendras (KVKs) preparing them for real-world agricultural challenges.",
+        body: "Students receive training through farm practicals, field visits, crop production experiments, and internships at Krishi Vigyan Kendras (KVKs).",
       },
       {
         icon: "🚀",
@@ -66,13 +71,75 @@ const data: DeptPageProps = {
     qualification: "Ph.D. Agronomy",
     specialization: "Agronomy",
     publications: "200+ Papers",
-    bio: "Dr. S N Vasudevan is a distinguished academician with over 40 years of experience in the field of Seed Science and Technology. He holds a Ph.D. from a premier Agricultural University, Bangalore and has published over 200 research papers in reputable National and International journals. Under his leadership, the department has established several research initiatives focusing on climate-resilient agriculture and organic farming techniques, significantly improving graduate placement outcomes.",
+    bio: "Dr. S N Vasudevan is a distinguished academician with over 40 years of experience in the field of Seed Science and Technology. He holds a Ph.D. from a premier Agricultural University, Bangalore and has published over 200 research papers in reputable National and International journals. Under his leadership, the institution has established several research initiatives focusing on climate-resilient agriculture and organic farming techniques, significantly improving graduate placement outcomes.",
     quote:
-      "Agriculture is not just a profession — it is a calling to steward the earth and nourish humanity. At our department, we cultivate scientists, entrepreneurs, and changemakers.",
+      "Agriculture is not just a profession — it is a calling to steward the earth and nourish humanity. At our institution, we cultivate scientists, entrepreneurs, and changemakers.",
   },
 
   /* ─── STAFF ─── */
   staff: [
+    {
+      name: "Dr. SADASHIVANAGOWDA S.N.",
+      role: "Assistant Professor",
+      photo: "/Dr. SADASHIVANAGOWDA S. N. O..jpg",
+      tags: ["Agronomy", "Cropping Systems", "Ph.D."],
+      designation: "Assistant Professor of Agronomy",
+      email: "ssgkrishiach21@gmail.com",
+      joiningDate: "11.12.2025",
+      education: ["B.Sc.(Agri.) [UAS Raichur]", "M.Sc.(Agri.) in Agronomy", "Ph.D.(Agronomy) [UAS, Dharwad]", "PGDAWM [MANAGE, Hyderabad]"],
+      experience: ["Assistant Professor (Agronomy) - 5 Years at College of Agriculture, Hassan (UASB)", "Senior Research Fellow at ICAR-Krishi Vigyan Kendra, Vijayapura - 7 months"],
+      interests: ["Cropping System", "Crop Diversification"],
+      achievements: [
+        "Contributed as a Developer in adding a new chapter on Agronomic practices of Moth Bean crop to the PoP, UAS Dharwad (2020).",
+        "ISA Best Ph.D. Thesis Award 2020 for Doctoral Research on Evaluation of Alternative Crops and Cropping Systems.",
+        "Generated income of ₹3,73,600 from ELP on Integrated Farming Systems (2021-22).",
+        "Earned ₹40,000 from half an acre of field bean cultivation (2024) at College of Agriculture, Hassan."
+      ],
+      memberships: ["Life Membership-International Journal Bio-resource and Stress Management"],
+      publications: "International (04), National (05)",
+      research: "09 Research Publications",
+      projects: "02 (As Co-PI)",
+      subjects: "Agronomy",
+      others: [
+        "Associate Coordinator for RAWEP (5 years) at College of Agriculture, Hassan.",
+        "Recipient of Young Scientist Award, Young Agronomist Award and Excellence in Teaching Award.",
+        "Conducted extension activities for farmers on IFS, Apiculture, coconut tree climbing, etc."
+      ]
+    },
+    {
+      name: "Dr. Sachin U. S.",
+      role: "Assistant Professor",
+      photo: "/sachin.jpg",
+      tags: ["Entomology", "UAV Pilot", "Ph.D."],
+      designation: "Assistant Professor of Entomology",
+      email: "sachinhort288@gmail.com",
+      joiningDate: "01.12.2025",
+      education: [
+        "B. Sc. (Horticulture), UHS Bagalkot (2013)",
+        "M. Sc. in Entomology, UAHS Shivamogga (2015)",
+        "Ph. D in Entomology, UHS Bagalkot (2020)",
+        "PG Diploma Ornamental and Landscape Gardening, Annamalai University (2015)",
+        "PG Diploma in Intellectual Property Rights, Annamalai University (2018)"
+      ],
+      experience: [
+        "Scientist (Plant Protection) at ICAR-KVK, Brahmavar, Udupi (2019-2023)",
+        "Senior Research Fellow at ICAR-KVK, Brahmavar, Udupi (2023-2025)"
+      ],
+      interests: ["Entomology (Toxicology & Molecular Entomology)"],
+      achievements: [
+        "Young Researcher Award-2022 from Institute of Scholars (InSc).",
+        "DGCA-authorized Remote Pilot (Medium Category) for agricultural UAV operations."
+      ],
+      publications: "16 Research Publications, 10 Conference Abstracts, 11 Popular Articles",
+      research: "16 National/International Publications",
+      projects: "Nil",
+      subjects: "Entomology",
+      others: [
+        "Participated as a resource person in several training programmes for KVKs.",
+        "Attended 22 training programmes organized by SAUs, ICAR institutes, etc.",
+        "Organized multiple skilled training programmes sponsored by ASCI and ICAR."
+      ]
+    },
     {
       name: "Prof. Rajesh Mehra",
       role: "Associate Professor",
@@ -91,30 +158,7 @@ const data: DeptPageProps = {
       photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
       tags: ["Horticulture", "Floriculture", "Ph.D."],
     },
-    {
-      name: "Mr. Vikram Singh",
-      role: "Assistant Professor",
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
-      tags: ["Agronomy", "Water Management", "M.Sc."],
-    },
-    {
-      name: "Dr. Kavita Rao",
-      role: "Assistant Professor",
-      photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
-      tags: ["Plant Pathology", "Mycology", "Ph.D."],
-    },
-    {
-      name: "Mr. Naresh Kumar",
-      role: "Lab Instructor",
-      photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-      tags: ["Field Practicals", "Soil Testing"],
-    },
-    {
-      name: "Ms. Priya Nair",
-      role: "Assistant Professor",
-      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-      tags: ["Agricultural Economics", "Extension"],
-    },
+    
   ],
 
   /* ─── ACTIVITIES ─── */

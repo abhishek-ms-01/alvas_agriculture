@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageBackground from "@/components/PageBackground";
 import PageHero from "@/components/PageHero";
-import "./admissions/Admissions.css";
+import "../admissions/Admissions.css";
 
 const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -26,24 +26,28 @@ const trustees = [
     name: "Mr. Vivek Alva",
     role: "Trustee, Alva's Education Foundation",
     quote: "Empowering young professionals with modern agricultural technology while staying deeply rooted in our traditions is the hallmark of Alva's education.",
+    image: "/vivek.jpg",
   },
   {
     name: "Mr. Vinay Alva",
     role: "Trustee, Alva's Education Foundation",
     quote: "Consistency in academic quality and an unwavering dedication to student success drive our administrative vision at every level of the institution.",
+    image: "/vinay sir.webp",
   }
 ];
 
 const management = [
   {
-    name: "Dr. Peter Fernandes",
+    name: "Dr. S N Vasudevan",
     role: "Dean, AIAST",
     quote: "Fostering rigorous academic standards and research excellence to position AIAST among the premier agricultural science institutions globally.",
+    image: "/dean.jpeg",
   },
   {
     name: "Administrative Officer",
     role: "Administration, AIAST",
     quote: "Streamlining campus operations and infrastructure to create a highly efficient, seamless academic environment for our distinguished faculty and students.",
+    image: "",
   }
 ];
 
@@ -128,8 +132,12 @@ export default function Administration() {
                {trustees.map((trustee, i) => (
                   <div key={i} className="bg-white rounded-xl border border-slate-200 p-8 shadow-sm hover:border-accent/40 transition-colors">
                      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                        <div className="w-20 h-20 flex-shrink-0 bg-slate-50 border border-slate-200 rounded-lg flex items-center justify-center shadow-inner">
-                           <span className="text-2xl font-black text-deep-green/80">{getInitials(trustee.name)}</span>
+                        <div className="w-40 h-40 flex-shrink-0 rounded-xl overflow-hidden border border-slate-200 shadow-md bg-slate-50">
+                           {trustee.image ? (
+                             <img src={trustee.image} alt={trustee.name} className="w-full h-full object-cover object-top" />
+                           ) : (
+                             <span className="w-full h-full flex items-center justify-center text-2xl font-black text-deep-green/80">{getInitials(trustee.name)}</span>
+                           )}
                         </div>
                         <div className="text-center sm:text-left">
                            <h3 className="text-2xl font-black text-deep-green mb-1">{trustee.name}</h3>
@@ -157,8 +165,12 @@ export default function Administration() {
                {management.map((mgmt, i) => (
                   <div key={i} className="bg-slate-50 rounded-xl border border-slate-200 p-8 hover:bg-white hover:shadow-md transition-all duration-300">
                      <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-                        <div className="w-16 h-16 flex-shrink-0 bg-white border border-slate-200 rounded-lg flex items-center justify-center shadow-sm">
-                           <span className="text-xl font-black text-deep-green/70">{getInitials(mgmt.name)}</span>
+                        <div className="w-36 h-36 flex-shrink-0 rounded-xl overflow-hidden border border-slate-200 shadow-md bg-white">
+                           {mgmt.image ? (
+                             <img src={mgmt.image} alt={mgmt.name} className="w-full h-full object-cover object-top" />
+                           ) : (
+                             <span className="w-full h-full flex items-center justify-center text-xl font-black text-deep-green/70">{getInitials(mgmt.name)}</span>
+                           )}
                         </div>
                         <div className="text-center sm:text-left">
                            <h3 className="text-xl font-black text-deep-green mb-1">{mgmt.name}</h3>

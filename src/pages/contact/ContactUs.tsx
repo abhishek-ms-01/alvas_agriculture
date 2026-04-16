@@ -19,7 +19,7 @@ const contactCards = [
     {
         icon: <Phone size={20} />,
         title: "Phone",
-        lines: ["+91 8258 262725", "+91 8258 262726"],
+        lines: ["+91 94484 58334", "+91 80505 85606"],
         delay: "0.1s",
     },
     {
@@ -123,7 +123,7 @@ const ContactUs = () => {
                             <div className="ip-overview-img" style={{ overflow: "hidden", borderRadius: 16, padding: 0, flexShrink: 0 }}>
                                 <iframe
                                     title="Alva's Campus Location"
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.4143736746813!2d74.9926861758652!3d13.072895612646698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba3add5bd600001%3A0x6b0ad93f6b0f0f0f!2sAlva's%20Institute%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1709121234567!5m2!1sen!2sin"
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.3!2d74.9650266!3d13.0236033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba355f5ffc25cab%3A0x5ef9b57c1b6279cf!2sAlva's%20Institute%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1713261000000!5m2!1sen!2sin"
                                     width="100%"
                                     height="100%"
                                     style={{ border: 0, display: "block", minHeight: 420 }}

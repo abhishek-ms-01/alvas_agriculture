@@ -201,8 +201,8 @@ const DepartmentPage: React.FC<DeptPageProps> = ({
           ══════════════════════════════ */}
           <section className="dp-section dp-animate-up">
             <div className="dp-section-header">
-              <span className="dp-section-eyebrow">Department Overview</span>
-              <h2 className="dp-section-title">About</h2>
+              <span className="dp-section-eyebrow">Programme Overview</span>
+              <h2 className="dp-section-title">About Programme</h2>
             </div>
 
             <div className="dp-about-main">
@@ -326,8 +326,8 @@ const DepartmentPage: React.FC<DeptPageProps> = ({
           ══════════════════════════════ */}
           <section className="dp-section dp-animate-up dp-delay-2">
             <div className="dp-section-header">
-              <span className="dp-section-eyebrow">Our Team</span>
-              <h2 className="dp-section-title">Department Staff</h2>
+              <span className="dp-section-eyebrow">Expert Faculty</span>
+              <h2 className="dp-section-title">Our Staff</h2>
             </div>
 
             <div className="dp-staff-grid">
@@ -366,8 +366,8 @@ const DepartmentPage: React.FC<DeptPageProps> = ({
           ══════════════════════════════ */}
           <section className="dp-section dp-animate-up dp-delay-3">
             <div className="dp-section-header">
-              <span className="dp-section-eyebrow">Events &amp; Programs</span>
-              <h2 className="dp-section-title">Branch Activities</h2>
+              <span className="dp-section-eyebrow">Events &amp; Learning</span>
+              <h2 className="dp-section-title">Programme Activities</h2>
             </div>
 
             <div className="dp-activities-grid">
@@ -393,7 +393,7 @@ const DepartmentPage: React.FC<DeptPageProps> = ({
           <section className="dp-section dp-animate-up dp-delay-4">
             <div className="dp-section-header">
               <span className="dp-section-eyebrow">Moments &amp; Memories</span>
-              <h2 className="dp-section-title">Branch Gallery</h2>
+              <h2 className="dp-section-title">Programme Gallery</h2>
             </div>
 
             <div className="dp-marquee-viewport">

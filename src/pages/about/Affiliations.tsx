@@ -7,40 +7,34 @@ import "../admissions/Admissions.css";
 const Affiliations = () => {
   const affiliates = [
     {
-      name: "University of Agricultural Sciences (UAS), Dharwad",
+      name: "Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences (KSNUAHS), Shivamogga",
       type: "Parent University",
-      since: "2008",
-      desc: "Alva's Institute of Agricultural Science & Technology is an affiliated college of Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences — one of India's premier agricultural universities, established in 1949. The university governs the curriculum, examinations, and degree award for all programmes at our institute.",
+      since: "2010",
+      desc: "Alva's Institute of Agricultural Sciences & Technology is an affiliated college of Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences — one of India's premier agricultural universities. The university governs the curriculum, examinations, and degree award for all programmes at our institute.",
     },
     {
       name: "Indian Council of Agricultural Research (ICAR), New Delhi",
       type: "National Apex Body",
       since: "2010",
-      desc: "ICAR is the apex body for agricultural research and education in India. Our B.Sc. Agriculture curriculum follows the 5th Dean's Committee recommendations prescribed by ICAR, ensuring national-level uniformity and quality.",
+      desc: "B.Sc. Agriculture curriculum follows the 5th Dean's Committee recommendations prescribed by ICAR, ensuring national-level uniformity and quality.",
     },
     {
       name: "Karnataka State Higher Education Council (KSHEC)",
       type: "State Regulatory Body",
       since: "2008",
-      desc: "KSHEC coordinates higher education policy and reforms in Karnataka. Alva's Institute reports to KSHEC for annual returns, fee fixation compliance, and strategic planning initiatives.",
+      desc: "Alva's Institute reports to KSHEC for annual returns, fee fixation compliance, and strategic planning.",
     },
     {
       name: "Karnataka Examinations Authority (KEA)",
       type: "Admission Authority",
       since: "2009",
-      desc: "KEA is the government body that conducts centralised admission counselling for aided and unaided professional colleges in Karnataka, including KCET-based admissions to Alva's Institute.",
-    },
-    {
-      name: "National Assessment and Accreditation Council (NAAC)",
-      type: "Quality Assurance",
-      since: "2015",
-      desc: "NAAC is an autonomous body under UGC that assesses and accredits institutions of higher education. Alva's Institute is NAAC accredited, reflecting its commitment to academic quality and continuous improvement.",
+      desc: "KEA conducts centralised admission counselling for KCET-based admissions to Alva's Institute.",
     },
     {
       name: "Alva's Education Foundation (AEF)",
       type: "Parent Trust",
-      since: "2005",
-      desc: "AEF is the parent trust body that manages Alva's group of educational institutions. The Agricultural Science & Technology institute operates under AEF's governance framework, aligned with Dr. Mohan Alva's vision for holistic education.",
+      since: "2001",
+      desc: "AEF is the parent trust body that manages Alva's group of educational institutions. Alva's IAST operates under AEF's governance framework, founded by Dr. M. Mohan Alva with a vision to build world-class educational institutions.",
     },
   ];
 
@@ -56,7 +50,7 @@ const Affiliations = () => {
             <div className="adm-badge"><Link2 size={14} /> Mandatory Disclosure</div>
             <h1 className="adm-title">Institutional <span>Affiliations</span></h1>
             <p className="adm-subtitle">
-              Alva's Institute of Agricultural Science & Technology is affiliated with and recognised by several leading academic, research, and regulatory bodies at the national and state level.
+              Alva's Institute of Agricultural Sciences & Technology is affiliated with and recognised by several leading academic, research, and regulatory bodies at the national and state level.
             </p>
             <div className="adm-stat-row">
               <div className="adm-stat-pill"><strong>6+</strong> Key Affiliations</div>
@@ -118,7 +112,6 @@ const Affiliations = () => {
                   <tr><td>ICAR</td><td>Curriculum Standards</td><td>2010</td><td>National</td></tr>
                   <tr><td>KSHEC</td><td>Policy Compliance</td><td>2008</td><td>State</td></tr>
                   <tr><td>KEA</td><td>Admission Authority</td><td>2009</td><td>State</td></tr>
-                  <tr><td>NAAC</td><td>Quality Accreditation</td><td>2015</td><td>National</td></tr>
                   <tr><td>AEF (Parent Trust)</td><td>Governing Trust</td><td>2005</td><td>Institutional</td></tr>
                 </tbody>
               </table>

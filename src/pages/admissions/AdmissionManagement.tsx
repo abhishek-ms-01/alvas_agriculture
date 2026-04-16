@@ -25,10 +25,10 @@ const AdmissionManagement = () => {
           badgeIcon={<Users size={14} />}
           badgeText="Admissions — Management Quota"
           title={<>Admission Through <span className="text-accent">Management</span></>}
-          subtitle="Admission through Management Quota at Alva's Institute of Agricultural Science & Technology is same as per KCET ranking, offering an opportunity for deserving students based on merit."
+          subtitle="Admission through Management Quota at Alva's Institute of Agricultural Sciences & Technology is same as per KCET ranking, ensuring merit-based selection for all aspiring students."
           stats={[
             { bold: "15%", text: "Management Seats" },
-            { bold: "KCET Rank", text: "Based" },
+            { bold: "KCET Rank", text: "Based Merit" },
             { bold: "Direct", text: "Application" },
           ]}
         />

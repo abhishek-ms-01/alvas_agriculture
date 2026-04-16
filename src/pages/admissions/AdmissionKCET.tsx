@@ -11,10 +11,10 @@ const AdmissionKCET = () => {
     { title: "Fill Application Form", desc: "Accurately fill in the KCET application form including choice of subjects, examination centre, and category details." },
     { title: "Pay Application Fee", desc: "Submit the requisite fee online via net banking, credit/debit card or UPI. Keep the payment receipt safe." },
     { title: "Download Hall Ticket", desc: "Download and print your KCET hall ticket from the KEA portal. Carry it along with a valid photo ID to the exam centre." },
-    { title: "Appear for KCET Exam", desc: "Attend the Karnataka Common Entrance Test. Candidates seeking admission under Farmer's Quota (50% reservation) should follow specific guidelines for practical exams." },
-    { title: "Check Results & Counselling", desc: "Results are published on the KEA portal. Eligible candidates are called for centralised counselling for seat allotment." },
-    { title: "Practical Exam (Farmer's Quota)", desc: "Candidates seeking reservation must appear for a Practical Exam for 200 marks conducted by Farm Universities of Karnataka State." },
-    { title: "Seat Allotment & Admission", desc: "After counselling, report to Alva's Institute of Agricultural Science & Technology with original documents and pay prescribed fees." },
+    { title: "Appear for KCET Exam", desc: "Attend the Karnataka Common Entrance Test. *Candidate seeking admission under Farmer’s Quota (50% reservation)* should clearly indicate the category in the application." },
+    { title: "Practical Exam (Farmer's Quota)", desc: "Candidate Should Appear for Practical Exam For 200 Marks Conducted By FARM UNIVERSITIES OF KARNATAKA STATE. This is mandatory for claiming reservation under the agriculturalist quota." },
+    { title: "Check Results & Counselling", desc: "Results are published on the KEA portal. Eligible candidates are called for centralised counselling for seat allotment based on their respective ranks." },
+    { title: "Seat Allotment & Admission", desc: "After counselling, report to Alva's Institute of Agricultural Sciences & Technology with original documents and pay prescribed fees." },
   ];
 
   return (
@@ -48,29 +48,19 @@ const AdmissionKCET = () => {
         <div className="adm-body">
           {/* Eligibility */}
           <div className="adm-section">
-            <h2 className="adm-heading">Eligibility Criteria</h2>
-            <div className="adm-grid">
-              {[
-                { icon: <BookOpen />, title: "Qualifying Exam", desc: "Candidates must have passed 10+2 or equivalent with Physics, Chemistry, and Biology/Mathematics as compulsory subjects from a recognised board." },
-                { icon: <Clipboard />, title: "KCET Score", desc: "Must have appeared and qualified in the Karnataka CET conducted by KEA. Valid CET rank is mandatory for counselling." },
-              ].map((item, i) => (
-                <div key={i} className="adm-card">
-                  <div className="adm-card-accent-bar" />
-                  <div className="adm-card-content">
-                    <div className="adm-card-icon">{item.icon}</div>
-                    <h3 className="adm-card-title">{item.title}</h3>
-                    <p className="adm-card-desc">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
+            <h2 className="adm-heading">Admissions via KCET</h2>
+            <div className="adm-info-box">
+              <p className="text-slate-700 font-medium">
+                Admissions to B.Sc. (Hons) Agriculture and B.Tech (Food Technology) are primarily conducted through the Karnataka Common Entrance Test (KCET). 50% of the seats are reserved for candidates from farming backgrounds under the Farmer's Quota.
+              </p>
             </div>
           </div>
 
           {/* Farmer's Quota Rank Consideration */}
           <div className="adm-section">
-            <h2 className="adm-heading">Farmer's Quota Rank Calculation</h2>
+            <h2 className="adm-heading">Farmer's Quota Rank Consideration</h2>
             <div className="adm-info-box">
-              <p className="font-bold mb-4">Rank declaration under Farmer's Quota is based on the following weightage:</p>
+              <p className="font-black text-deep-green mb-4 text-sm uppercase tracking-wider">CONSIDERATION OF MARKS FOR DECLARING RANK UNDER FARMER’S QUOTA BY KCET:</p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div className="bg-white/50 p-4 rounded-xl border border-accent/20 text-center">
                   <div className="text-2xl font-black text-accent mb-1">25%</div>
