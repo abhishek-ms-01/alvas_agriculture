@@ -65,8 +65,8 @@ import Affiliations from "./pages/about/Affiliations";
 import MandatoryDisclosure from "./pages/about/MandatoryDisclosure";
 
 // Academics imports
-import BTechFoodTechnology from "./pages/academics/ug/BTechFoodTechnology";
-import BScAgriculture from "./pages/academics/ug/BScAgriculture";
+import BTechFoodTechnology from "./pages/academics/ug/btech-food-technology/BTechFoodTechnology";
+import BScAgriculture from "./pages/academics/ug/bsc-agriculture/BScAgriculture";
 
 const queryClient = new QueryClient();
 

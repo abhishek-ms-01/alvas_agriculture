@@ -1,6 +1,6 @@
 import DepartmentPage, {
   DeptPageProps,
-} from "../DepartmentPage";
+} from "../../DepartmentPage";
 
 const data: DeptPageProps = {
   breadcrumb: "B.Tech Food Technology",

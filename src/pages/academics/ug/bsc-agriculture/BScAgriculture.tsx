@@ -1,6 +1,6 @@
 import DepartmentPage, {
   DeptPageProps,
-} from "../DepartmentPage";
+} from "../../DepartmentPage";
 
 const data: DeptPageProps = {
   breadcrumb: "B.Sc. (Hons) Agriculture",
@@ -141,22 +141,38 @@ const data: DeptPageProps = {
       ]
     },
     {
-      name: "Prof. Rajesh Mehra",
-      role: "Associate Professor",
-      photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-      tags: ["Soil Science", "Soil Morphology", "M.Sc."],
-      designation: "Associate Professor & Assistant Registrar",
-      email: "rajesh.mehra@alvas.edu.in",
-      joiningDate: "15-06-2010",
-      education: ["Ph.D. in Soil Science (UAS Bengaluru)", "M.Sc. Agriculture (Agri. Chemistry)"],
-      experience: "14+ years of teaching and research in Soil Morphology and Plant Nutrition.",
-      interests: ["Remote Sensing in Agriculture", "Digital Soil Mapping"],
-    },
-    {
-      name: "Dr. Anita Sharma",
+      name: "Dr. Dhanalakshmi. D",
       role: "Assistant Professor",
-      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-      tags: ["Horticulture", "Floriculture", "Ph.D."],
+      photo: "/danalakshmi.jpeg",
+      tags: ["Soil Science", "IPR", "Ph.D."],
+      designation: "Assistant Professor of Soil Science",
+      email: "Dhanalakshmiagri2@gmail.Com",
+      joiningDate: "01.12.2025",
+      education: [
+        "B. Sc. (Agri.) [UAS, Bangalore, 2011]",
+        "M.Sc. (Agri.) in Soil Science and Agril. Chemistry [UAS, Raichur, 2015]",
+        "Ph. D (Soil Science) [UAS, Dharwad, 2021]",
+        "PGD IPR [Annamalai University, 2016]",
+        "PGD RD [Annamalai University, 2020]"
+      ],
+      experience: [
+        "Watershed Manager at Sujal-II RIDF, Mother NGO, Hiriyuru (2011-2012)",
+        "Subject Matter Specialist at ADA office, KSDA, Sira (2012-2013)",
+        "Research Associate at UAS, Dharwad (2015-2016)",
+        "Staff Research Fellow at UAS, Dharwad (2018-2019)",
+        "Research Associate at Regional Horticultural Research Center, Kumbapur (2019-2021)",
+        "Scientist (SS & AC) at ICAR-KVK, Mudigere (2021-2023)",
+        "District Project Co-ordinator at JDA office, KSADA, Chikkamagaluru (2025)"
+      ],
+      interests: ["Soil Science", "Soil Fertility and productivity", "Soil test laboratory and Research"],
+      achievements: ["Received 10 different Awards from different institutes and foundations"],
+      publications: "20 Abstracts, 11 Popular articles, 03 Leaflets, 01 Folder, 05 Radio talks",
+      research: "05 Research Publications",
+      subjects: "Soil Science",
+      others: [
+        "Presented research data in various Seminars/Conferences/Workshops.",
+        "Attended three 21-day Training Programmes on various aspects of Agriculture."
+      ]
     },
     
   ],
