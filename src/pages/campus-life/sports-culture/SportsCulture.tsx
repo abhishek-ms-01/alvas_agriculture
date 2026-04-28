@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -8,14 +8,24 @@ import "./SportsCulture.css";
 
 const fameImages = [
   {
+    url: "/wa_110102.jpeg",
+    title: "Sports Podium — Medal Ceremony",
+    category: "Sports"
+  },
+  {
     url: "/sports1.jpeg",
     title: "Track & Field",
     category: "Sports"
   },
   {
     url: "/sports2.jpeg",
-    title: "Indoor Training",
+    title: "Inter-Collegiate Sports",
     category: "Sports"
+  },
+  {
+    url: "/wa_110102_1.jpeg",
+    title: "Alvas Nudisiri Cultural Festival",
+    category: "Culture"
   },
   {
     url: "/virasath.jpg",
@@ -26,6 +36,16 @@ const fameImages = [
     url: "/nudisiri.jpg",
     title: "Nudisiri Event",
     category: "Culture"
+  },
+  {
+    url: "/together.jpeg",
+    title: "Team Spirit",
+    category: "Culture"
+  },
+  {
+    url: "/wa_110106_2.jpeg",
+    title: "Green Campus Initiative",
+    category: "Campus"
   }
 ];
 

@@ -1,4 +1,4 @@
-import DepartmentPage, {
+﻿import DepartmentPage, {
   DeptPageProps,
 } from "../../DepartmentPage";
 
@@ -231,19 +231,40 @@ const data: DeptPageProps = {
   /* ─── GALLERY ─── */
   gallery: [
     {
-      src: "/agriculture%20filed.jpeg",
-      alt: "Crop Production Fields",
-      caption: "Crop Production Field Practicals",
+      src: "/wa_110058_1.jpeg",
+      alt: "Farmer Scientist Meet",
+      caption: "Farmer-Scientist Meet — Sustainable Agriculture",
       span: true,
       placeholder: "🌾",
       bg: "linear-gradient(135deg, #052e16, #14532d)",
+    },
+    {
+      src: "/agriculture%20filed.jpeg",
+      alt: "Crop Production Fields",
+      caption: "Crop Production Field Practicals",
+      placeholder: "🌾",
+      bg: "linear-gradient(135deg, #14532d, #166534)",
+    },
+    {
+      src: "/wa_110101_2.jpeg",
+      alt: "Mushroom Laboratory Visit",
+      caption: "Mushroom Lab — Hands-On Field Visit",
+      placeholder: "🍄",
+      bg: "linear-gradient(135deg, #14532d, #15803d)",
     },
     {
       src: "/horticulture3.jpeg",
       alt: "Horticulture Unit",
       caption: "Horticulture Demonstration Plot",
       placeholder: "🌿",
-      bg: "linear-gradient(135deg, #14532d, #15803d)",
+      bg: "linear-gradient(135deg, #064e3b, #065f46)",
+    },
+    {
+      src: "/wa_110101_3.jpeg",
+      alt: "Tissue Culture Laboratory",
+      caption: "Tissue Culture Lab — Field Visit",
+      placeholder: "🔬",
+      bg: "linear-gradient(135deg, #1e3a5f, #0c4a6e)",
     },
     {
       src: "/apiculture.jpeg",
@@ -253,6 +274,13 @@ const data: DeptPageProps = {
       bg: "linear-gradient(135deg, #713f12, #92400e)",
     },
     {
+      src: "/wa_110103.jpeg",
+      alt: "Mushroom Cultivation Training",
+      caption: "Mushroom Cultivation — Skill Training",
+      placeholder: "🌱",
+      bg: "linear-gradient(135deg, #064e3b, #065f46)",
+    },
+    {
       src: "/nursary.jpg",
       alt: "Nursery",
       caption: "Plant Nursery & Propagation Unit",
@@ -260,11 +288,25 @@ const data: DeptPageProps = {
       bg: "linear-gradient(135deg, #064e3b, #065f46)",
     },
     {
+      src: "/wa_110103_1.jpeg",
+      alt: "Bio Centre Horticulture Field Visit",
+      caption: "Bio Centre, Horticulture Dept., Shimoga",
+      placeholder: "🌿",
+      bg: "linear-gradient(135deg, #713f12, #92400e)",
+    },
+    {
       src: "/technologidrone.jpeg",
       alt: "Agri Technology",
       caption: "Drone-Based Precision Agriculture",
       placeholder: "🚁",
       bg: "linear-gradient(135deg, #1e3a5f, #0c4a6e)",
+    },
+    {
+      src: "/wa_110102_1.jpeg",
+      alt: "Alvas Nudisiri Cultural Event",
+      caption: "Alvas Nudisiri — Cultural Celebrations",
+      placeholder: "🎭",
+      bg: "linear-gradient(135deg, #422006, #78350f)",
     },
     {
       src: "/A.I.E.T%20CAMPUS%20-2026-185.jpg",

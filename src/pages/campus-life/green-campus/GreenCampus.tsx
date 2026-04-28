@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+﻿import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -39,11 +39,17 @@ const features = [
 ];
 
 const galleryImages = [
+  { src: "/wa_110059.jpeg", alt: "Farmer-Scientist Meet" },
   { src: "/agriculture%20filed.jpeg", alt: "Agriculture Field" },
+  { src: "/wa_110101_2.jpeg", alt: "Mushroom Lab Visit" },
   { src: "/horticulture3.jpeg", alt: "Horticulture" },
+  { src: "/wa_110103_1.jpeg", alt: "Bio Centre Shimoga Field Visit" },
   { src: "/apiculture.jpeg", alt: "Apiculture" },
-  { src: "/A.I.E.T%20CAMPUS%20-2026-180.jpg", alt: "Campus" },
-  { src: "/agriculture%20field2.jpeg", alt: "Field" },
+  { src: "/wa_110106_2.jpeg", alt: "Sapling Ceremony" },
+  { src: "/A.I.E.T%20CAMPUS%20-2026-180.jpg", alt: "Campus Walk" },
+  { src: "/wa_110102_1.jpeg", alt: "Alvas Nudisiri Cultural Festival" },
+  { src: "/agriculture%20field2.jpeg", alt: "Agriculture Field 2" },
+  { src: "/wa_110102.jpeg", alt: "Sports Podium" },
   { src: "/apiculture4.jpeg", alt: "Apiculture 2" },
 ];
 

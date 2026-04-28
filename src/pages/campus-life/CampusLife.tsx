@@ -8,31 +8,49 @@ import { useNavigate } from "react-router-dom";
 
 /* ── Gallery Marquee Data ── */
 const topRowImgs = [
+    { src: "/wa_110058_1.jpeg", title: "Farmer-Scientist Meet", tag: "Event" },
     { src: "/agriculture%20filed.jpeg", title: "Campus Morning", tag: "Nature" },
-    { src: "/apiculture.jpeg", title: "Apiculture", tag: "apiculture" },
-    { src: "/ruraldevellopment.jpeg", title: "Student Hub", tag: "Community" },
-    { src: "/horticulture3.jpeg", title: "Horticulture", tag: "horticulture" },
+    { src: "/wa_110101_2.jpeg", title: "Mushroom Lab Visit", tag: "Lab" },
+    { src: "/apiculture.jpeg", title: "Apiculture", tag: "Apiculture" },
+    { src: "/wa_110102.jpeg", title: "Sports Podium", tag: "Sports" },
+    { src: "/ruraldevellopment.jpeg", title: "Rural Development", tag: "Community" },
+    { src: "/wa_110102_1.jpeg", title: "Alvas Nudisiri", tag: "Culture" },
+    { src: "/horticulture3.jpeg", title: "Horticulture", tag: "Horticulture" },
+    { src: "/wa_110103.jpeg", title: "Mushroom Training", tag: "Skill" },
     { src: "/sports1.jpeg", title: "Athletics", tag: "Sports" },
-    { src: "/technologidrone.jpeg", title: "Skill Dev", tag: "Workshop" },
-    { src: "/apiculture2.jpeg", title: "Apiculture", tag: "apiculture" },
+    { src: "/wa_110105_2.jpeg", title: "Food Tech Lab", tag: "Lab" },
+    { src: "/technologidrone.jpeg", title: "Drone Tech", tag: "Workshop" },
+    { src: "/wa_110106_2.jpeg", title: "Sapling Ceremony", tag: "Campus" },
+    { src: "/wa_110058.jpeg", title: "Award Ceremony", tag: "Event" },
+    { src: "/apiculture2.jpeg", title: "Apiculture", tag: "Apiculture" },
+    { src: "/wa_110104.jpeg", title: "Mushroom Workshop", tag: "Workshop" },
 ];
 
 const bottomRowImgs = [
-    { src: "/apiculture123.jpeg", title: "Apiculture", tag: "apiculture" },
+    { src: "/wa_110101_3.jpeg", title: "Tissue Culture Lab", tag: "Lab" },
+    { src: "/apiculture123.jpeg", title: "Apiculture", tag: "Apiculture" },
+    { src: "/wa_110103_1.jpeg", title: "Bio Centre Shimoga", tag: "Field Visit" },
     { src: "/library3.jpg", title: "Library", tag: "Research" },
+    { src: "/wa_110103_2.jpeg", title: "Inauguration", tag: "Event" },
     { src: "/together.jpeg", title: "Team Spirit", tag: "Together" },
+    { src: "/wa_110104_1.jpeg", title: "Hands-On Training", tag: "Workshop" },
     { src: "/A.I.E.T%20CAMPUS%20-2026-180.jpg", title: "Green Walk", tag: "Campus" },
+    { src: "/wa_110104_2.jpeg", title: "Mushroom Cultivation", tag: "Skill" },
     { src: "/agriculture%20field2.jpeg", title: "Field", tag: "Nature" },
+    { src: "/wa_110105.jpeg", title: "Food Tech Demo", tag: "Lab" },
     { src: "/sports2.jpeg", title: "Sports Day", tag: "Sports" },
-    { src: "/apiculture8.jpeg", title: "Apiculture", tag: "apiculture" },
+    { src: "/wa_110106.jpeg", title: "Lab Session", tag: "Academic" },
+    { src: "/apiculture8.jpeg", title: "Apiculture", tag: "Apiculture" },
+    { src: "/wa_110102_2.jpeg", title: "Agri University Seminar", tag: "Academic" },
+    { src: "/wa_110104_3.jpeg", title: "Student Training", tag: "Workshop" },
 ];
 
 const spotlightItems = [
     { src: "/agriculture%20filed.jpeg", title: "Green Campus & ATC", sub: "100 acres of living, breathing campus in the Western Ghats", tag: "Infrastructure" },
     { src: "/apiculture4.jpeg", title: "Apiculture", sub: "Celebrating art, music & heritage through the year", tag: "Culture" },
-    { src: "/sports1.jpeg", title: " Sports", sub: "Pushing boundaries in agri-science and technology", tag: "Research" },
-    { src: "/technologidrone.jpeg", title: "Drone Technologies", sub: "Agri Technologies", tag: "workshop" },
-    { src: "/agrifield.jpeg", title: "Floriculture Field Visit", sub: "promoting hands-on learning in agriculture and floriculture.", tag: "Floriculture Field Visit" },
+    { src: "/sports1.jpeg", title: "Sports", sub: "Pushing boundaries in agri-science and technology", tag: "Research" },
+    { src: "/technologidrone.jpeg", title: "Drone Technologies", sub: "Agri Technologies", tag: "Workshop" },
+    { src: "/agrifield.jpeg", title: "Floriculture Field Visit", sub: "Promoting hands-on learning in agriculture and floriculture.", tag: "Floriculture Field Visit" },
 ];
 
 /* ─── Spotlight Gallery Component ─── */
