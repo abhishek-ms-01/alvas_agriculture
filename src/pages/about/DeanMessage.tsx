@@ -25,7 +25,7 @@ const DeanMessage = () => {
                 </div>
                 
                 <div className="mt-8 text-center md:text-right">
-                  <h2 className="text-2xl font-black text-deep-green uppercase tracking-tight">Dr. S N Vasudevan</h2>
+                  <h2 className="text-2xl font-black text-deep-green uppercase tracking-tight">Dr. S. N. Vasudevan</h2>
                   <p className="text-accent font-bold uppercase tracking-[0.2em] text-sm mt-1">Dean, College of Agriculture</p>
                 </div>
               </div>
@@ -43,20 +43,21 @@ const DeanMessage = () => {
               <div className="prose prose-slate prose-lg max-w-none text-slate-600 leading-relaxed space-y-6">
                 <p>
                   As the Dean of the College of Agriculture, it is my privilege to lead an institution that is at the 
-                  forefront of agricultural education and research. We are living in a time of unprecedented change, 
-                  where technology and sustainability must go hand-in-hand.
+                  forefront of agricultural education and research. With 38 years of experience in Seed Science and Technology, 
+                  I bring a deep commitment to nurturing the next generation of agricultural scientists and leaders.
                 </p>
                 <p>
-                  Our curriculum is designed to challenge the status quo. From precision farming to genetic research, 
-                  we provide our students with the tools they need to solve the complex problems of our global food systems. 
-                  We believe in learning by doing, which is why our 50-acre campus serves as a living laboratory.
+                  Our curriculum, designed as per the ICAR 5th Dean's Committee recommendations, is built to challenge the status quo. 
+                  From precision farming to seed technology and genetic research, we provide our students with the tools they need to 
+                  solve the complex problems of our global food systems. We believe in learning by doing, which is why our campus 
+                  serves as a living laboratory.
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
                   {[
-                    { icon: <Microscope />, title: "Research-Driven", desc: "Pushing the boundaries of agri-science." },
-                    { icon: <Sprout />, title: "Sustainable", desc: "Focusing on climate-resilient farming." },
-                    { icon: <Target />, title: "Future-Ready", desc: "Preparing leaders for the global market." }
+                    { icon: <Microscope />, title: "Research-Driven", desc: "95+ journal articles, 10 books, ₹425+ lakhs in projects." },
+                    { icon: <Sprout />, title: "Sustainable", desc: "Focusing on climate-resilient farming and seed technology." },
+                    { icon: <Target />, title: "Future-Ready", desc: "Guided 12 Ph.D. and 32 M.Sc. scholars." }
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-start gap-4 p-4 border border-slate-100 rounded-2xl hover:border-accent/20 transition-colors">
                       <div className="p-2 bg-accent/10 rounded-lg text-accent">

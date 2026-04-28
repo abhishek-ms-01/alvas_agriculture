@@ -38,7 +38,7 @@ const trustees = [
 
 const management = [
   {
-    name: "Dr. S N Vasudevan",
+    name: "Dr. S. N. Vasudevan",
     role: "Dean, AIAST",
     quote: "Fostering rigorous academic standards and research excellence to position AIAST among the premier agricultural science institutions globally.",
     image: "/dean.jpeg",

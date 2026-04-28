@@ -94,19 +94,35 @@ const Header = ({ forceDark = false }: { forceDark?: boolean }) => {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled || forceDark
-          ? "bg-deep-green/95 backdrop-blur-md shadow-lg py-3"
-          : "bg-transparent py-6"
+          ? "bg-deep-green/95 backdrop-blur-md shadow-lg"
+          : "bg-transparent"
       }`}
     >
-      {/* Centered Content Width */}
-      <div className="mx-auto max-w-[95%] flex items-center pl-4 pr-6">
+      {/* CET Codes Thin Strip */}
+      <div className={`hidden lg:flex items-center justify-end mx-auto max-w-[95%] px-4 transition-all duration-300 ${scrolled || forceDark ? 'h-0 py-0 opacity-0 overflow-hidden' : 'pt-1 pb-0'}`}>
+        <div className="flex items-center gap-3">
+          <span className="text-white/40 text-[9px] font-bold uppercase tracking-wider">CET Code</span>
+          <span className="text-white/55 text-[9px] font-bold">Agri:</span>
+          <span className="text-accent text-[9px] font-black">P 038 / N 038</span>
+          <span className="text-white/15">|</span>
+          <span className="text-white/55 text-[9px] font-bold">Food Tech:</span>
+          <span className="text-accent text-[9px] font-black">R 038 / F 038</span>
+          <span className="text-white/15">|</span>
+          <Link to="/contact-us" className="bg-accent text-deep-green text-[9px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full hover:bg-accent/90 transition-colors">
+            Admissions Enquiry
+          </Link>
+        </div>
+      </div>
+
+      {/* Main Nav Row */}
+      <div className={`mx-auto max-w-[95%] flex items-center pl-4 pr-6 py-1`}>
 
         {/* ================= LOGO SECTION ================= */}
         <a href="/" className="flex items-center gap-4 max-w-[420px]">
           <img
             src="/alvas-org-logo-white.png"
             alt="Alva's Logo"
-            className="h-16 w-auto object-contain drop-shadow-md"
+            className="h-14 w-auto object-contain drop-shadow-md"
           />
           <div className="flex flex-col">
             <p className="font-sans font-black text-white text-lg sm:text-2xl leading-none tracking-wider uppercase">

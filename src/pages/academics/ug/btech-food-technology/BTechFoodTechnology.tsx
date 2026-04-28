@@ -57,16 +57,15 @@ const data: DeptPageProps = {
     ],
   },
 
-  /* ─── DEAN ─── */
   dean: {
-    name: "Dr. S N Vasudevan",
-    title: "Dean — Food Technology & Engineering",
+    name: "Dr. S. N. Vasudevan",
+    title: "Dean — College of Agriculture",
     photo: "/MSM_0722.jpg",
-    experience: "40+ Years",
-    qualification: "Ph.D. Agronomy",
-    specialization: "Agronomy",
-    publications: "200+ Papers",
-    bio: "Dr. S N Vasudevan is a distinguished academician with over 40 years of experience in the field of Seed Science and Technology. He holds a Ph.D. from a premier Agricultural University, Bangalore and has published over 200 research papers in reputable National and International journals. Under his leadership, the institution has established several research initiatives focusing on climate-resilient agriculture and organic farming techniques, significantly improving graduate placement outcomes.",
+    experience: "38 Years",
+    qualification: "Ph.D. (Seed Science & Technology)",
+    specialization: "Seed Science and Technology",
+    publications: "95+ Papers",
+    bio: "Dr. S. N. Vasudevan is a distinguished academician with 38 years of experience specializing in Seed Science and Technology. He holds a Ph.D. from College of Agriculture, UAS Bangalore (CGPA 3.94/4.00). He has served as Dean (Agriculture) at College of Agriculture, Karekere, Hassan under UAS Bangalore, Associate Director of Research at ZARS, V.C. Farm, Mandya, and Head of ABI Unit at UAS Raichur. He has accomplished projects worth over ₹425 lakhs as Principal Investigator, published 95+ journal articles, authored 10 books, and guided 12 Ph.D. and 32 M.Sc. scholars. He is a Fellow of ISST, New Delhi and has received numerous national and international awards.",
     quote:
       "Food technology is the bridge between the farm and the fork. We train engineers who ensure that every grain harvested reaches the consumer safely, nutritiously, and sustainably.",
   },

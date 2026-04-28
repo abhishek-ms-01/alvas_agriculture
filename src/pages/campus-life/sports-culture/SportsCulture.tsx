@@ -2,27 +2,30 @@ import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Trophy, Music, Target, Users, Zap, Award, Star, ArrowRight, Play } from "lucide-react";
+import { Trophy, Music, Target, Users, Zap, Award, Star, Play, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useState } from "react";
 import "./SportsCulture.css";
 
-const sportsFacilities = [
+const fameImages = [
   {
-    name: "Standard 400m Track",
-    tag: "Athletics",
-    img: "https://images.unsplash.com/photo-1595113316349-9fa4ee24f884?w=800&q=80",
-    desc: "8-lane synthetic track built to international standards for peak performance."
+    url: "/sports1.jpeg",
+    title: "Track & Field",
+    category: "Sports"
   },
   {
-    name: "Indoor Multi-Stadium",
-    tag: "Pro Court",
-    img: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=800&q=80",
-    desc: "High-grade wooden flooring for Badminton, Table Tennis, and Basketball."
+    url: "/sports2.jpeg",
+    title: "Indoor Training",
+    category: "Sports"
   },
   {
-    name: "The Cricket Oval",
-    tag: "Main Ground",
-    img: "https://images.unsplash.com/photo-1531415074968-036ba1b575da?w=800&q=80",
-    desc: "A sprawling field with multiple turf pitches for league-level matches."
+    url: "/virasath.jpg",
+    title: "Virasat Celebration",
+    category: "Culture"
+  },
+  {
+    url: "/nudisiri.jpg",
+    title: "Nudisiri Event",
+    category: "Culture"
   }
 ];
 
@@ -34,6 +37,19 @@ const culturalClubs = [
 
 export default function SportsCulture() {
   const energyRef = useRef<HTMLDivElement>(null);
+  const [lightbox, setLightbox] = useState<{ images: typeof fameImages, index: number } | null>(null);
+
+  const nextImg = () => {
+    if (lightbox) {
+      setLightbox({ ...lightbox, index: (lightbox.index + 1) % lightbox.images.length });
+    }
+  };
+
+  const prevImg = () => {
+    if (lightbox) {
+      setLightbox({ ...lightbox, index: (lightbox.index - 1 + lightbox.images.length) % lightbox.images.length });
+    }
+  };
 
   useEffect(() => {
     if (!energyRef.current) return;
@@ -120,37 +136,6 @@ export default function SportsCulture() {
         </div>
       </div>
 
-      {/* --- THE ARENA --- */}
-      <section className="sc-section">
-        <div className="sc-sec-header">
-          <span className="sc-hero-badge mb-4">Elite Training</span>
-          <h2 className="sc-sec-title">The <em>Arena</em></h2>
-        </div>
-        <div className="sc-grid">
-          {sportsFacilities.map((f, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="sc-arena-card"
-            >
-              <img src={f.img} alt={f.name} className="sc-arena-img" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80" />
-              <div className="sc-arena-content">
-                <span className="sc-arena-tag">{f.tag}</span>
-                <h3 className="sc-arena-name">{f.name}</h3>
-                <p className="opacity-70 text-sm mb-6">{f.desc}</p>
-                <div className="flex items-center gap-2 text-sc-sport font-bold">
-                  Explore Hub <ArrowRight className="w-4 h-4" />
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </section>
-
       {/* --- SIGNATURE EVENTS: VIRASAT & NUDISIRI --- */}
       <section className="sc-events">
         <div className="sc-event-hero">
@@ -180,8 +165,8 @@ export default function SportsCulture() {
             viewport={{ once: true }}
             className="sc-event-img-wrap"
           >
-            <img src="/virasath.jpg" alt="Virasat Gallery" />
-            <div className="absolute inset-0 bg-gradient-to-tr from-culture-gold/20 to-transparent" />
+            <img src="https://visitmangalore.in/_next/image?url=https%3A%2F%2Fapi.visitmangalore.in%2Fuploads%2FAlvas_Virasat_4_175dca9e0e.JPG&w=3840&q=75" alt="Virasat Gallery" />
+            <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/20 to-transparent" />
           </motion.div>
         </div>
 
@@ -193,7 +178,7 @@ export default function SportsCulture() {
             viewport={{ once: true }}
             className="sc-event-img-wrap order-last lg:order-first"
           >
-            <img src="/nudisiri.jpg" alt="Nudisiri" />
+            <img src="https://alvas.org/wp-content/uploads/2016/05/Alvas_Nudisiri.jpg" alt="Nudisiri" />
           </motion.div>
           <motion.div
             initial={{ opacity: 0, y: 50 }}
@@ -231,7 +216,27 @@ export default function SportsCulture() {
             who have brought national and international laurels to the institution.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-12 mt-12">
+
+        {/* Simple Minimal Gallery */}
+        <div className="sc-mini-gallery">
+          {fameImages.map((img, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, scale: 0.96 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.07 }}
+              className="sc-mini-item"
+              onClick={() => setLightbox({ images: fameImages, index: i })}
+            >
+              <img src={img.url} alt={img.title} className="sc-mini-img" />
+              <span className="sc-mini-label">{img.category}</span>
+            </motion.div>
+          ))}
+        </div>
+
+        {/* Cultural Clubs */}
+        <div className="flex flex-wrap justify-center gap-12 mt-24">
           {culturalClubs.map((c, i) => (
             <motion.div
               key={i}
@@ -252,6 +257,59 @@ export default function SportsCulture() {
           ))}
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      {lightbox !== null && (
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="sc-lightbox"
+          onClick={() => setLightbox(null)}
+        >
+          <button 
+            className="sc-lightbox-close"
+            onClick={(e) => { e.stopPropagation(); setLightbox(null); }}
+          >
+            <X className="w-8 h-8" />
+          </button>
+
+          <button 
+            className="sc-lightbox-nav prev"
+            onClick={(e) => { e.stopPropagation(); prevImg(); }}
+          >
+            <ChevronLeft className="w-10 h-10" />
+          </button>
+
+          <button 
+            className="sc-lightbox-nav next"
+            onClick={(e) => { e.stopPropagation(); nextImg(); }}
+          >
+            <ChevronRight className="w-10 h-10" />
+          </button>
+
+          <motion.div 
+            key={lightbox.index}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            className="sc-lightbox-content"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <img 
+              src={lightbox.images[lightbox.index].url} 
+              alt={lightbox.images[lightbox.index].title} 
+              className="sc-lightbox-img"
+            />
+            <div className="sc-lightbox-info">
+              <span className="text-orange-500 font-bold uppercase tracking-widest text-xs">
+                {lightbox.images[lightbox.index].category}
+              </span>
+              <h3 className="text-2xl font-black text-white mt-2">
+                {lightbox.images[lightbox.index].title}
+              </h3>
+            </div>
+          </motion.div>
+        </motion.div>
+      )}
 
       <Footer />
     </div>

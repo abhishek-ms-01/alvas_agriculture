@@ -53,7 +53,7 @@ const AboutMegaMenu = ({ onClose }: AboutMegaMenuProps) => {
     },
     {
       title: "DEAN'S MESSAGE",
-      name: "DR S N VASUDEVAN",
+      name: "DR. S. N. VASUDEVAN",
       quote: "\"We foster an environment of academic excellence and holistic development for all.\"",
       img: "dean.jpeg",
       path: "/dean-message"

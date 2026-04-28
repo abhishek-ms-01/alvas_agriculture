@@ -6,7 +6,7 @@ import "../admissions/Admissions.css";
 
 const RTI = () => {
   const officers = [
-    { role: "First Appellate Authority", name: "Dr. S N Vasudevan", designation: "Dean (Agri.)", email: "deanaiast@gmail.com", phone: "9448300046" },
+    { role: "First Appellate Authority", name: "Dr. S. N. Vasudevan", designation: "Dean (Agri.)", email: "snvasudevan1963@gmail.com", phone: "9448300046" },
     { role: "Public Information Officer (PIO)", name: "Administrative Officer", designation: "Admin Department", email: "rti@alvas.ac.in", phone: "+91-824-2277286" },
   ];
 
