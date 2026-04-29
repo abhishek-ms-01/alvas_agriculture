@@ -52,7 +52,7 @@ const destinations = [
         tag: "Industry",
         title: "Agro-Processing Units",
         desc: "Learning about the value chain from farm to fork by visiting large-scale food processing and preservation facilities.",
-        img: "/Agro.jpg",
+        img: "mushroom.jpeg",
         date: "Semester VII",
         delay: "0.3s",
     },

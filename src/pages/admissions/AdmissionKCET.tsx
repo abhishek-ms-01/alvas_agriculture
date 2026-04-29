@@ -49,9 +49,9 @@ const AdmissionKCET = () => {
           {/* Eligibility */}
           <div className="adm-section">
             <h2 className="adm-heading">Admissions via KCET</h2>
-            <div className="adm-info-box">
-              <p className="text-slate-700 font-medium">
-                Admission to B.Sc. (Hons) Agriculture and B.Tech. (Food Technology) is primarily through the Karnataka Examination Authority (Karnataka Common Entrance Test (KCET). 50% of the seats are reserved for candidates from agriculturalist family under the Farmer's Quota.
+            <div className="relative bg-gradient-to-r from-deep-green/10 via-accent/5 to-transparent border-l-4 border-accent rounded-2xl px-8 py-7 shadow-md">
+              <p className="text-deep-green text-base md:text-lg leading-relaxed font-semibold">
+                Admission to <span className="text-accent font-black">B.Sc. (Hons) Agriculture</span> and <span className="text-accent font-black">B.Tech. (Food Technology)</span> is primarily through the Karnataka Examination Authority (<span className="font-black">Karnataka Common Entrance Test (KCET)</span>). <span className="font-black">50%</span> of the seats are reserved for candidates from agriculturalist family under the <span className="text-accent font-black">Farmer's Quota</span>.
               </p>
             </div>
           </div>

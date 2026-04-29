@@ -41,8 +41,8 @@ export default function AboutCollege() {
         <PageHero
           badgeIcon={<MapPin size={14} />}
           badgeText="Moodbidri, Karnataka"
-          title={<>Shaping Future <span className="text-accent underline decoration-accent/30 underline-offset-8">Agri-Innovators</span></>}
-          subtitle="Alva's Institute of Agricultural Sciences and Technology (IAST) blends agrarian tradition with cutting-edge bioscience."
+          title={<><span style={{ whiteSpace: "nowrap" }}>Shaping Future <span className="text-accent underline decoration-accent/30 underline-offset-8">Agri-Innovators</span></span></>}
+          subtitle="Alva's Institute of Agricultural Sciences and Technology (AIAST) blends agrarian tradition with cutting-edge bioscience."
           stats={[
             { bold: "2025", text: "Established" },
             { bold: "100%", text: "Skill focus" },
