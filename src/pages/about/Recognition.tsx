@@ -24,7 +24,7 @@ const Recognition = () => {
         <PageHero
           badgeIcon={<MapPin size={14} />}
           badgeText="Institution at a Glance"
-          title={<>Accreditations &amp; <span className="text-accent underline decoration-accent/30 underline-offset-8">Recognition</span></>}
+          title={<>Accreditations &amp; <span className="text-accent underline decoration-accent/30 underline-offset-8">Recognitions</span></>}
           subtitle="Formally recognised and approved by leading national regulatory and statutory bodies."
           stats={[
             { bold: "Govt. of Karnataka", text: "Approved" },

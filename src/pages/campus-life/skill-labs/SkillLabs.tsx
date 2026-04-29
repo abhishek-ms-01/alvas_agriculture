@@ -8,7 +8,7 @@ import "../../internship/Internship.css";
 import "./SkillLabs.css";
 
 const labFeatures = [
-    "Equipped with advanced analytical instruments for soil and water testing.",
+    "Equipped with advanced analytical instruments for soil, water and seed testing.",
     "Integrated precision farming modules for real-world drone data analysis.",
     "Specialized bio-technology wing for plant tissue culture and genetic research.",
     "Computer-Aided Learning (CAL) center for agri-informatics and GIS mapping.",

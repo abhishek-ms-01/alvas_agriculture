@@ -126,11 +126,11 @@ const VisionMission = () => {
               </div>
               <blockquote className="vm2-vision-quote">
                 "To produce globally competent agricultural graduates through quality education,
-                experiential learning, research and extension for sustainable agriculture,
+                experiential learning, skill enhancement, research and extension for sustainable agriculture,
                 food / nutritional security and rural prosperity."
               </blockquote>
               <div className="vm2-vision-pillars">
-                {["Quality Education", "Experiential Learning", "Research & Extension", "Food Security", "Rural Prosperity"].map((tag) => (
+                {["Quality Education", "Experiential Learning", "Skill Enhancement", "Research & Extension", "Food Security", "Rural Prosperity"].map((tag) => (
                   <span key={tag} className="vm2-vision-pill">{tag}</span>
                 ))}
               </div>
@@ -206,9 +206,9 @@ const VisionMission = () => {
             <div className="vm2-aff-body">
               <h3 className="vm2-aff-title">Affiliation &amp; Recognition</h3>
               <p className="vm2-aff-text">
-                Affiliated to <strong>Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences</strong>,
+                Affiliated to <strong>Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Iruvakki, Shivamogga</strong>,
                 actively contributing to the{" "}
-                <strong>Vision 2030</strong> roadmap for sustainable rural empowerment.
+                <strong>Vision 2047</strong> roadmap for sustainable rural empowerment.
               </p>
             </div>
           </div>

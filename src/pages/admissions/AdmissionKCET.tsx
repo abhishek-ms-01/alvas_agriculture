@@ -26,8 +26,8 @@ const AdmissionKCET = () => {
         <PageHero
           badgeIcon={<GraduationCap size={14} />}
           badgeText="Admissions — KCET"
-          title={<>Admission Through <span className="text-accent">KCET</span></>}
-          subtitle="Secure your seat to a world-class agricultural education through the Karnataka Common Entrance Test. Join Karnataka's premier agri-science institution."
+          title={<>ADMISSION THROUGH <span className="text-accent underline decoration-accent/30 underline-offset-8">KCET</span></>}
+          subtitle="Secure your seat to a world-class Alvas Agricultural Education Institute through the Karnataka Common Entrance Test. Join Karnataka's premier agri-science institution."
           stats={[
             { bold: "60%", text: "Seats via KCET" },
             { bold: "Merit Based", text: "Allotment" },
@@ -51,7 +51,7 @@ const AdmissionKCET = () => {
             <h2 className="adm-heading">Admissions via KCET</h2>
             <div className="adm-info-box">
               <p className="text-slate-700 font-medium">
-                Admissions to B.Sc. (Hons) Agriculture and B.Tech (Food Technology) are primarily conducted through the Karnataka Common Entrance Test (KCET). 50% of the seats are reserved for candidates from farming backgrounds under the Farmer's Quota.
+                Admission to B.Sc. (Hons) Agriculture and B.Tech. (Food Technology) is primarily through the Karnataka Examination Authority (Karnataka Common Entrance Test (KCET). 50% of the seats are reserved for candidates from agriculturalist family under the Farmer's Quota.
               </p>
             </div>
           </div>

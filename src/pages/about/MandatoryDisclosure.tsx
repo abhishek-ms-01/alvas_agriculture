@@ -28,7 +28,6 @@ const MandatoryDisclosure = () => {
           subtitle="Transparency and accountability through proactive disclosure of institutional information as mandated by regulatory authorities."
           stats={[
             { bold: "RTI", text: "Compliance" },
-            { bold: "Affiliations", text: "& Recognition" },
           ]}
         />
 
@@ -104,8 +103,8 @@ const MandatoryDisclosure = () => {
                 },
                 {
                   name: "Indian Council of Agricultural Research (ICAR), New Delhi",
-                  type: "National Apex Body",
-                  desc: "B.Sc. Agriculture curriculum follows the 5th Dean's Committee recommendations prescribed by ICAR, ensuring national-level uniformity and quality."
+                  type: "NATIONAL APEX BODY",
+                  desc: "B.Sc. (Hons) Agriculture and B. Tech. (Food Technology) curriculum follows the 6th Dean's Committee recommendations prescribed by ICAR, New Delhi ensuring National-level Uniformity and Quality."
                 },
                 {
                   name: "Karnataka State Higher Education Council (KSHEC)",

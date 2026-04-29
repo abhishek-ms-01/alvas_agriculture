@@ -1,4 +1,4 @@
-﻿import DepartmentPage, {
+import DepartmentPage, {
   DeptPageProps,
 } from "../../DepartmentPage";
 

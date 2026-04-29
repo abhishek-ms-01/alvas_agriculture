@@ -46,7 +46,7 @@ const bottomRowImgs = [
 ];
 
 const spotlightItems = [
-    { src: "/agriculture%20filed.jpeg", title: "Green Campus & ATC", sub: "100 acres of living, breathing campus in the Western Ghats", tag: "Infrastructure" },
+    { src: "/agriculture%20filed.jpeg", title: "Green Campus & ATC", sub: "More than 100 acres of living, breathing campus in the Western Ghats", tag: "Infrastructure" },
     { src: "/apiculture4.jpeg", title: "Apiculture", sub: "Celebrating art, music & heritage through the year", tag: "Culture" },
     { src: "/sports1.jpeg", title: "Sports", sub: "Pushing boundaries in agri-science and technology", tag: "Research" },
     { src: "/technologidrone.jpeg", title: "Drone Technologies", sub: "Agri Technologies", tag: "Workshop" },
@@ -170,7 +170,7 @@ export default function CampusLife() {
                     <span className="ip-badge">Alva's IAST</span>
                     <h1 className="ip-title">Campus <span>Life</span></h1>
                     <p className="ip-subtitle">
-                        Discover 100 acres of living, breathing campus in the Western Ghats—where academics, culture, and nature blend seamlessly.
+                        Discover more than 100 acres of living, breathing campus in the Western Ghats—where academics, culture, and nature blend seamlessly.
                     </p>
                 </div>
                 <div className="ip-wave">

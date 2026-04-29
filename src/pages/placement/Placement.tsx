@@ -32,9 +32,9 @@ const Placement = () => (
                     <div className="ip-blob ip-blob-1" /><div className="ip-blob ip-blob-2" /><div className="ip-blob ip-blob-3" />
                     <div className="ip-hero-content">
                         <span className="ip-badge"><Target size={12} /> Placement Cell</span>
-                        <h1 className="ip-title">Cultivating <span>Careers</span> in Agriculture</h1>
+                        <h1 className="ip-title">Upcoming <span>Graduates</span></h1>
                         <p className="ip-subtitle">
-                            Empowering agricultural graduates through industry-focused training, expert mentorship, and placement opportunities with leading national and global agri-organisations.
+                            Preparing for Excellence
                         </p>
 
                     </div>
@@ -89,7 +89,7 @@ const Placement = () => (
                             <Award size={48} style={{ color: "var(--ip-green-dark)", opacity: 0.8, fill: "var(--ip-green-light)", marginBottom: "16px" }} />
                             <h3 style={{ color: "var(--ip-content)", fontSize: "1.6rem", fontWeight: 700, marginBottom: "12px", fontFamily: "var(--ip-font-heading)" }}>Preparing for Excellence</h3>
                             <p style={{ color: "var(--ip-muted)", fontSize: "1.1rem", maxWidth: "680px", margin: "0 auto", lineHeight: 1.6 }}>
-                                Alva's Institute of Agricultural Sciences embarked on its educational journey in <strong>2025</strong>. 
+                                Alva's Institute of Agricultural Sciences and Technology embarked on its educational journey in <strong>2025</strong>. 
                                 Our maiden batch of agricultural professionals is currently undergoing rigorous academic and practical training. We are actively building industry partnerships and look forward to our first placement drive as these students prepare to become future agricultural leaders!
                             </p>
                         </div>

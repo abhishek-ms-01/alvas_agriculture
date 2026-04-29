@@ -54,7 +54,7 @@ const Footer = () => {
                     Affiliated to
                   </span>
                   <p className="text-white/60 text-[10px] font-bold leading-tight max-w-[200px]">
-                    Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Shivamogga
+                    Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Iruvakki, Shivamogga
                   </p>
                 </div>
               </div>

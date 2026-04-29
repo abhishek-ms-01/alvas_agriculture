@@ -7,9 +7,9 @@ import "../admissions/Admissions.css";
 
 const DocumentsRequired = () => {
   const primaryDocs = [
-    "10th Standard (SSLC) Mark Sheet & Certificate",
-    "11th Standard Mark Sheet",
-    "12th Standard (PUC/HSC) Mark Sheet & Passing Certificate",
+    "10th Standard (SSLC) Marks card & Pass Certificate",
+    "11th Standard Marks card",
+    "12th Standard (PUC/HSC) Mark card & Pass Certificate",
     "Transfer Certificate (TC) from last attended institution",
     "Conduct Certificate from last attended institution",
     "KCET / Farmer's Quota Rank Card (as applicable)",
@@ -44,8 +44,8 @@ const DocumentsRequired = () => {
         <PageHero
           badgeIcon={<FolderOpen size={14} />}
           badgeText="Admissions — Documents"
-          title={<>Documents <span className="text-accent">Required</span></>}
-          subtitle="Ensure you have all required documents ready before reporting to the college. Original documents along with self-attested photocopies are mandatory."
+          title={<>DOCUMENTS <span className="text-accent underline decoration-accent/30 underline-offset-8">REQUIRED</span></>}
+          subtitle="Ensure that you have all the required original documents ready before reporting to the college. Original documents along with self-attested photocopies are mandatory."
           stats={[
             { bold: "Originals", text: "+ Photocopies" },
             { bold: "Self-Attested", text: "Copies" },

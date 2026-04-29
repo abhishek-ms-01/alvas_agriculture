@@ -1,4 +1,4 @@
-﻿import { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
@@ -9,17 +9,17 @@ const features = [
   {
     icon: "🌿",
     title: "Botanical Living Lab",
-    desc: "Thousands of rare and exotic plant species thrive across our sprawling grounds — a living textbook for every agri-science student.",
+    desc: "Thousands of Rare / Exotic and Medicinal / Aromatic plant species thrive across our sprawling grounds — a living textbook for every agri-science student.",
   },
   {
     icon: "🐝",
-    title: "Apiculture & Horticulture Units",
-    desc: "Dedicated apiculture apiaries and horticulture demonstration plots provide hands-on training in specialized agricultural disciplines.",
+    title: "Apiculture, Mushroom, Bakery, Horticulture & Vermi-Compost Units",
+    desc: "Dedicated apiculture apiaries, Mushroom, Bakery, Vermi-Composting and horticulture demonstration plots provide hands-on training in specialized agricultural disciplines.",
   },
   {
     icon: "🚜",
     title: "Agricultural Technology Centre (ATC)",
-    desc: "A state-of-the-art centre housing modern farm machinery, soil testing labs, and precision agriculture tools for real-world skill development.",
+    desc: "A state-of-the-art centre housing modern farm machinery, soil / seed testing labs, and precision agriculture tools for real-world skill development.",
   },
   {
     icon: "💧",
@@ -34,7 +34,7 @@ const features = [
   {
     icon: "🏡",
     title: "Protected Cultivation",
-    desc: "Greenhouses and polyhouses for year-round cultivation of vegetables, flowers, and medicinal plants in a controlled environment.",
+    desc: "Greenhouse and poly-house for year-round cultivation of vegetables, flowers, and medicinal / aromatic plants in a controlled environment.",
   },
 ];
 

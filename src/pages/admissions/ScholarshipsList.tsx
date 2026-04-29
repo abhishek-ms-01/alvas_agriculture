@@ -73,11 +73,11 @@ const ScholarshipsList = () => {
         <PageHero
           badgeIcon={<Award size={14} />}
           badgeText="Scholarships"
-          title={<>List of <span className="text-accent">Scholarship Schemes</span></>}
-          subtitle="Explore the wide range of scholarships available to students of Alva's Institute of Agricultural Science & Technology — from government schemes to institutional awards."
+          title={<>LIST OF <span className="text-accent underline decoration-accent/30 underline-offset-8">SCHOLARSHIP SCHEMES</span></>}
+          subtitle="Explore the wide range of scholarships available to students of Alva's Institute of Agricultural Sciences & Technology — from government schemes to institutional awards."
           stats={[
             { bold: "8+", text: "Scholarship Schemes" },
-            "Govt. & Institutional",
+            { bold: "Govt. &", text: "Institutional" },
             { bold: "₹80K+", text: "Max Award" },
           ]}
         />

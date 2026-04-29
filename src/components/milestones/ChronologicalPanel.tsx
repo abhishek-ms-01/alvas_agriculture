@@ -12,7 +12,7 @@ const milestones = [
   { year: "2020", emoji: "💻", title: "E-Learning", desc: "Digital infrastructure for remote learning & virtual labs.", tag: "Digital" },
   { year: "2022", emoji: "🏆", title: "State Award", desc: "Karnataka Government recognition for agricultural education.", tag: "Award" },
   { year: "2023", emoji: "🌐", title: "Global Reach", desc: "Academic exchange with Netherlands & Israel universities.", tag: "Global" },
-  { year: "2025", emoji: "🚀", title: "Vision 2030", desc: "Roadmap to become a globally top-50 agri institution.", tag: "Future" },
+  { year: "2025", emoji: "🚀", title: "Vision 2047", desc: "Roadmap for sustainable rural empowerment and global excellence.", tag: "Future" },
 ];
 
 const numbers = [

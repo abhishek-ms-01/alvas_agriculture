@@ -13,7 +13,7 @@ const AdmissionManagement = () => {
     { title: "Merit List & Shortlisting", desc: "Shortlisted candidates are selected based on academic merit, extracurricular achievements, and interview performance (if applicable)." },
     { title: "Offer of Admission", desc: "Selected candidates receive an official offer letter from the institution specifying the programme, fees, and joining date." },
     { title: "Fee Payment & Confirmation", desc: "Confirm your seat by paying the management quota fees within the stipulated time. Delay may result in forfeiture of the offer." },
-    { title: "Reporting & Enrolment", desc: "Report to the college on the designated date with all original documents for formal enrolment and hostel allocation (if needed)." },
+    { title: "Reporting & Enrolment", desc: "Report to the college on the designated date with all original documents for formal enrolment and hostel allocation." },
   ];
 
   return (
@@ -24,10 +24,10 @@ const AdmissionManagement = () => {
         <PageHero
           badgeIcon={<Users size={14} />}
           badgeText="Admissions — Management Quota"
-          title={<>Admission Through <span className="text-accent">Management</span></>}
+          title={<>ADMISSION THROUGH <span className="text-accent underline decoration-accent/30 underline-offset-8">MANAGEMENT</span></>}
           subtitle="Admission through Management Quota at Alva's Institute of Agricultural Sciences & Technology is same as per KCET ranking, ensuring merit-based selection for all aspiring students."
           stats={[
-            { bold: "15%", text: "Management Seats" },
+            { bold: "40%", text: "Management Seats" },
             { bold: "KCET Rank", text: "Based Merit" },
             { bold: "Direct", text: "Application" },
           ]}
