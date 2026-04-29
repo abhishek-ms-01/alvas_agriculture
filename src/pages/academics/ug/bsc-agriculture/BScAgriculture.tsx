@@ -173,6 +173,47 @@ const data: DeptPageProps = {
         "Attended three 21-day Training Programmes on various aspects of Agriculture."
       ]
     },
+    {
+      name: "Dr. Naveen Nayaka S",
+      role: "Assistant Professor",
+      photo: "/NAVEEN.png",
+      tags: ["Plant Pathology", "Molecular Pathology", "Ph.D."],
+      designation: "Assistant Professor of Plant Pathology",
+      email: "drnayaknaveen@gmail.com",
+      joiningDate: "02.12.2025",
+      education: [
+        "B.Sc. (Agriculture) [UAS, Bengaluru, 2016]",
+        "M.Sc. (Plant Pathology) [IARI, New Delhi, 2018]",
+        "Ph.D. (Plant Pathology) [IARI, New Delhi, 2023]"
+      ],
+      experience: [
+        "Agriculture Block Technology Manager — 6 Months"
+      ],
+      interests: [
+        "Plant Disease Diagnostics",
+        "Plant-Microbe Interaction",
+        "Molecular Plant Pathology"
+      ],
+      achievements: [
+        "H.M. Suresh Memorial Gold Medal at the 51st Convocation of UAS, Bengaluru.",
+        "ICAR-Junior Research Fellowship (ICAR-JRF).",
+        "IARI Senior Research Fellowship (SRF).",
+        "Young Scientist Award-2023 of TSBAS, New Delhi.",
+        "Best Ph.D. Thesis Award (2023) under Vigyan Varta Outstanding Achievers Awards."
+      ],
+      memberships: [
+        "Life Membership of Technology Society of Basic and Applied Sciences (TSBAS), New Delhi.",
+        "Life Membership of Indian Virological Society (IVS), New Delhi."
+      ],
+      publications: "Popular Articles (05), Book Chapters (01), Abstracts (04), Research Publications (04)",
+      research: "04 Research Publications",
+      subjects: [
+        "Plant Pathology",
+        "Nematology",
+        "Mushroom Production Techniques",
+        "Bio-fertilizers and Bio-pesticides"
+      ]
+    },
     
   ],
 

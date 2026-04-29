@@ -679,13 +679,14 @@
   box-shadow: none;
   background: #f8fafc;
   position: relative;
+  overflow: hidden;
 }
 
 .dp-staff-avatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center top;
 }
 
 .dp-staff-card-top {
@@ -1065,6 +1066,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
 }
 
 .dp-modal-header-info h2 {

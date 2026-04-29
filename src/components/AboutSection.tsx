@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { useNavigate } from "react-router-dom";
 import {
 } from "lucide-react";
 
@@ -12,12 +13,14 @@ const courses = [
     duration: "4 Years",
     eligibility: "10+2 with Science",
     image: "https://mbcollegeofagriculture.in/img/course-about.jpg",
+    path: "/academics/ug/bsc-agriculture",
   },
   {
     title: "B.Tech (Food Technology)",
     duration: "4 Years",
     eligibility: "10+2 with PCM",
     image: "ai.png",
+    path: "/academics/ug/btech-food-technology",
   },
 ];
 
@@ -25,6 +28,7 @@ const courses = [
 
 const AboutSection = () => {
   const { ref, isVisible } = useScrollAnimation();
+  const navigate = useNavigate();
 
   return (
     <section id="about" className="pt-20 md:pt-28 pb-10 bg-background">
@@ -92,6 +96,7 @@ const AboutSection = () => {
               key={course.title}
               className="group relative overflow-hidden rounded-3xl shadow-lg cursor-pointer
                          transition-all duration-500 hover:-translate-y-3 hover:shadow-2xl"
+              onClick={() => navigate(course.path)}
             >
               <img
                 src={course.image}

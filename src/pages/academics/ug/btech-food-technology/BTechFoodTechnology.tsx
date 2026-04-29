@@ -73,46 +73,144 @@ const data: DeptPageProps = {
   /* ─── STAFF ─── */
   staff: [
     {
-      name: "Dr. Neeraja Reddy",
-      role: "Associate Professor",
-      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-      tags: ["Food Microbiology", "Safety", "Ph.D."],
-      designation: "Associate Professor & Lab In-charge",
-      email: "neeraja.reddy@alvas.edu.in",
-      joiningDate: "10-08-2015",
-      education: ["Ph.D. in Food Technology (CFTRI)", "M.Tech. (Food Safety)"],
-      experience: "9+ years in Food Microbiology and Quality Assurance.",
-      interests: ["Probiotics", "Food Safety Standards"],
-    },
-    {
-      name: "Prof. Michael D'Souza",
+      name: "Sharanbasava",
       role: "Assistant Professor",
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
-      tags: ["Dairy Tech", "Process Eng.", "M.Tech."],
+      photo: "/SHARANA BASAPPA.jpeg",
+      tags: ["Farm Machinery", "Power Engineering", "M.Tech."],
+      designation: "Assistant Professor",
+      email: "sharanb@aiet.org.in",
+      joiningDate: "28.08.2025",
+      education: [
+        "M.Tech. (Farm Machinery and Power Engineering)"
+      ],
+      interests: [
+        "Teaching and Research"
+      ],
+      publications: "01",
+      research: "Solar Powered Groundnut Decorticator: Design, Performance and Emission Reductions for Sustainable Agriculture.",
+      subjects: [
+        "Farm Machinery Equipment II",
+        "Human Engineering"
+      ]
     },
     {
-      name: "Ms. Shalini Gupta",
+      name: "Dr. Rahul Phatak",
+      role: "Senior Assistant Professor",
+      photo: "/RAHUL.jpeg",
+      tags: ["Horticulture", "Natural Farming", "Ph.D."],
+      designation: "Senior Assistant Professor",
+      email: "rahulp@aiet.org.in",
+      joiningDate: "20.11.2023",
+      education: [
+        "Ph.D. (Horticulture) [UHS, Bagalkot, 2018]",
+        "M.Sc. (Horticulture) — University Gold Medalist"
+      ],
+      experience: [
+        "Senior Assistant Professor, Dept. of Agricultural Engineering, Alva's Institute of Engineering and Technology, Moodbidri (Nov 2023 – Present)",
+        "Research Associate, Natural Farming Project at CoH, Sirsi, UHS, Bagalkot — 4 Years (with UG teaching)",
+        "Graduate Assistant at KRCCH, Arabhavi, UHS, Bagalkot — 1 Year",
+        "Assistant Professor of Horticulture at AEEC, Koppal, UAS, Raichur — 1 Year"
+      ],
+      interests: [
+        "Horticulture",
+        "Plantation, Spices, Medicinal and Aromatic Crops",
+        "Organic Farming",
+        "Natural Farming"
+      ],
+      achievements: [
+        "Holds three patents (Design Registrations).",
+        "INSPIRE Fellow, Dept. of Science and Technology, Govt. of India for Ph.D.",
+        "University Gold Medal for securing first rank in M.Sc. Horticulture.",
+        "Yuva Vigyani Award from Karnataka Science Federation."
+      ],
+      memberships: [
+        "Life Member of 'Institute of Scholars'"
+      ],
+      publications: "Research Articles (16), Review Articles (01), Book Chapters (03), Conference Presentations (15), Popular Articles (09), Extension Folders (04), Radio Programs (02), TV Program (01)",
+      subjects: [
+        "Horticulture",
+        "Post-Harvest Engineering",
+        "Agriculture Process Engineering",
+        "Agro-chemicals",
+        "Research Methodology & IPR",
+        "Fundamentals of Agriculture",
+        "Sustainable Agriculture",
+        "Micro-irrigation Engineering",
+        "Entrepreneurship Development"
+      ],
+      projects: "04 (As Project Guide)",
+      others: [
+        "University Blue in Debate.",
+        "Research Excellence Award - 2021 from Institute of Scholars.",
+        "Reviewer for a journal, University representation in NSS-National Integration Camp."
+      ]
+    },
+    {
+      name: "Rakesh Rudragouda Patil",
       role: "Assistant Professor",
-      photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400",
-      tags: ["Fruit & Veg Tech", "Post-Harvest", "M.Tech."],
+      photo: "/RAKESH.jpeg",
+      tags: ["Food Processing", "NPD", "M.Tech."],
+      designation: "Assistant Professor",
+      email: "rakeshp@aiet.org.in",
+      joiningDate: "19.09.2025",
+      education: [
+        "M.Tech. (Food Processing Technology)"
+      ],
+      experience: [
+        "Research Experience — 6 Months",
+        "Industry Experience — 5 Months"
+      ],
+      interests: [
+        "Research",
+        "New Product Development (NPD)"
+      ],
+      publications: "01",
+      research: "Solar Powered Groundnut Decorticator: Design, Performance and Emission Reductions for Sustainable Agriculture.",
+      subjects: [
+        "Food and Agriculture Aspects"
+      ]
     },
     {
-      name: "Dr. Rahul Verma",
-      role: "Assistant Professor",
-      photo: "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400",
-      tags: ["Nutraceuticals", "Functional Foods", "Ph.D."],
-    },
-    {
-      name: "Mr. Sandeep Patil",
-      role: "Lab Instructor",
-      photo: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=400",
-      tags: ["Food Quality Analysis", "Instrumentation"],
-    },
-    {
-      name: "Ms. Ananya Das",
-      role: "Assistant Professor",
-      photo: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=400",
-      tags: ["Beverage Tech", "Packing Science", "M.Tech."],
+      name: "Dr. Yamagar S. G.",
+      role: "Senior Assistant Professor",
+      photo: "/Yamagar.png",
+      tags: ["Farm Machinery", "Precision Farming", "Ph.D."],
+      designation: "Senior Assistant Professor",
+      email: "ysujitrao@aiet.org.in",
+      joiningDate: "21.09.2025",
+      education: [
+        "Ph.D. (Farm Equipment and Power) [ICAR-IARI, New Delhi, 2024]"
+      ],
+      experience: [
+        "Teaching Assistant, Kellapaji College of Agricultural Engineering and Technology, Tavnur, Kerala"
+      ],
+      interests: [
+        "Farm Machinery",
+        "Electric Vehicle",
+        "Protected Cultivation",
+        "Precision and Smart Farming"
+      ],
+      achievements: [
+        "IARI Institute Fellowship.",
+        "2nd Rank in ICAR-SRF 2018 in Farm Machinery.",
+        "3rd Prize in Essay Competition organized by ICAR-IARI, New Delhi on Mahatma Gandhi's 150th Birth Anniversary."
+      ],
+      publications: "04",
+      research: "08 Research Publications",
+      subjects: [
+        "Farm Machinery and Equipment I/II",
+        "Precision Agriculture and System Management",
+        "Artificial Intelligence and Machine Learning (AI-ML)",
+        "Human Engineering and Safety",
+        "Testing of Agricultural Tractor and Machinery",
+        "Tractor Control System",
+        "Theory of Machine",
+        "Workshop Technology",
+        "Micro-Irrigation Engineering",
+        "Renewable Energy and Green Technology",
+        "Generation of Energy from Waste"
+      ],
+      projects: "02"
     },
   ],
 

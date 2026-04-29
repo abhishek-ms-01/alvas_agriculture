@@ -43,7 +43,7 @@ export default function Milestones() {
           subtitle="Two decades of excellence, innovation, and service — the remarkable journey of Alva's IAST."
           stats={[
             { bold: "2001", text: "AEF Founded" },
-            { bold: "2025", text: "IAST Established" },
+            { bold: "2025", text: "AIAST Established" },
           ]}
         />
 
@@ -65,9 +65,9 @@ export default function Milestones() {
             <h2 className="text-2xl md:text-3xl font-black text-deep-green mb-6 flex items-center gap-3">
               <Trophy className="text-accent w-6 h-6" /> Our Journey
             </h2>
-            <div className="adm-info-box">
-              <p>
-                Alva's Institute of Agricultural Sciences &amp; Technology was established in 2025 under the Alva's Education Foundation, founded by Dr. M. Mohan Alva in 2001. Affiliated to Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences, Iruvakki, Shivamogga
+            <div className="relative bg-gradient-to-r from-deep-green/10 via-accent/5 to-transparent border-l-4 border-accent rounded-2xl px-8 py-7 shadow-md">
+              <p className="text-deep-green text-base md:text-lg leading-relaxed font-semibold">
+                Alva's Institute of Agricultural Sciences &amp; Technology was established in <span className="text-accent font-black">2025</span> under the Alva's Education Foundation, founded by <span className="text-accent font-black">Dr. M. Mohan Alva</span> in 2001. Affiliated to <span className="font-black">Keladi Shivappa Nayaka University of Agricultural and Horticultural Sciences</span>, Iruvakki, Shivamogga
               </p>
             </div>
           </motion.section>
