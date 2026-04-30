@@ -102,7 +102,6 @@ const App = () => (
           <Route path="/about/naac" element={<NAAC />} />
           <Route path="/about/recognition" element={<Recognition />} />
           <Route path="/about/statutory-approvals" element={<StatutoryApprovals />} />
-          <Route path="/contact" element={<ContactUs />} />
           <Route path="/about/rti" element={<RTI />} />
           <Route path="/about/ncte" element={<NCTE />} />
           <Route path="/about/affiliations" element={<Affiliations />} />

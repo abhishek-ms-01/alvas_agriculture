@@ -48,7 +48,9 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: linear-gradient(135deg, #1a3a32 0%, #2d5a4e 100%);
+  background:
+    linear-gradient(135deg, rgba(26, 58, 50, 0.82) 0%, rgba(45, 90, 78, 0.78) 100%),
+    url('/libraryhall.jpg') center/cover no-repeat;
   color: white;
   text-align: center;
 }
@@ -118,14 +120,14 @@
 
 .lib-stat-card {
   flex: 1;
-  background: rgba(255, 255, 255, 0.8);
+  background: #ffffff;
   backdrop-filter: blur(25px);
   padding: 3rem 1.5rem;
   border-radius: 40px;
   text-align: center;
   position: relative;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  box-shadow: 0 15px 30px rgba(26, 58, 50, 0.05);
+  border: 1px solid rgba(26, 58, 50, 0.08);
+  box-shadow: 0 15px 40px rgba(26, 58, 50, 0.08);
   transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
   overflow: hidden;
 }
@@ -557,11 +559,48 @@
 
 .lib-rules-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 4rem auto 0;
 }
+
+/* --- Contact Grid (Librarian Section) --- */
+.lib-contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.lib-contact-item {
+  background: #f9f7f2;
+  border: 1px solid rgba(197, 160, 89, 0.2);
+  border-radius: 16px;
+  padding: 1.25rem 1.5rem;
+}
+
+.lib-contact-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #999;
+  margin-bottom: 0.5rem;
+}
+
+.lib-contact-val {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--lib-green);
+}
+
+/* Utility */
+.text-lib-gold { color: var(--lib-gold) !important; }
 
 .lib-rule-item {
   padding: 2.5rem;
@@ -586,15 +625,25 @@
   .lib-info-container { grid-template-columns: 1fr; }
   .lib-info-image { height: 400px; }
   .lib-librarian-card { flex-direction: column; }
-  .lib-staff-img { width: 100%; height: 400px; }
+  .lib-staff-img-wrapper { flex: none; height: 380px; }
+  .lib-staff-img { width: 100%; height: 100%; }
   .lib-staff-content { width: 100%; padding: 3rem; }
   .lib-gallery-grid { grid-template-columns: 1fr; }
   .lib-gallery-item.tall { height: 400px; grid-row: auto; }
 }
 
+@media (max-width: 768px) {
+  .lib-stats-grid { flex-wrap: wrap; margin-top: 0; padding-top: 2rem; }
+  .lib-stat-card { flex: 1 1 calc(50% - 0.5rem); }
+  .lib-stat-card:nth-child(even) { transform: translateY(0); }
+  .lib-rules-grid { grid-template-columns: 1fr; max-width: 480px; }
+  .lib-contact-grid { grid-template-columns: 1fr; }
+}
+
 @media (max-width: 640px) {
   .lib-hero { height: 70vh; }
-  .lib-hero-title { font-size: 3.5rem; }
-  .lib-grid { grid-template-columns: 1fr; }
+  .lib-hero-title { font-size: 3rem; }
   .lib-sec-title { font-size: 2.2rem; }
+  .lib-stat-card { flex: 1 1 100%; }
 }
+

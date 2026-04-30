@@ -56,6 +56,31 @@ const AdmissionKCET = () => {
             </div>
           </div>
 
+          {/* Institutional CET Codes */}
+          <div className="adm-section">
+            <h2 className="adm-heading">Institutional CET Codes</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="flex items-center justify-between bg-white border border-accent/20 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div>
+                  <p className="text-[10px] font-black text-accent uppercase tracking-widest mb-1">CET Code</p>
+                  <h3 className="text-deep-green font-black text-lg">B.Sc. (Hons) Agriculture</h3>
+                </div>
+                <div className="bg-accent/10 px-4 py-2 rounded-xl">
+                  <span className="text-accent font-black text-lg tracking-wider">P 038 / N 038</span>
+                </div>
+              </div>
+              <div className="flex items-center justify-between bg-white border border-accent/20 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
+                <div>
+                  <p className="text-[10px] font-black text-accent uppercase tracking-widest mb-1">CET Code</p>
+                  <h3 className="text-deep-green font-black text-lg">B.Tech (Food Technology)</h3>
+                </div>
+                <div className="bg-accent/10 px-4 py-2 rounded-xl">
+                  <span className="text-accent font-black text-lg tracking-wider">R 038 / F 038</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Farmer's Quota Rank Consideration */}
           <div className="adm-section">
             <h2 className="adm-heading">Farmer's Quota Rank Consideration</h2>

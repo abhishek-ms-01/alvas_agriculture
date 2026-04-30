@@ -17,7 +17,7 @@ const featuresList = [
         title: "Digital Repository",
         tag: "24/7 Access",
         desc: "Instant access to 50,000+ e-journals and global agricultural research papers.",
-        img: "/A.I.E.T CAMPUS -2026-186 (1).jpg",
+        img: "/libraryhall.jpg",
         icon: <Globe className="w-5 h-5" />
     },
     {
@@ -31,7 +31,7 @@ const featuresList = [
         title: "Collaborative Hub",
         tag: "Teamwork",
         desc: "Smart-board equipped meeting spaces for group projects and peer discussions.",
-        img: "/A.I.E.T CAMPUS -2026-217 (1).jpg",
+        img: "/librarystudyhall.jpg",
         icon: <Users className="w-5 h-5" />
     },
     {
@@ -44,10 +44,10 @@ const featuresList = [
 ];
 
 const libraryGallery = [
-    { src: "/A.I.E.T CAMPUS -2026-206.jpg", title: "Main Hall", tag: "Quiet Zone" },
-    { src: "/A.I.E.T CAMPUS -2026-209.jpg", title: "Digital Lib", tag: "E-Resources" },
-    { src: "/A.I.E.T CAMPUS -2026-211.jpg", title: "Stack Area", tag: "Collections" },
-    { src: "/A.I.E.T CAMPUS -2026-218.jpg", title: "Research", tag: "Reference" },
+    { src: "/library1.jpg", title: "Main Hall", tag: "Quiet Zone" },
+    { src: "/A.I.E.T CAMPUS -2026-209.jpg", title: "Digital Lab", tag: "E-Resources" },
+    { src: "/librarystudyhall1.jpg", title: "Stack Area", tag: "Collections" },
+    { src: "/library3.jpg", title: "Research Zone", tag: "Reference" },
 ];
 
 const libraryRules = [
