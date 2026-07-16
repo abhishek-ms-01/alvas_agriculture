@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/alvas-org-logo-white.png" alt="Alva's IAST Logo" width="120"/>
+<img src="./public/alvas-org-logo-white.png" alt="Alva's IAST Logo" width="120"/>
 
 <br/><br/>
 
@@ -10,7 +10,8 @@
 
 <br/>
 
-[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Website-16a34a?style=for-the-badge&logo=vercel)](https://alvas-agriculture.vercel.app)
+[![Official Website](https://img.shields.io/badge/🌐%20Official%20Website-www.aiast.org-16a34a?style=for-the-badge)](https://www.aiast.org)
+[![Live Demo](https://img.shields.io/badge/🚀%20Live%20Demo-Visit%20Vercel-000000?style=for-the-badge&logo=vercel)](https://alvas-agriculture.vercel.app)
 [![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://react.dev)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org)
 [![Vite](https://img.shields.io/badge/Vite-5.4-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
@@ -58,7 +59,7 @@ The website was built with a premium design philosophy — blending a warm earth
 | 🎓 **Programs** | B.Sc. (Hons) Agriculture · B.Tech. Food Technology |
 | 🏛️ **Affiliation** | KSKVKU, Shivamogga · UGC · ICAR · NAAC |
 | 📞 **Contact** | +91 8258 238 900 · info@alvas.org |
-| 🌐 **Live Website** | [alvas-agriculture.vercel.app](https://alvas-agriculture.vercel.app) |
+| 🌐 **Official Website** | [www.aiast.org](https://www.aiast.org) <br/> *(Mirror: [alvas-agriculture.vercel.app](https://alvas-agriculture.vercel.app))* |
 
 ---
 
@@ -67,49 +68,49 @@ The website was built with a premium design philosophy — blending a warm earth
 ### 🏠 Homepage — Hero Section
 > *"Cultivating Knowledge. For a Bumper Harvesting."*
 
-![Homepage Hero](https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/preview/home.png)
+![Homepage Hero](./public/preview/home.png)
 
 ---
 
 ### 🏛️ About — Legacy of Agricultural Excellence
 
-![About Page](https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/preview/about.png)
+![About Page](./public/preview/about.png)
 
 ---
 
 ### 🎓 Admissions — KCET & Management Quota
 
-![Admissions Page](https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/preview/admissions.png)
+![Admissions Page](./public/preview/admissions.png)
 
 ---
 
 ### 🔬 Research — Discovery & Innovation
 
-![Research Page](https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/preview/research.png)
+![Research Page](./public/preview/research.png)
 
 ---
 
 ### 🌿 Campus Life — 100 Acres in the Western Ghats
 
-![Campus Life Page](https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/preview/campus.png)
+![Campus Life Page](./public/preview/campus.png)
 
 ---
 
 ### 💼 Placements — Bridges to Success
 
-![Placements Page](https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/preview/placement.png)
+![Placements Page](./public/preview/placement.png)
 
 ---
 
 ### 🏫 Facilities — Smart Classrooms, Labs & Research Farms
 
-![Facilities Gallery](https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/preview/gallery.png)
+![Facilities Gallery](./public/preview/gallery.png)
 
 ---
 
 ### 📬 Footer — Quick Links, Contact & Location
 
-![Footer](https://raw.githubusercontent.com/abhishek-ms-01/alvas_agriculture/main/public/preview/footer.png)
+![Footer](./public/preview/footer.png)
 
 ---
 
@@ -404,7 +405,8 @@ npm test           # Run unit tests with Vitest
 
 | Environment | URL |
 |---|---|
-| 🌐 **Production** | [https://alvas-agriculture.vercel.app](https://alvas-agriculture.vercel.app) |
+| 🌐 **Official Website** | [https://www.aiast.org](https://www.aiast.org) |
+| 🚀 **Vercel Mirror** | [https://alvas-agriculture.vercel.app](https://alvas-agriculture.vercel.app) |
 | 📦 **Repository** | [github.com/abhishek-ms-01/alvas_agriculture](https://github.com/abhishek-ms-01/alvas_agriculture) |
 
 > Deployed on **Vercel** with automatic CI/CD — every push to the `main` branch triggers a new deployment automatically.
